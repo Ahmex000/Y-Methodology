@@ -33,6 +33,7 @@
 ## 5. Claim ASN Number
 - **BGP Tools**:
   [BGP Tools](https://bgp.tools/search?q=dell)
+- https://bgp.he.net/ 
 - **theHarvester**:
   ```bash
   theHarvester -d target.com -b all
@@ -51,7 +52,11 @@
   ```bash
   whois -h whois.radb.net -- '-i origin AS16509' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
   ```
-
+- **ASN To IP's**
+  ```bash
+  apt-get install whois
+  whois -h whois.radb.net  -- '-i origin AS8983' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq -u > ip_ranges.txt
+  ``` 
 ## 7. Convert CIDR to IP's
 - **Nmap**:
   ```bash
@@ -80,6 +85,15 @@
   - [Knock](https://github.com/guelfoweb/knock)
   - [Frogy](https://github.com/iamthefrogy/frogy)
   - [DomainCollector](https://github.com/Cyber-Guy1/domainCollector)
+  - https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228
+  - https://github.com/sl4x0/subfree
+  - https://dnsdumpster.com/
+  - https://github.com/gwen001/github-subdomains
+  - https://github.com/gwen001/gitlab-subdomains
+  - 
+  - 
+  - 
+
 - **VirusTotal**:
   ```bash
   curl -s "https://www.virustotal.com/vtapi/v2/domain/report?apikey=<api_key>&domain=<DOMAIN>" | jq -r '.domain_siblings[]'
@@ -124,6 +138,10 @@
   assetfinder --subs-only <domain>
   cat ../target | xargs -I {} assetfinder --subs-only {} >> assetfinder
   ```
+## 9.1. Active  Subdomain Enumeration
+- https://github.com/d3mondev/puredns
+- 
+
 
 ## 10. Subdomain Brute Forcing
 - https://github.com/projectdiscovery/shuffledns
@@ -168,11 +186,41 @@
   - [ZoomEye](https://www.zoomeye.ai/)
   - [Dorks](https://dorks.faisalahmed.me/)
   - [Criminal IP](https://www.criminalip.io/)
+  - censys
+  - bevigil
+  - binaryedge
+  - cerspotter
+  - whoisxmlapi
+  - fofa
+  - shodan
+  - github
+  - virustotal
+  - zoomeye
+
+ 
+    
 - **GooFuzz**:
   ```bash
   GooFuzz -t nasa.gov -e pdf,bak,old -d 10
   GooFuzz -t nasa.gov -e wordlists/extensions.txt -d 30
   GooFuzz -t nasa.gov -w wordlists/words-100.txt -p 3
+  ```
+- **Favicon Search**
+```bash
+  import hashlib
+  def calculate_favicon_hash(file_path):
+    with open(file_path, 'rb') as file:
+        favicon_data = file.read()
+        favicon_hash = hashlib.md5(favicon_data).hexdigest()
+    return favicon_hash
+  favicon_path = '/path/to/favicon.ico'
+  favicon_hash = calculate_favicon_hash(favicon_path)
+  print(favicon_hash)
+```
+- http.favicon.hash:[Favicon hash here]
+ ```bash
+  cat urls.txt | python3 favfreak.py -o output
+  http.favicon.hash:-<hash>
   ```
 
 ## 13. Test for Subdomain Takeover
