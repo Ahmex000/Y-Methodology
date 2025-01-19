@@ -103,5 +103,5 @@
    - Check if the password can be the same as the email address.
 
 ---
-
+-- https://xmind.ai/share/6ZrhpTgT?xid=JCZJS2jB
 - https://www.irongeek.com/homoglyph-attack-generator.php
