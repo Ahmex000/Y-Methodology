@@ -132,5 +132,5 @@
   https://github.com/MR-pentestGuy/nuclei-templates
   ```
 -- https://gowthams.gitbook.io/bughunter-handbook/fuzzing-wordlists
----
+-- https://bugbountyforum.com/tools/recon/
 
