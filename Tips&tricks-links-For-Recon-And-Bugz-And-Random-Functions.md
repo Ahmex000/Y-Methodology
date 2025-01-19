@@ -116,3 +116,4 @@
 - Nored0x Writeups: https://nored0x.github.io/penetration%20testing/writeups-Bug-Bounty-hackrone/
 - https://www.virtuesecurity.com/kb/wkhtmltopdf-file-inclusion-vulnerability-2/
 - https://0xcybery.github.io/blog/
+- https://0xhunterr.gitbook.io/the-nen-book
