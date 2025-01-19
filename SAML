@@ -1,0 +1,16 @@
+
+---
+
+- https://auth0.com/blog/how-saml-authentication-works/
+- https://epi052.gitlab.io/notes-to-self/blog/2019-03-13-how-to-test-saml-a-methodology-part-two/
+- https://joonas.fi/2021/08/saml-is-insecure-by-design/
+- https://hackerone.com/reports/812064
+- https://www.sonarsource.com/blog/zabbix-case-study-of-unsafe-session-storage/
+- https://www.slideshare.net/slideshow/saml-authentication-bypass/234383337#4
+- https://cheatsheetseries.owasp.org/cheatsheets/SAML_Security_Cheat_Sheet.html
+- https://blog.calif.io/p/redash-saml-authentication-bypass
+- https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SAML%20Injection/README.md
+- https://www.netspi.com/blog/technical-blog/web-application-pentesting/attacking-sso-common-saml-vulnerabilities-ways-find/
+- https://xakep.ru/2016/02/09/hacking-single-sign-on/
+
+--- 
