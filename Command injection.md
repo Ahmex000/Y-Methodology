@@ -51,5 +51,5 @@
    - Inject system commands in JavaScript contexts to execute arbitrary commands.
 
 ---
-
+- https://sallam.gitbook.io/sec-88/web-appsec/command-injection
 إذا كنت بحاجة إلى أي تعديلات إضافية، فلا تتردد في طلبها! 😊
