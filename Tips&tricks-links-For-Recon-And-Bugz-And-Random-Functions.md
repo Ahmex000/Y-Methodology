@@ -19,7 +19,6 @@
 
 ### Mind Maps
 - Mind-Maps: https://github.com/imran-parray/Mind-Maps/tree/master
-- Mind-Maps (Duplicate): https://github.com/imran-parray/Mind-Maps
 
 ### Handbooks & Guides
 - sec-88: https://sallam.gitbook.io/sec-88
@@ -37,6 +36,8 @@
 ### Exploits
 - SpringBootVulExploit: https://github.com/LandGrey/SpringBootVulExploit
 - Mitigation-And-Analysis: https://github.com/Dark-Night0/Mitigation-And-Analysis
+- https://gitlab.com/jobertabma/vulnerable-code
+
 
 ## Writeups & Blogs
 
