@@ -1,0 +1,2 @@
+- https://rafa.hashnode.dev/exploiting-http-parsers-inconsistencies
+- https://www.cobalt.io/blog/common-vulnerabilities-in-nodejs-applications
