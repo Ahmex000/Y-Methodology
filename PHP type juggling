@@ -1,0 +1,60 @@
+إليك تنظيم النقاط بشكل نصي عادي ومنظم:
+
+---
+
+### **PHP Type Juggling Vulnerability**
+
+#### **1. Resources**
+- **Medium Article**:
+  ```bash
+  https://medium.com/@abdelrahman0x01/php-type-juggling-vulnerability-768bca4d8b3b
+  ```
+- **SecOps Group Article**:
+  ```bash
+  https://secops.group/php-type-juggling-simplified/
+  ```
+
+#### **2. PHP Type Juggling**
+- **Operators**:
+  - `==` (Loose Comparison): Compares values after type juggling.
+  - `===` (Strict Comparison): Compares both value and type.
+
+#### **3. Example**
+- **Loose Comparison (`==`)**:
+  ```php
+  if ("0e12345" == "0e67890") {
+      echo "Equal";
+  } else {
+      echo "Not Equal";
+  }
+  ```
+  - Output: `Equal` (because both strings are treated as scientific notation and evaluated to 0).
+
+- **Strict Comparison (`===`)**:
+  ```php
+  if ("0e12345" === "0e67890") {
+      echo "Equal";
+  } else {
+      echo "Not Equal";
+  }
+  ```
+  - Output: `Not Equal` (because both value and type are compared).
+
+---
+
+### **How to Use This Information**
+1. **Understand PHP Type Juggling**:
+   - Learn how PHP handles type juggling with `==` and `===`.
+
+2. **Identify Vulnerabilities**:
+   - Look for places in the code where loose comparison (`==`) is used, which can lead to security vulnerabilities.
+
+3. **Exploit Scenarios**:
+   - Use type juggling to bypass authentication or other security checks by crafting inputs that evaluate to the same value after type conversion.
+
+4. **Secure Coding Practices**:
+   - Always use strict comparison (`===`) to avoid type juggling vulnerabilities.
+
+---
+
+إذا كنت بحاجة إلى أي تعديلات إضافية، فلا تتردد في طلبها! 😊
