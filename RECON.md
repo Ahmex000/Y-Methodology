@@ -1,4 +1,4 @@
-```markdown
+
 # Recon Methodology
 
 ## 1. Select Main Domains & Acquisitions
