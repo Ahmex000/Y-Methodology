@@ -30,3 +30,7 @@
    - Test for **Local File Inclusion (LFI)** in JWT headers.
 
 ---
+
+-toole
+
+-- https://github.com/ticarpi/jwt_tool
