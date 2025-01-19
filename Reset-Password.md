@@ -83,3 +83,5 @@ Host: target.com
 - Bugcrowd Blog: https://www.bugcrowd.com/blog/breaking-the-chain-exploiting-oauth-and-forgot-password-for-account-takeover/
 
 ---
+
+-- https://xmind.ai/share/UYJM9L9t
