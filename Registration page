@@ -1,0 +1,106 @@
+---
+
+### **Email Injection & Bypass Techniques**
+
+#### **1. Email Injection Patterns**
+- email1/=email2
+- {email1;...;email2}
+- email1f=$email2
+- [email1,email2]
+- $(email1:email2)
+- email1 >> email2;
+- [email1]#[email2]
+- email1==email2
+- email1*1=email2*1
+- email1^email2
+- email1;email2
+- email1->email2
+- email1 ... email2
+- email1 != email2
+- email1'...'email2
+- email1/../../email2
+- (email1)=email2
+- /email1/+/email2/
+- email1@email2@
+- email1;email2
+- email1×0=1=email2
+- email1|email2
+- email1(*)email2
+- email1#>email2
+- \email1\email2
+- \email1/email2
+
+#### **2. Email Bypass Examples**
+- email@email.com,victim@hack.secry
+- email@email“,”victim@hack.secry
+- email@email.com:victim@hack.secry
+- email@email.com%0d%0avictim@hack.secry
+- %0d%0avictim@hack.secry
+- %0avictim@hack.secry
+- victim@hack.secry%0d%0a
+- victim@hack.secry%0a
+- victim@hack.secry%0d
+- victim@hack.secry%00
+- victim@hack.secry{{}}
+
+---
+
+### **Registration & Signup Vulnerabilities**
+
+#### **1. Duplicate Registration / Overwrite Existing User**
+- Create an account with the same email but different password.
+- Check if the system allows overwriting existing users.
+
+#### **2. Cross-Site Scripting (XSS) in Username or Account Name**
+- Test for XSS in username, account name, or other registration fields.
+
+#### **3. Insufficient Email Verification**
+- Bypass email verification using techniques like:
+  - Response manipulation.
+  - SQL injection in verification process.
+  - Client-side validation bypass.
+
+#### **4. Weak Password Policy**
+- Check if the application allows weak passwords like "123456" or "password".
+- Test if the password can be the same as the email address.
+
+#### **5. Weak Registration Implementation**
+- Test for vulnerabilities in the registration process, such as:
+  - Lack of input validation.
+  - Insecure storage of user data.
+  - Missing rate limiting.
+
+---
+
+### **ORM Parameter Manipulation**
+- Example: `user[admin]=true`
+- Exploit ORM (Object-Relational Mapping) by manipulating object parameters.
+
+---
+
+### **References**
+- Test Cases for Registration Page: https://katalon.com/resources-center/blog/test-cases-for-registration-page
+- OWASP Testing Guide - User Registration: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/02-Test_User_Registration_Process
+- HackTricks - Registration Vulnerabilities: https://hacktricks.boitatech.com.br/pentesting-web/registration-vulnerabilities
+
+---
+
+### **Steps for Testing**
+1. **Account Creation**:
+   - Create an account with a valid email and password.
+   - Try creating another account with the same email but a different password.
+
+2. **Form Submission**:
+   - Fill the registration form with a long string in the password field.
+   - Submit the form and check for server errors or unexpected behavior.
+
+3. **Email Verification**:
+   - Enter an invalid or malformed email address.
+   - Check if the system properly validates the email.
+
+4. **Password Policy**:
+   - Test if the system allows weak or easily guessable passwords.
+   - Check if the password can be the same as the email address.
+
+---
+
