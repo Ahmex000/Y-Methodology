@@ -1,0 +1,4 @@
+- https://sec.okta.com/articles/2020/04/attacking-evil-regex-understanding-regular-expression-denial-service
+
+- `^(a+)+$`
+- `^(a+)+[a-zA-Z]$`
