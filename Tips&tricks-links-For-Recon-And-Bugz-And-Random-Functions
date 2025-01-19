@@ -1,16 +1,126 @@
-1. https://github.com/jhaddix/tbhm
-2. https://github.com/tuhin1729/Bug-Bounty-Methodology
-3. https://github.com/IamLucif3r/Bug-Hunting
-4. https://github.com/Az0x7/vulnerability-Checklist
-5. https://github.com/imran-parray/Mind-Maps/tree/master
-6. https://github.com/0xmaximus/Galaxy-Bugbounty-Checklist
-7. https://github.com/KathanP19/HowToHunt
-8. https://github.com/brianlam38/Sec-Cheatsheets/tree/master/Web
-9. https://github.com/daffainfo/AllAboutBugBounty/tree/master
-10. Spring Boot : https://github.com/LandGrey/SpringBootVulExploit
-11. https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master
-12. https://github.com/qazbnm456/awesome-web-security?tab=readme-ov-file#upload
-13. https://github.com/infoslack/awesome-web-hacking
-14. https://github.com/akr3ch/CheatSheet?tab=readme-ov-file#phpmailer
-15. https://github.com/EdOverflow/bugbounty-cheatsheet/tree/master
-16. https://github.com/Dark-Night0/Mitigation-And-Analysis
+Here’s a structured list of the resources you provided, categorized for easier navigation:
+
+---
+
+### **Bug Bounty Methodologies & Checklists**
+1. **Methodologies**:
+   - [tbhm](https://github.com/jhaddix/tbhm) - Bug bounty methodology by Jason Haddix.
+   - [Bug-Bounty-Methodology](https://github.com/tuhin1729/Bug-Bounty-Methodology) - Tuhin's bug bounty methodology.
+   - [Bug-Hunting](https://github.com/IamLucif3r/Bug-Hunting) - Bug hunting resources by Lucif3r.
+   - [HowToHunt](https://github.com/KathanP19/HowToHunt) - Kathan's guide to bug hunting.
+   - [AllAboutBugBounty](https://github.com/daffainfo/AllAboutBugBounty) - Comprehensive bug bounty resources.
+
+2. **Checklists**:
+   - [vulnerability-Checklist](https://github.com/Az0x7/vulnerability-Checklist) - Vulnerability checklist for bug hunting.
+   - [Galaxy-Bugbounty-Checklist](https://github.com/0xmaximus/Galaxy-Bugbounty-Checklist) - Bug bounty checklist by 0xmaximus.
+   - [Sec-Cheatsheets](https://github.com/brianlam38/Sec-Cheatsheets/tree/master/Web) - Web security cheatsheets.
+   - [bugbounty-cheatsheet](https://github.com/EdOverflow/bugbounty-cheatsheet) - EdOverflow's bug bounty cheatsheet.
+
+---
+
+### **Mind Maps & Learning Resources**
+1. **Mind Maps**:
+   - [Mind-Maps](https://github.com/imran-parray/Mind-Maps/tree/master) - Imran Parray's mind maps for security concepts.
+   - [Mind-Maps (Duplicate)](https://github.com/imran-parray/Mind-Maps) - Same as above.
+
+2. **Handbooks & Guides**:
+   - [sec-88](https://sallam.gitbook.io/sec-88) - Sallam's security guide.
+   - [bughunter-handbook](https://gowthams.gitbook.io/bughunter-handbook) - Gowtham's bug hunter handbook.
+   - [The Nen Book](https://0xhunterr.gitbook.io/the-nen-book) - A bug bounty guide by 0xhunterr.
+   - [Introduction](https://oreobiscuit.gitbook.io/introduction) - Oreobiscuit's introduction to security.
+
+---
+
+### **Payloads & Exploits**
+1. **Payloads**:
+   - [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master) - Swissky's payload collection.
+   - [awesome-web-security](https://github.com/qazbnm456/awesome-web-security) - Awesome web security resources.
+   - [CheatSheet](https://github.com/akr3ch/CheatSheet) - Akr3ch's security cheatsheet.
+
+2. **Exploits**:
+   - [SpringBootVulExploit](https://github.com/LandGrey/SpringBootVulExploit) - Spring Boot vulnerability exploits.
+   - [Mitigation-And-Analysis](https://github.com/Dark-Night0/Mitigation-And-Analysis) - Mitigation and analysis of vulnerabilities.
+
+---
+
+### **Writeups & Blogs**
+1. **Writeups**:
+   - [Bug-bounty-Writeups](https://github.com/fardeen-ahmed/Bug-bounty-Writeups) - Fardeen's bug bounty writeups.
+   - [Awesome-Bugbounty-Writeups](https://github.com/devanshbatham/Awesome-Bugbounty-Writeups) - Devansh's curated bug bounty writeups.
+   - [Bounty Writeups](https://securitycipher.com/bounty-writeups/) - SecurityCipher's bounty writeups.
+
+2. **Blogs**:
+   - [Critical Thinking Podcast Blog](https://blog.criticalthinkingpodcast.io/)
+   - [VidocSecurity Blog](https://blog.vidocsecurity.com/blog/)
+   - [PortSwigger Research](https://portswigger.net/research)
+   - [Hakai Security](https://hakaisecurity.io/)
+   - [Security Lab - GitHub](https://securitylab.github.com/research/)
+   - [RedFoxSec API Blog](https://redfoxsec.com/blog/category/api/)
+   - [Invicti Web Security Blog](https://www.invicti.com/blog/web-security/)
+   - [MemoryLeaks](https://memoryleaks.ir/)
+   - [PentestBook](https://pentestbook.six2dez.com/)
+   - [TurboChaos](https://turbochaos.blogspot.com/)
+   - [Positive Security Blog](https://positive.security/blog)
+   - [Checkmarx Blog](https://checkmarx.com/blog/)
+   - [Salt Security Blog](https://salt.security/blog)
+   - [Nokline](https://nokline.github.io/)
+   - [Lauritz Holtmann Security Blog](https://security.lauritz-holtmann.de/)
+   - [SCRT Blog](https://blog.scrt.ch/)
+   - [Claranet Blogs](https://www.claranet.com/us/blogs)
+   - [Binary Security](https://binarysecurity.no/posts/)
+   - [Lyra Horse Blog](https://lyra.horse/blog/)
+   - [Voorivex Team Blog](https://blog.voorivex.team/)
+   - [Malicious Group Blog](https://blog.malicious.group/)
+   - [Xakep Hack Blog](https://xakep.ru/category/hack/)
+   - [Securing.pl](https://www.securing.pl/)
+   - [Hacklido](https://hacklido.com/)
+   - [Secry.me](https://secry.me/)
+   - [MahmoudSec Blog](https://mahmoudsec.blogspot.com/)
+   - [Gremwell Blog](https://www.gremwell.com/blog)
+   - [Happy-Jjang-A](https://happy-jjang-a.tistory.com/)
+   - [AttackerKB](https://attackerkb.com/)
+   - [Salmonsec Cheatsheet](https://salmonsec.com/cheatsheethome)
+   - [Steven Life Blog](https://steven-life-1991.tistory.com/167)
+   - [Internet-Lab](https://internet-lab.ru/)
+   - [GitHub Security Lab](https://github.blog/tag/github-security-lab/)
+   - [Huntr Hacktivity](https://huntr.com/bounties/hacktivity)
+
+---
+
+### **Cheatsheets & Tools**
+1. **Cheatsheets**:
+   - [Sec-Cheatsheets](https://github.com/brianlam38/Sec-Cheatsheets/tree/master/Web) - Web security cheatsheets.
+   - [CheatSheet](https://github.com/akr3ch/CheatSheet) - Akr3ch's security cheatsheet.
+   - [XXE Cheat Sheet](https://www.securityidiots.com/Web-Pentest/XXE/XXE-Cheat-Sheet-by-SecurityIdiots.html) - XXE cheat sheet by Security Idiots.
+
+2. **Tools**:
+   - [SpringBootVulExploit](https://github.com/LandGrey/SpringBootVulExploit) - Spring Boot vulnerability exploits.
+   - [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master) - Swissky's payload collection.
+
+---
+
+### **Communities & Social Media**
+1. **LinkedIn**:
+   - [LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:7132773764202704897/) - Bug bounty-related LinkedIn post.
+
+2. **Facebook Groups**:
+   - [Pentesting4Arabs](https://www.facebook.com/groups/pentesting4arabs/permalink/1153719841750978/) - Pentesting group for Arabic speakers.
+
+---
+
+### **Miscellaneous**
+1. **Notion**:
+   - [H1 Report Notes](https://www.notion.so/H1-Report-Notes-Shreyas-Chavhan-Shared-c2c9e990d2474d288626da2604bd4498) - Shreyas Chavhan's H1 report notes.
+
+2. **GitHub Repos**:
+   - [Bugbountybloglist](https://github.com/g0ldencybersec/bugbountybloglist) - Goldencybersec's bug bounty blog list.
+   - [0xss0rz GitBook](https://0xss0rz.gitbook.io/0xss0rz/pentest/web-attacks/2fa-otp) - 0xss0rz's GitBook on web attacks.
+
+3. **Other**:
+   - [LostSec](https://lostsec.xyz/) - LostSec's security resources.
+   - [Attacker CodeNinja](https://attacker-codeninja.github.io/) - Attacker CodeNinja's blog.
+   - [Nored0x Writeups](https://nored0x.github.io/penetration%20testing/writeups-Bug-Bounty-hackrone/) - Nored0x's bug bounty writeups.
+
+---
+
+This structured list should help you navigate the resources more efficiently! Let me know if you need further assistance.
