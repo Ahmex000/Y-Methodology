@@ -139,6 +139,6 @@ Here’s a **summarized and organized version** of the key tips and techniques f
 - [GitHub CSPT Burp Extension](https://github.com/doyensec/CSPTBurpExtension)  
 
 ---
-
+- https://sallam.gitbook.io/sec-88/web-appsec/cross-site-path-traversal-cspt#id-1-click-cspt2csrf-in-rocket.chat
 
 - https://youtu.be/yGRRGUtT9MU?si=OLNg6eaQNplLuWag
