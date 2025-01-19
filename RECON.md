@@ -126,6 +126,7 @@
   ```
 
 ## 10. Subdomain Brute Forcing
+- https://github.com/projectdiscovery/shuffledns
 - **PureDNS**:
   ```bash
   puredns bruteforce all.txt domain.com
