@@ -18,6 +18,7 @@
 
 #### **Additional Resources**
 - 2FA Bypass Mind Map: https://xmind.ai/share/UYJM9L9t
+- https://xmind.ai/share/ph6inJpw?xid=HPdwd04O
 
 ---
 
