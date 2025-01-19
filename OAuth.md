@@ -212,3 +212,4 @@
 
 ---
 
+--- https://sallam.gitbook.io/sec-88/web-appsec/auth0-misconfigurations
