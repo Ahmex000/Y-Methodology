@@ -131,6 +131,6 @@
   https://github.com/vijay922/XXE-FUZZ
   https://github.com/MR-pentestGuy/nuclei-templates
   ```
-
+-- https://gowthams.gitbook.io/bughunter-handbook/fuzzing-wordlists
 ---
 
