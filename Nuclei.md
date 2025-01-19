@@ -1,0 +1,2 @@
+- https://www.youtube.com/watch?v=WNdf1zcShl4
+- https://github.com/projectdiscovery/nuclei-ai-extension
