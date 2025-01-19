@@ -1,0 +1,1 @@
+- https://github.com/waf-bypass-maker/waf-community-bypasses/blob/main/payloads.twitter.csv
