@@ -25,7 +25,7 @@
   ```bash
   curl -s "https://www.virustotal.com/vtapi/v2/domain/report?domain=<DOMAIN>&apikey=<api_key>" | jq -r '.. | .ip_address? // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
   ```
-  - **zdns**:
+- **zdns**:
   ```bash
    git clone https://github.com/zmap/zdns.git
    cd zdns
@@ -88,6 +88,15 @@
   ```bash
   Reverse DNS Lookup
   ```
+  - **zdns Reverse DNS Lookup**:
+  ```bash
+   git clone https://github.com/zmap/zdns.git
+   cd zdns
+   make install
+   -----
+   echo "censys.io" | zdns A
+  ```
+
   ### **8.1 sacn all web IPs to search for target CN/SAN's**
   ```bash
   - just use https://github.com/g0ldencybersec/CloudRecon to scan all web ips form https://kaeferjaeger.gay/
