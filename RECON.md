@@ -227,14 +227,10 @@ dnsrecon -d example.com -t brt -D wordlist.txt -c dnsrecon_output.csv
 4. [PureDNS](https://github.com/d3mondev/puredns)
 5. [BBOT](https://github.com/blacklanternsecurity/bbot)
 6. [OneForAll](https://github.com/shmilylty/OneForAll)
-7. [Knock](https://github.com/guelfoweb/knock)
-8. [Frogy](https://github.com/iamthefrogy/frogy)
 9. [DomainCollector](https://github.com/Cyber-Guy1/domainCollector)
 10. [Netlas.io](https://app.netlas.io/)
 11. [DNSDumpster](https://dnsdumpster.com/)
 12. [GitLab Subdomains](https://github.com/gwen001/gitlab-subdomains)
-
-بالفعل، قمت بمراجعة القائمة التي أرسلتها لك وقارنتها مع القائمة الجديدة التي قمت بإنشائها. هناك بعض الأدوات والروابط التي أرسلتها ولم أقم بتضمينها في القائمة الجديدة. سأضيفها الآن مع التأكد من عدم التكرار:
 
 ---
 
