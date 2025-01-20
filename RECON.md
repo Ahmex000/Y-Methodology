@@ -101,6 +101,11 @@ subfinder -d example.com -b -w wordlist.txt -t 100 -sources censys -set-settings
 # Against a list of domains
 subfinder -dL domains.txt > example.com.subs
 ```
+- please dont forget to add api keys for following API's
+```bash
+BeVigil, BinaryEdge, BufferOver, C99, Censys, CertSpotter, Chaos, Chinaz, DNSDB, Fofa, FullHunt, GitHub, Intelx, PassiveTotal, quake, Robtex, SecurityTrails, Shodan, ThreatBook, VirusTotal, WhoisXML API, ZoomEye API china - worldwide, dnsrepo, Hunter, Facebook, BuiltWith
+```
+- see subfinder Doc's https://docs.projectdiscovery.io/tools/subfinder/install
 
 #### **2. Amass**:
 ```bash
