@@ -831,26 +831,187 @@ https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse
 ## 15. Port Scanning
 - **Naabu**:
   ```bash
-  naabu -host <ip> -p- -Pn -o portscan | httpx -sc -td -server
+  naabu -host <ip> -p- -Pn -o portscan | httpx -sc -td -server 
+  naabu -list sub-list.txt -top-ports 1000 -exclude-ports 80,443,21,22,25 -o ports.txt
+  naabu -list sub-list.txt -p - -exclude-ports 80,443,21,22,25  -o ports.txt
   ```
 - **Nmap**:
   ```bash
   nmap -sV -sC -sS 87.251.41.115
+
+  nmap 127.0.0.1 -sS -sV -Pn -n — max-rate 1000 — open -p 21 -oN Active_21.txt
+
+  Tip: Don’t forgot to scan the commonly open ports like 21,22,3000,8080,8000,8081,8008,8888,8443,9000,9001,9090.
+  ```
+- **httprobe**:
+  ```bash
+  cat domains | httprobe -c 80 -h 
   ```
 
+
+
 ## 16. Claim URLs
-- **Waybackurls**:
+---
+
+### **Web Crawling and URL Discovery Tools**
+
+#### **1. Katana**
+- **GitHub Repository**: [Katana by ProjectDiscovery](https://github.com/projectdiscovery/katana)
+- **Installation**:
   ```bash
-  echo "example.com" | waybackurls | grep -iE '\.js' | grep -ivE '\.json' | sort -u > j.txt
+  go install github.com/projectdiscovery/katana/cmd/katana@latest
   ```
-- **Gospider**:
-  ```bash
-  gospider -s "https://google.com/" -o output -c 10 -d 1
-  ```
-- **Katana**:
+- **Basic Usage**:
   ```bash
   katana -u https://tesla.com
   ```
+- **List Input**:
+  ```bash
+  cat url_list.txt | katana -list
+  ```
+- **More Info**: [Katana GitHub Page](https://github.com/projectdiscovery/katana)
+
+---
+
+#### **2. GoSpider**
+- **GitHub Repository**: [GoSpider by Jaeles Project](https://github.com/jaeles-project/gospider)
+- **Installation**:
+  ```bash
+  go get -u github.com/jaeles-project/gospider
+  ```
+- **Basic Usage**:
+  ```bash
+  gospider -s "https://google.com/" -o output -c 10 -d 1
+  ```
+- **Advanced Usage**:
+  - Run with site list:
+    ```bash
+    gospider -S sites.txt -o output -c 10 -d 1
+    ```
+  - Include 3rd party sources (Archive.org, CommonCrawl.org, VirusTotal.com, AlienVault.com) and subdomains:
+    ```bash
+    gospider -s "https://google.com/" -o output -c 10 -d 1 --other-source --include-subs
+    ```
+  - Blacklist URL/file extensions:
+    ```bash
+    gospider -s "https://google.com/" -o output -c 10 -d 1 --blacklist ".(woff|pdf)"
+    ```
+
+---
+
+#### **3. GetAllUrls (GAU)**
+- **GitHub Repository**: [GAU by lc](https://github.com/lc/gau)
+- **Installation**:
+  ```bash
+  go get -u -v github.com/lc/gau
+  ```
+- **Usage**:
+  - Extract subdomains:
+    ```bash
+    gau -subs example.com | cut -d / -f 3 | sort -u
+    ```
+  - Extract URLs excluding specific file types:
+    ```bash
+    cat sub.txt | gau -b png,jpg,gif,jpeg,swf,woff,gif,svg -o allurls.txt
+    ```
+
+---
+
+#### **4. URLFinder**
+- **GitHub Repository**: [URLFinder by ProjectDiscovery](https://github.com/projectdiscovery/urlfinder)
+- **Purpose**: A tool to discover URLs from various sources.
+
+---
+
+#### **5. CWFF**
+- **GitHub Repository**: [CWFF by D4Vinci](https://github.com/D4Vinci/CWFF)
+- **Purpose**: A tool for web application fingerprinting.
+
+---
+
+### **Web Archiving and Historical Data**
+
+#### **1. Wayback Machine (Archive.org)**
+- **Usage**:
+  ```bash
+  https://web.archive.org/cdx/search/cdx?url=*.redacted.com%2F*&output=text&fl=original&collapse=urlkey&filter=statuscode%3A200
+  ```
+- **Example Commands**:
+  ```bash
+  echo "example.com" | waybackurls | grep -iE '\.js' | grep -ivE '\.json' | sort -u > j.txt
+  echo "example.com" | waybackurls | httpx > live.txt
+  ```
+
+---
+
+#### **2. Archive.ph**
+- **Website**: [Archive.ph](https://archive.ph/)
+- **Purpose**: A tool for saving and accessing archived web pages.
+
+---
+
+### **URL Scanning and Analysis Tools**
+
+#### **1. URLScan.io**
+- **Website**: [URLScan.io](https://urlscan.io/)
+- **Search Functionality**: [URLScan.io Search](https://urlscan.io/search#target.com)
+- **Purpose**: Scan and analyze URLs and websites.
+
+---
+
+#### **2. Fofa.info**
+- **Website**: [Fofa.info](https://en.fofa.info)
+- **Purpose**: A search engine for internet-connected devices and services.
+
+---
+
+### **JavaScript Tools**
+
+#### **1. JavaScript Code for Scanning**
+- **Code**:
+  ```javascript
+  javascript:(async function(){let scanningDiv=document.createElement("div");scanningDiv.style.position="fixed",scanningDiv.style.bottom="0",scanningDiv.style.left="0",scanningDiv.style.width="100%",scanningDiv.style.maxHeight="50%",scanningDiv.style.overflowY="scroll",scanningDiv.style.backgroundColor="white",scanningDiv.style.color="black",scanningDiv.style.padding="10px",scanningDiv.style.zIndex="9999",scanningDiv.style.borderTop="2px solid black",scanningDiv.innerHTML="<h4>Scanning...</h4>",document.body.appendChild(scanningDiv);let e=[],t=new Set;async function n(e){try{const t=await fetch(e);return t.ok?await t.text():(console.error(`Failed to fetch ${e}: ${t.status}`),null)}catch(t){return console.error(`Error fetching ${e}:`,t),null}}function o(e){return(e.startsWith("/")||e.startsWith("./")||e.startsWith("../"))&&!e.includes(" ")&&!/[^\x20-\x7E]/.test(e)&&e.length>1&&e.length<200}function s(e){return[...e.matchAll(/['"]((?:\/|\.\.\/|\.\/)[^'"]+)['"]/g)].map(e=>e[1]).filter(o)}async function c(o){if(t.has(o))return;t.add(o),console.log(`Fetching and processing: ${o}`);const c=await n(o);if(c){const t=s(c);e.push(...t)}}const l=performance.getEntriesByType("resource").map(e=>e.name);console.log("Resources found:",l);for(const e of l)await c(e);const i=[...new Set(e)];console.log("Final list of unique paths:",i),console.log("All scanned resources:",Array.from(t)),scanningDiv.innerHTML=`<h4>Unique Paths Found:</h4><ul>${i.map(e=>`<li>${e}</li>`).join("")}</ul>`})();
+  ```
+- **Purpose**: A JavaScript snippet for scanning and extracting unique paths from a webpage.
+
+---
+
+### **Other Tools and Resources**
+
+#### **1. AlienVault**
+- **Purpose**: A threat intelligence platform for detecting and analyzing threats.
+
+#### **2. VirusTotal**
+- **Purpose**: A service for analyzing files and URLs for malware.
+
+#### **3. Hakrawler**
+- **Purpose**: A web crawler for discovering URLs and endpoints.
+
+---
+
+### **Combined Workflow Example**
+
+```bash
+cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpeg|swf|woff|svg)$' > way1 >(waybackurls | sort | uniq cat way | grep -Ev '\.(png|jpg|gif|jpeg|swf|woff|svg)$' > way1 | sort | uniq > combined_urls.txt && cat combined_urls.txt | httpx > urls && cat urls | grep "=" > params && cat urls | grep ".js" > js
+```
+
+---
+
+### **Additional Notes**
+- **Waymore**:
+  ```bash
+  waymore -i $domain -mode U -oU ./waymoreUrls.txt -url-filename -p 4
+  ```
+- **Gauplus and Hakrawler**:
+  ```bash
+  echo $domain | (gauplus || hakrawler) | grep -Ev "\.(jpeg|jpg|png|ico|woff|svg|css|ico|woff|ttf)$" > ./gaukrawler.txt
+  ```
+- **Combining Results**:
+  ```bash
+  cat ./waymoreUrls.txt ./gaukrawler.txt | sort -u | uro | gf endpoints > allUrls.txt
+  ```
+
+---
 
 ## 17. Scan JS-Files
 - **LinkFinder**:
