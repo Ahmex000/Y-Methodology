@@ -100,7 +100,8 @@
   ```bash
   amass intel -asn 12345
   ```
-
+  ### 5.1 Claim CIDR's Number (claim CIDR's For Domains)
+- https://bgp.he.net/ 
 ## 6. Convert ASN to CIDR's (conver ASN number to CIDR and ASN to IP's)
 - **Whois**:
   ```bash
