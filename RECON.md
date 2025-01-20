@@ -306,8 +306,6 @@ domainCollector -d example.com -o domainCollector_output.txt
 
 ## 12. Dorking
 
-أتفهم طلبك! سأقوم بإعادة تنظيم **كل البيانات** التي قدمتها بشكل كامل ومنظم، دون حذف أي شيء. سأقسمها إلى أقسام واضحة لتسهيل الوصول إليها.
-
 ---
 
 ### **$3 Bucket Recon Methods**
@@ -336,6 +334,65 @@ domainCollector -d example.com -o domainCollector_output.txt
    - [sandcastle](https://github.com/DxSearches/sandcastle)
    - [DumpsterDiver](https://github.com/securing/DumpsterDiver)
    - [$3 Bucket Finder](https://github.com/gwen001/s3-buckets-finder)
+   - [S3Scanner](https://github.com/sa7mon/S3Scanner)
+   - [Mass3](https://github.com/smiegles/mass3)
+   - [slurp](https://github.com/3xbarath/slurp)
+   - [lazyS3](https://github.com/nahamsec/lazys3)
+   - [bucket_finder](https://github.com/msttwidmer/bucket_finder)
+   - [ANSBucketDump](https://github.com/netgusto/ANSBucketDump)
+   - [sandcastle](https://github.com/DxSearches/sandcastle)
+   - [DumpsterDiver](https://github.com/securing/DumpsterDiver)
+   - [$3 Bucket Finder](https://github.com/gwen001/s3-buckets-finder)
+   - [grayhatwarfare](https://buckets.grayhatwarfare.com)
+   - [osint.sh](https://osint.sh/buckets)
+   - [s3-detect.yaml](https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/s3-detect.yaml)
+
+2. **OSINT Tools**:
+   - [shodan.io](https://www.shodan.io)
+   - [censys.io](https://censys.io)
+   - [hunter.io](https://hunter.io)
+   - [urlscan.io](https://urlscan.io)
+   - [grep.app](https://grep.app)
+   - [intelx.io](https://intelx.io)
+   - [wigle.net](https://wigle.net)
+   - [fullhunt.io](https://fullhunt.io)
+   - [vulners.com](https://vulners.com)
+   - [viz.greynoise.io](https://viz.greynoise.io)
+
+3. **Additional Resources**:
+   - [Searx](https://searx.thegpm.org/)
+   - [LostSec](https://lostsec.xyz/)
+   - [Leak-Lookup](https://leak-lookup.com/account/login)
+   - [Dehashed](https://www.dehashed.com/)
+   - [Wayback Machine](https://web.archive.org/cdx/search?url=simplisafe.com/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000&_=1507209148310)
+   - [Pentest-Tools](https://pentest-tools.com/information-gathering/google-hacking)
+   - [Exploit-DB](https://www.exploit-db.com/google-hacking-database)
+   - [Hunter](https://hunter.how/list?searchValue=product.name%3D%22Zabbix%22)
+   - [RocketReach](https://rocketreach.co/person?start=1&pageSize=10&link=https://www.linkedin.com/in/brianarsenault)
+   - [Lopseg](https://www.lopseg.com.br/dork-helper)
+   - [ProxyNova](https://www.proxynova.com/tools/comb/)
+   - [Domain Glass](https://domain.glass/)
+   - [ZoomEye](https://www.zoomeye.ai/)
+   - [Bug Bounty Helper](https://dorks.faisalahmed.me/)
+   - [Criminal IP](https://www.criminalip.io/)
+   - [vsec7](https://vsec7.github.io/)
+   - [Favihash](https://www.favihash.com/)
+   - [GooFuzz](https://github.com/m3n0sd0n4ld/GooFuzz)
+   - [Awesome-Dorks](https://github.com/0xPugal/Awesome-Dorks)
+   - [Shodan-Dorks](https://github.com/humblelad/Shodan-Dorks)
+   - [mr-koanti/shodan](https://mr-koanti.github.io/shodan)
+   - [Gist](https://gist.github.com)
+   - [GitLab](https://gitlab.com)
+   - [ContactOut](https://contactout.com)
+   - [Crunchbase](https://www.crunchbase.com)
+   - [DuckDuckGo](https://duckduckgo.com)
+   - [Stack Overflow](https://stackoverflow.com)
+
+4. **Images and Files**:
+   - [GaZY2cfXcAAkF3f.jfif](https://prod-files-secure.s3.us-west-2.amazonaws.com/52176e8c-8028-469c-a231-bf6e8894870c/8ccc213a-6eeb-48f8-aec5-b1e9f23cabf1/GaZY2cfXcAAkF3f.jfif)
+   - [image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/52176e8c-8028-469c-a231-bf6e8894870c/55e54cd4-48b7-4609-bb59-2988be625987/image.png)
+
+---
 
 5. **Online Websites**
    - [grayhatwarfare](https://buckets.grayhatwarfare.com)
