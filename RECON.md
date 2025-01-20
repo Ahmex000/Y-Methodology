@@ -54,7 +54,7 @@
   # Install browser extension to detect technologies used by the website.
   ```
 
-## 3. Virtual Host Fuzzing
+## 3. Virtual Host Fuzzing (fuzzing for another domains in the same IP)
 - **GoBuster**:
   ```bash
   gobuster vhost -u https://mysite.com -t 50 -w subdomains.txt
@@ -64,7 +64,7 @@
   VHostScan -t domain.com
   ```
 
-## 4. Resolve Domains to IPs
+## 4. Resolve Domains to IPs (don't forget to filter in scope domains )
 - **VirusTotal API**:
   ```bash
   curl -s "https://www.virustotal.com/vtapi/v2/domain/report?domain=<DOMAIN>&apikey=<api_key>" | jq -r '.. | .ip_address? // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
@@ -83,7 +83,7 @@
   for url in $(cat grab.txt); do host $url | grep "has address" | cut -d " " -f 4 ;done
   ```
 
-## 5. Claim ASN Number
+## 5. Claim ASN Number (claim ASN's For Domains)
 - **BGP Tools**:
   [BGP Tools](https://bgp.tools/search?q=dell)
 - https://blog.voorivex.team/20300-bounties-from-a-200-hour-hacking-challenge
@@ -101,7 +101,7 @@
   amass intel -asn 12345
   ```
 
-## 6. Convert ASN to CIDR's
+## 6. Convert ASN to CIDR's (conver ASN number to CIDR and ASN to IP's)
 - **Whois**:
   ```bash
   whois -h whois.radb.net -- '-i origin AS16509' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
