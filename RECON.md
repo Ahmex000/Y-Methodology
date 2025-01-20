@@ -25,6 +25,15 @@
   ```bash
   curl -s "https://www.virustotal.com/vtapi/v2/domain/report?domain=<DOMAIN>&apikey=<api_key>" | jq -r '.. | .ip_address? // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
   ```
+  - **zdns**:
+  ```bash
+   git clone https://github.com/zmap/zdns.git
+   cd zdns
+   make install
+   -----
+   echo "censys.io" | zdns A
+  ```
+  
 - **Host Command**:
   ```bash
   for url in $(cat grab.txt); do host $url | grep "has address" | cut -d " " -f 4 ;done
