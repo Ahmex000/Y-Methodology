@@ -7,7 +7,51 @@
 ## 2. Detect Technology
 - Use the following command to detect web technologies:
   ```bash
-  curl -s -X | grep "<meta>"
+  curl -s -X | grep "<meta>" //look if the site is wordpress
+  ```
+- **WhatWeb**:
+  ```bash
+  whatweb <target-url>
+  ```
+
+- **Wappalyzer**:
+  ```bash
+  wappalyzer <target-url>
+  ```
+
+- **BuiltWith**:
+  ```bash
+  builtwith <target-url>
+  ```
+
+- **Netcraft**:
+  ```bash
+  netcraft <target-url>
+  ```
+
+- **Nmap (With HTTP/HTTPS scripts)**:
+  ```bash
+  nmap -sV --script=http-enum <target-url>
+  ```
+
+- **HTTP Headers Inspection**:
+  ```bash
+  curl -I <target-url>
+  ```
+
+- **Shodan**:
+  ```bash
+  shodan host <target-ip>
+  ```
+
+- **JSFiddle & Web Technologies by URL**:
+  ```bash
+  # Use JSFiddle or other tools to inspect source code or URLs to identify JavaScript frameworks.
+  ```
+
+- **WhatRuns**:
+  ```bash
+  # Install browser extension to detect technologies used by the website.
   ```
 
 ## 3. Virtual Host Fuzzing
