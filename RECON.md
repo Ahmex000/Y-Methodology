@@ -54,7 +54,7 @@
   # Install browser extension to detect technologies used by the website.
   ```
 
-## 3. Virtual Host Fuzzing (fuzzing for another domains in the same IP)
+## 3. Virtual Host Fuzzing (search for another domains in the same IP)
 - **GoBuster**:
   ```bash
   gobuster vhost -u https://mysite.com -t 50 -w subdomains.txt
@@ -63,7 +63,10 @@
   ```bash
   VHostScan -t domain.com
   ```
-
+- **Revers Whois (Do revers WHO is For target Domain)**:
+  ```bash
+  amass intel -d domain.com -whois
+  ```
 ## 4. Resolve Domains to IPs (don't forget to filter in scope domains )
 - **VirusTotal API**:
   ```bash
@@ -98,7 +101,7 @@
   ```
 - **check if tjhis ASN for Target Scope**:
   ```bash
-  nmap intel - asn Found ASN 
+  amass intel -asn Found ASN 
   - rpeonse will contain ASN owner name 
   ```  
 - **ASN to Domains**:
