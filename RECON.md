@@ -305,7 +305,74 @@ domainCollector -d example.com -o domainCollector_output.txt
   ```
 
 ## 12. Dorking
-- **Tools**:
+Here is a reorganized and complete version of the provided content, ensuring all details are included and structured clearly:
+
+---
+
+### **$3 Bucket Recon Methods**
+
+1. **Google Dork to Find $3 Buckets**
+   - `site:s3.amazonaws.com site.com`
+   - `site:amazonaws.com inurl:s3.amazonaws.com`
+   - `site:s3.amazonaws.com intitle:index.of bucket`
+
+2. **Using Burp Suite**
+   - Crawl the application through a browser proxy.
+   - Use Burp Suite’s sitemap feature to discover $3 buckets.
+   - Look for URLs or headers mentioning `s3.amazonaws.com` or `x-amz-bucket`.
+
+3. **From Application**
+   - Right-click on an image in the application and open it in a new tab.
+   - Check if the URL format is `https://name.s3.amazonaws.com/image1.png`. The `name` before `.s3` is the bucket name.
+
+4. **Online Tools on GitHub**
+   - [S3Scanner](https://github.com/sa7mon/S3Scanner)
+   - [Mass3](https://github.com/smiegles/mass3)
+   - [slurp](https://github.com/3xbarath/slurp)
+   - [lazyS3](https://github.com/nahamsec/lazys3)
+   - [bucket_finder](https://github.com/msttwidmer/bucket_finder)
+   - [ANSBucketDump](https://github.com/netgusto/ANSBucketDump)
+   - [sandcastle](https://github.com/DxSearches/sandcastle)
+   - [DumpsterDiver](https://github.com/securing/DumpsterDiver)
+   - [$3 Bucket Finder](https://github.com/gwen001/s3-buckets-finder)
+
+5. **Online Websites**
+   - [grayhatwarfare](https://buckets.grayhatwarfare.com)
+   - [osint.sh](https://osint.sh/buckets)
+
+6. **Nuclei Template**
+   - [s3-detect.yaml](https://github.com/projectdiscovery/nuclei-templates/blob/master/technologies/s3-detect.yaml)
+
+7. **Command to Extract $3 Buckets from JS URLs**
+   ```bash
+   cat js_url.txt | xargs -I {} curl -s {} | grep -oE 'http[s]?://[^/]*\.s3\.amazonaws\.com'
+   ```
+
+8. **Using Subfinder and Httpx**
+   ```bash
+   subfinder -d domain.com -all -silent | httpx -status-code -title -tech-detect | grep "Amazon S3"
+   ```
+
+---
+
+### **OSINT Tools and Resources**
+
+- **Shodan**: [shodan.io](https://www.shodan.io)
+- **Censys**: [censys.io](https://censys.io)
+- **Hunter**: [hunter.io](https://hunter.io)
+- **Urlscan**: [urlscan.io](https://urlscan.io)
+- **Grep.app**: [grep.app](https://grep.app)
+- **Intelx**: [intelx.io](https://intelx.io)
+- **Wigle**: [wigle.net](https://wigle.net)
+- **FullHunt**: [fullhunt.io](https://fullhunt.io)
+- **Vulners**: [vulners.com](https://vulners.com)
+- **GreyNoise**: [viz.greynoise.io](https://viz.greynoise.io)
+
+---
+
+### **Additional Resources and Dorks**
+
+- **Search Engines and Tools**
   - [Searx](https://searx.thegpm.org/)
   - [LostSec](https://lostsec.xyz/)
   - [Leak-Lookup](https://leak-lookup.com/account/login)
@@ -315,48 +382,82 @@ domainCollector -d example.com -o domainCollector_output.txt
   - [Exploit-DB](https://www.exploit-db.com/google-hacking-database)
   - [Hunter](https://hunter.how/list?searchValue=product.name%3D%22Zabbix%22)
   - [RocketReach](https://rocketreach.co/person?start=1&pageSize=10&link=https://www.linkedin.com/in/brianarsenault)
-  - [Dork Helper](https://www.lopseg.com.br/dork-helper)
+  - [Lopseg](https://www.lopseg.com.br/dork-helper)
   - [ProxyNova](https://www.proxynova.com/tools/comb/)
   - [Domain Glass](https://domain.glass/)
   - [ZoomEye](https://www.zoomeye.ai/)
-  - [Dorks](https://dorks.faisalahmed.me/)
+  - [Bug Bounty Helper](https://dorks.faisalahmed.me/)
   - [Criminal IP](https://www.criminalip.io/)
-  - censys
-  - bevigil
-  - binaryedge
-  - cerspotter
-  - whoisxmlapi
-  - fofa
-  - shodan
-  - github
-  - virustotal
-  - zoomeye
 
- 
-    
-- **GooFuzz**:
+- **GooFuzz**
   ```bash
-  GooFuzz -t nasa.gov -e pdf,bak,old -d 10
-  GooFuzz -t nasa.gov -e wordlists/extensions.txt -d 30
-  GooFuzz -t nasa.gov -w wordlists/words-100.txt -p 3
+  git clone https://github.com/m3n0sd0n4ld/GooFuzz.git
+  cd GooFuzz
+  chmod +x GooFuzz
+  ./GooFuzz -h
   ```
-- **Favicon Search**
-```bash
-  import hashlib
-  def calculate_favicon_hash(file_path):
-    with open(file_path, 'rb') as file:
-        favicon_data = file.read()
-        favicon_hash = hashlib.md5(favicon_data).hexdigest()
-    return favicon_hash
-  favicon_path = '/path/to/favicon.ico'
-  favicon_hash = calculate_favicon_hash(favicon_path)
-  print(favicon_hash)
-```
-- http.favicon.hash:[Favicon hash here]
- ```bash
-  cat urls.txt | python3 favfreak.py -o output
-  http.favicon.hash:-<hash>
+
+- **GitHub Dorks**
+  ```python
+  ".mlab.com password"
+  "access_key"
+  "api_key"
+  "aws_access_key_id"
+  "db_password"
+  "private_key"
+  "secret"
+  "token"
   ```
+
+- **Shodan Dorks**
+  ```bash
+  ssl.cert.subject.cn:"att.com" -http.title:"404"
+  ssl:apple
+  org:Apple Inc*
+  ```
+
+- **Hash Dorking**
+  - [Favihash](https://www.favihash.com/)
+
+- **FOFA Dorks**
+  ```bash
+  site:target.com intext:"sql syntax near" | intext:"syntax error has occurred"
+  ```
+
+- **Other Platforms**
+  - [Gist](https://gist.github.com)
+  - [GitLab](https://gitlab.com)
+  - [ContactOut](https://contactout.com)
+  - [Crunchbase](https://www.crunchbase.com)
+  - [DuckDuckGo](https://duckduckgo.com)
+  - [Stack Overflow](https://stackoverflow.com)
+
+---
+
+### **Dorking Sites**
+
+- **Slack Invites**
+  ```bash
+  site:http://join.slack.com
+  site:http://docs.google.com "company name"
+  site:http://groups.google.com "company name"
+  ```
+
+- **Cloud Storage**
+  ```bash
+  site:http://s3.amazonaws.com "target.com"
+  site:http://blob.core.windows.net "target.com"
+  site:http://googleapis.com "target.com"
+  site:http://drive.google.com "target.com"
+  ```
+
+- **URL Scanning**
+  ```bash
+  https://otx.alienvault.com/api/v1/indicators/hostname/site.com/url_list?limit=500&page=1
+  https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse=urlkey
+  ```
+
+---
 
 ## 13. Test for Subdomain Takeover
 - **Subzy**:
