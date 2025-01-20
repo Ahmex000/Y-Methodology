@@ -74,6 +74,11 @@
   ```bash
   nmap -iL ips.txt -sn | grep for | cut -d " " -f 5
   ```
+  ### **8.1 sacn all web IPs to search for target CN/SAN's**
+  ```bash
+  - just use https://github.com/g0ldencybersec/CloudRecon to scan all web ips form https://kaeferjaeger.gay/
+  - search for target CN/SAN
+  ```
 
 ## **9. Subdomain Enumeration**
 
