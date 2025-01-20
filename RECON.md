@@ -355,6 +355,7 @@ domainCollector -d example.com -o domainCollector_output.txt
 7. [BBOT](https://github.com/blacklanternsecurity/bbot)
 8. [OneForAll](https://github.com/shmilylty/OneForAll)
 9. [DomainCollector](https://github.com/Cyber-Guy1/domainCollector)
+10. [Crobat](https://github.com/Cgboal/SonarSearch)
 
 ---
 
