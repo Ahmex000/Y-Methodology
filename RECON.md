@@ -73,6 +73,10 @@
   nmap -n -sn 13.35.121.0/24 | grep "for" | cut -d " " -f 5 >> IP.txt
   nmap -n -Pn -sS 13.35.121.0/24 | grep "for" | cut -d " " -f 5 >> IP.txt
   ```
+- **Scan CIDR open Ports**:
+  ```bash
+  https://github.com/zmap/zmap?tab=readme-ov-file
+  ```
 
 ## 8. Resolve IPs to Domains
 - **HostHunter**:
