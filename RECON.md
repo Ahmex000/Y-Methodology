@@ -96,6 +96,11 @@
   ```bash
   amass enum -active -d target.com
   ```
+- **check if tjhis ASN for Target Scope**:
+  ```bash
+  nmap intel - asn Found ASN 
+  - rpeonse will contain ASN owner name 
+  ```  
 - **ASN to Domains**:
   ```bash
   amass intel -asn 12345
