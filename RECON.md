@@ -1085,14 +1085,139 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 5. **Detect Secrets with Regex**: Use the provided regex pattern to detect secrets in JS files.
 
 ## 18. Hidden Parameters
-- **FFuf**:
+
+### **Parameter Fuzzing Tools and Techniques**
+
+#### **1. FFUF (Fuzz Faster U Fool)**
+- **Installation:**
   ```bash
-  ffuf -w /path/to/paramnames.txt -u https://target/script.php?FUZZ=test_value -fs <Number of Default Length>
+  git clone https://github.com/ffuf/ffuf
+  cd ffuf
+  go get
+  go build
   ```
-- **Arjun**:
+
+- **GET Parameter Fuzzing:**
+  - Fuzz parameter names:
+    ```bash
+    ffuf -w /path/to/paramnames.txt -u https://target/script.php?FUZZ=test_value -fs <Number of Default Length>
+    ```
+    *Assumes a response size of 4242 bytes for invalid GET parameter names.*
+
+  - Fuzz parameter values (if the parameter name is known):
+    ```bash
+    ffuf -w /path/to/values.txt -u https://target/script.php?valid_name=FUZZ -fc 401
+    ```
+    *Assumes a wrong parameter value returns HTTP response code 401.*
+
+- **POST Data Fuzzing:**
   ```bash
-  arjun -u https://api.example.com/endpoint
+  ffuf -w /path/to/postdata.txt -X POST -d "username=admin&password=FUZZ" -u https://target/login.php -fc 401
   ```
+  *Fuzzes part of the POST request and filters out 401 responses.*
+
+- **Advanced FFUF Examples:**
+  ```bash
+  ffuf -w params.txt -u http://ffuf.me/cd/param/data?FUZZ=1 -c true -s -t 99 -rate 660
+  ffuf -request req.txt -w params.txt -c true -s -t 99 -rate 660 [in request param=FUZZ]
+  ffuf -w params.txt -u http://ffuf.me/cd/param/data? -c true -s -t 99 -rate 660 -X POST -d '{"name": "FUZZ", "anotherkey": "anothervalue"}'
+  ```
+
+- **Learn More About FFUF:**
+  [FFUF GitHub Repository](https://github.com/ffuf/ffuf)
+
+---
+
+#### **2. X8**
+- **GitHub Repository:**
+  [X8 by Sh1Yo](https://github.com/Sh1Yo/x8)
+
+---
+
+#### **3. InputScanner**
+- **GitHub Repository:**
+  [InputScanner by zseano](https://github.com/zseano/InputScanner)
+
+---
+
+#### **4. LinkFinder**
+- **GitHub Repository:**
+  [LinkFinder by GerbenJavado](https://github.com/GerbenJavado/LinkFinder)
+
+---
+
+#### **5. Parameth**
+- **GitHub Repository:**
+  [Parameth by maK-](https://github.com/maK-/parameth)
+
+---
+
+#### **6. Arjun**
+- **Installation:**
+  ```bash
+  pip3 install arjun
+  ```
+
+- **Usage:**
+  - Scan a single URL:
+    ```bash
+    arjun -u https://api.example.com/endpoint
+    ```
+  - Import targets from a file:
+    ```bash
+    arjun -i targets.txt
+    ```
+  - Advanced GET parameter discovery:
+    ```bash
+    arjun -i urls.txt -t 90 -oT getparams.txt -w paramswordlist.txt -m GET --stable --disable-redirects --headers "Accept-Language: en-US\nCookie: null"
+    ```
+  - Advanced POST parameter discovery:
+    ```bash
+    arjun -i urls.txt -t 90 -oT postparams.txt -w paramswordlist.txt -m POST --stable --disable-redirects --headers "Accept-Language: en-US\nCookie: null"
+    ```
+  - API (REST) parameter discovery:
+    ```bash
+    arjun -i urls.txt -t 90 -oT jsonparams.txt -w paramswordlist.txt -m JSON --stable --disable-redirects --headers "Accept-Language: en-US\nCookie: null"
+    ```
+  - API (SOAP) parameter discovery:
+    ```bash
+    arjun -i urls.txt -t 90 -oT soapparams.txt -w paramswordlist.txt -m XML --stable --disable-redirects --headers "Accept-Language: en-US\nCookie: null"
+    ```
+
+---
+
+#### **7. ParamPamPam**
+- **Installation:**
+  ```bash
+  git clone https://github.com/Bo0oM/ParamPamPam.git
+  cd ParamPamPam
+  pip3 install --no-cache-dir -r requirements.txt
+  ```
+
+- **Usage:**
+  - GET parameter discovery:
+    ```bash
+    python3 parampp.py -u "https://vk.com/login" -m GET -f getparamsout.txt
+    ```
+  - POST parameter discovery:
+    ```bash
+    python3 parampp.py -u "https://vk.com/login" -m POST -f postparamsout.txt
+    ```
+
+---
+
+#### **8. ParamSpider**
+- **GET Parameter Fuzzing:**
+  ```bash
+  for URL in $(<php_endpoints_urls.txt); do (ffuf -u "${URL}?FUZZ=1" -w params_list.txt -mc 200 -ac -sa -t 20 -or -od ffuf_hidden_params_sqli_injections); done
+  ```
+
+- **POST Parameter Fuzzing:**
+  ```bash
+  for URL in $(<php_endpoints_urls.txt); do (ffuf -X POST -u "${URL}" -w params_list.txt -mc 200 -ac -sa -t 20 -or -od ffuf_hidden_params_sqli_injections -d "FUZZ=1"); done
+  ```
+
+---
 
 ## 19. Employee Enumeration
 - **GitHub**:
