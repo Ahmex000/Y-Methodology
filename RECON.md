@@ -305,7 +305,8 @@ domainCollector -d example.com -o domainCollector_output.txt
   ```
 
 ## 12. Dorking
-Here is a reorganized and complete version of the provided content, ensuring all details are included and structured clearly:
+
+أتفهم طلبك! سأقوم بإعادة تنظيم **كل البيانات** التي قدمتها بشكل كامل ومنظم، دون حذف أي شيء. سأقسمها إلى أقسام واضحة لتسهيل الوصول إليها.
 
 ---
 
@@ -372,92 +373,387 @@ Here is a reorganized and complete version of the provided content, ensuring all
 
 ### **Additional Resources and Dorks**
 
-- **Search Engines and Tools**
-  - [Searx](https://searx.thegpm.org/)
-  - [LostSec](https://lostsec.xyz/)
-  - [Leak-Lookup](https://leak-lookup.com/account/login)
-  - [Dehashed](https://www.dehashed.com/)
-  - [Wayback Machine](https://web.archive.org/cdx/search?url=simplisafe.com/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000&_=1507209148310)
-  - [Pentest-Tools](https://pentest-tools.com/information-gathering/google-hacking)
-  - [Exploit-DB](https://www.exploit-db.com/google-hacking-database)
-  - [Hunter](https://hunter.how/list?searchValue=product.name%3D%22Zabbix%22)
-  - [RocketReach](https://rocketreach.co/person?start=1&pageSize=10&link=https://www.linkedin.com/in/brianarsenault)
-  - [Lopseg](https://www.lopseg.com.br/dork-helper)
-  - [ProxyNova](https://www.proxynova.com/tools/comb/)
-  - [Domain Glass](https://domain.glass/)
-  - [ZoomEye](https://www.zoomeye.ai/)
-  - [Bug Bounty Helper](https://dorks.faisalahmed.me/)
-  - [Criminal IP](https://www.criminalip.io/)
+#### **Search Engines and Tools**
+- [Searx](https://searx.thegpm.org/)
+- [LostSec](https://lostsec.xyz/)
+- [Leak-Lookup](https://leak-lookup.com/account/login)
+- [Dehashed](https://www.dehashed.com/)
+- [Wayback Machine](https://web.archive.org/cdx/search?url=simplisafe.com/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000&_=1507209148310)
+- [Pentest-Tools](https://pentest-tools.com/information-gathering/google-hacking)
+- [Exploit-DB](https://www.exploit-db.com/google-hacking-database)
+- [Hunter](https://hunter.how/list?searchValue=product.name%3D%22Zabbix%22)
+- [RocketReach](https://rocketreach.co/person?start=1&pageSize=10&link=https://www.linkedin.com/in/brianarsenault)
+- [Lopseg](https://www.lopseg.com.br/dork-helper)
+- [ProxyNova](https://www.proxynova.com/tools/comb/)
+- [Domain Glass](https://domain.glass/)
+- [ZoomEye](https://www.zoomeye.ai/)
+- [Bug Bounty Helper](https://dorks.faisalahmed.me/)
+- [Criminal IP](https://www.criminalip.io/)
 
-- **GooFuzz**
-  ```bash
-  git clone https://github.com/m3n0sd0n4ld/GooFuzz.git
-  cd GooFuzz
-  chmod +x GooFuzz
-  ./GooFuzz -h
-  ```
+---
 
-- **GitHub Dorks**
-  ```python
-  ".mlab.com password"
-  "access_key"
-  "api_key"
-  "aws_access_key_id"
-  "db_password"
-  "private_key"
-  "secret"
-  "token"
-  ```
+#### **GooFuzz**
+```bash
+# Install
+git clone https://github.com/m3n0sd0n4ld/GooFuzz.git
+cd GooFuzz
+chmod +x GooFuzz
+./GooFuzz -h
 
-- **Shodan Dorks**
-  ```bash
-  ssl.cert.subject.cn:"att.com" -http.title:"404"
-  ssl:apple
-  org:Apple Inc*
-  ```
+# Lists files by extensions separated by commas.
+GooFuzz -t nasa.gov -e pdf,bak,old -d 10
 
-- **Hash Dorking**
-  - [Favihash](https://www.favihash.com/)
+# Lists files by extensions contained in a txt file.
+GooFuzz -t nasa.gov -e wordlists/extensions.txt -d 30
 
-- **FOFA Dorks**
-  ```bash
-  site:target.com intext:"sql syntax near" | intext:"syntax error has occurred"
-  ```
+# List files, directories, and parameters using a wordlist.
+GooFuzz -t nasa.gov -w wordlists/words-100.txt -p 3
+```
 
-- **Other Platforms**
-  - [Gist](https://gist.github.com)
-  - [GitLab](https://gitlab.com)
-  - [ContactOut](https://contactout.com)
-  - [Crunchbase](https://www.crunchbase.com)
-  - [DuckDuckGo](https://duckduckgo.com)
-  - [Stack Overflow](https://stackoverflow.com)
+---
+
+#### **GitHub Dorks**
+```python
+".mlab.com password"
+"access_key"
+"access_token"
+"amazonaws"
+"api.googlemaps AIza"
+"api_key"
+"api_secret"
+"apidocs"
+"apikey"
+"apiSecret"
+"app_key"
+"app_secret"
+"appkey"
+"appkeysecret"
+"application_key"
+"appsecret"
+"appspot"
+"auth"
+"auth_token"
+"authorizationToken"
+"aws_access"
+"aws_access_key_id"
+"aws_key"
+"aws_secret"
+"aws_token"
+"AWSSecretKey"
+"bashrc password"
+"bucket_password"
+"client_secret"
+"cloudfront"
+"codecov_token"
+"config"
+"conn.login"
+"connectionstring"
+"consumer_key"
+"credentials"
+"database_password"
+"db_password"
+"db_username"
+"dbpasswd"
+"dbpassword"
+"dbuser"
+"dot-files"
+"dotfiles"
+"encryption_key"
+"fabricApiSecret"
+"fb_secret"
+"firebase"
+"ftp"
+"gh_token"
+"github_key"
+"github_token"
+"gitlab"
+"gmail_password"
+"gmail_username"
+"herokuapp"
+"internal"
+"irc_pass"
+"JEKYLL_GITHUB_TOKEN"
+"key"
+"keyPassword"
+"ldap_password"
+"ldap_username"
+"login"
+"mailchimp"
+"mailgun"
+"master_key"
+"mydotfiles"
+"mysql"
+"node_env"
+"npmrc _auth"
+"oauth_token"
+"pass"
+"passwd"
+"password"
+"passwords"
+"pem private"
+"preprod"
+"private_key"
+"prod"
+"pwd"
+"pwds"
+"rds.amazonaws.com password"
+"redis_password"
+"root_password"
+"secret"
+"secret.password"
+"secret_access_key"
+"secret_key"
+"secret_token"
+"secrets"
+"secure"
+"security_credentials"
+"send.keys"
+"send_keys"
+"sendkeys"
+"SF_USERNAME salesforce"
+"sf_username"
+"site.com FIREBASE_API_JSON="
+"site.com vim_settings.xml"
+"slack_api"
+"slack_token"
+"sql_password"
+"ssh"
+"ssh2_auth_password"
+"sshpass"
+"staging"
+"stg"
+"storePassword"
+"stripe"
+"swagger"
+"testuser"
+"token"
+"x-api-key"
+"xoxb"
+"xoxp"
+[WFClient] Password= extension:ica
+access_key
+bucket_password
+dbpassword
+dbuser
+extension:avastlic "support.avast.com"
+extension:bat
+extension:cfg
+extension:env
+extension:exs
+extension:ini
+extension:json api.forecast.io
+extension:json googleusercontent client_secret
+extension:json mongolab.com
+extension:pem
+extension:pem private
+extension:ppk
+extension:ppk private
+extension:properties
+extension:sh
+extension:sls
+extension:sql
+extension:sql mysql dump
+extension:sql mysql dump password
+extension:yaml mongolab.com
+extension:zsh
+filename:.bash_history
+filename:.bash_history DOMAIN-NAME
+filename:.bash_profile aws
+filename:.bashrc mailchimp
+filename:.bashrc password
+filename:.cshrc
+filename:.dockercfg auth
+filename:.env DB_USERNAME NOT homestead
+filename:.env MAIL_HOST=smtp.gmail.com
+filename:.esmtprc password
+filename:.ftpconfig
+filename:.git-credentials
+filename:.history
+filename:.htpasswd
+filename:.netrc password
+filename:.npmrc _auth
+filename:.pgpass
+filename:.remote-sync.json
+filename:.s3cfg
+filename:.sh_history
+filename:.tugboat NOT _tugboat
+filename:_netrc password
+filename:apikey
+filename:bash
+filename:bash_history
+filename:bash_profile
+filename:bashrc
+filename:beanstalkd.yml
+filename:CCCam.cfg
+filename:composer.json
+filename:config
+filename:config irc_pass
+filename:config.json auths
+filename:config.php dbpasswd
+filename:configuration.php JConfig password
+filename:connections
+filename:connections.xml
+filename:constants
+filename:credentials
+filename:credentials aws_access_key_id
+filename:cshrc
+filename:database
+filename:dbeaver-data-sources.xml
+filename:deployment-config.json
+filename:dhcpd.conf
+filename:dockercfg
+filename:environment
+filename:express.conf
+filename:express.conf path:.openshift
+filename:filezilla.xml
+filename:filezilla.xml Pass
+filename:git-credentials
+filename:gitconfig
+filename:global
+filename:history
+filename:htpasswd
+filename:hub oauth_token
+filename:id_dsa
+filename:id_rsa
+filename:id_rsa or filename:id_dsa
+filename:idea14.key
+filename:known_hosts
+filename:logins.json
+filename:makefile
+filename:master.key path:config
+filename:netrc
+filename:npmrc
+filename:pass
+filename:passwd path:etc
+filename:pgpass
+filename:prod.exs
+filename:prod.exs NOT prod.secret.exs
+filename:prod.secret.exs
+filename:proftpdpasswd
+filename:recentservers.xml
+filename:recentservers.xml Pass
+filename:robomongo.json
+filename:s3cfg
+filename:secrets.yml password
+filename:server.cfg
+filename:server.cfg rcon password
+filename:settings
+filename:settings.py SECRET_KEY
+filename:sftp-config.json
+filename:sftp-config.json password
+filename:sftp.json path:.vscode
+filename:shadow
+filename:shadow path:etc
+filename:spec
+filename:sshd_config
+filename:token
+filename:tugboat
+filename:ventrilo_srv.ini
+filename:WebServers.xml
+filename:wp-config
+filename:wp-config.php
+filename:zhrc
+HEROKU_API_KEY language:json
+HEROKU_API_KEY language:shell
+HOMEBREW_GITHUB_API_TOKEN language:shell
+jsforce extension:js conn.login
+language:yaml -filename:travis
+msg nickserv identify filename:config
+org:Target "AWS_ACCESS_KEY_ID"
+org:Target "list_aws_accounts"
+org:Target "aws_access_key"
+org:Target "aws_secret_key"
+org:Target "bucket_name"
+org:Target "S3_ACCESS_KEY_ID"
+org:Target "S3_BUCKET"
+org:Target "S3_ENDPOINT"
+org:Target "S3_SECRET_ACCESS_KEY"
+password
+path:sites databases password
+private -language:java
+PT_TOKEN language:bash
+redis_password
+root_password
+secret_access_key
+SECRET_KEY_BASE=
+shodan_api_key language:python
+WORDPRESS_DB_PASSWORD=
+xoxp OR xoxb OR xoxa
+s3.yml
+.exs
+beanstalkd.yml
+deploy.rake
+.sls
+AWS_SECRET_ACCESS_KEY
+API KEY
+API SECRET
+API TOKEN
+ROOT PASSWORD
+ADMIN PASSWORD
+GCP SECRET
+AWS SECRET
+"private" extension:pgp
+```
+
+---
+
+#### **Shodan Dorks**
+```bash
+ssl.cert.subject.cn:"att.com" -http.title:"404"
+ssl:apple
+org:Apple Inc*
+ssl:apple.com
+```
+
+---
+
+#### **Hash Dorking**
+- [Favihash](https://www.favihash.com/)
+
+---
+
+#### **FOFA Dorks**
+```bash
+site:target.com intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"
+```
+
+---
+
+#### **Other Platforms**
+- [Gist](https://gist.github.com)
+- [GitLab](https://gitlab.com)
+- [ContactOut](https://contactout.com)
+- [Crunchbase](https://www.crunchbase.com)
+- [DuckDuckGo](https://duckduckgo.com)
+- [Stack Overflow](https://stackoverflow.com)
 
 ---
 
 ### **Dorking Sites**
 
-- **Slack Invites**
-  ```bash
-  site:http://join.slack.com
-  site:http://docs.google.com "company name"
-  site:http://groups.google.com "company name"
-  ```
+#### **Slack Invites**
+```bash
+site:http://join.slack.com
+site:http://docs.google.com "company name"
+site:http://groups.google.com "company name"
+```
 
-- **Cloud Storage**
-  ```bash
-  site:http://s3.amazonaws.com "target.com"
-  site:http://blob.core.windows.net "target.com"
-  site:http://googleapis.com "target.com"
-  site:http://drive.google.com "target.com"
-  ```
+#### **Cloud Storage**
+```bash
+site:http://s3.amazonaws.com "target.com"
+site:http://blob.core.windows.net "target.com"
+site:http://googleapis.com "target.com"
+site:http://drive.google.com "target.com"
+```
 
-- **URL Scanning**
-  ```bash
-  https://otx.alienvault.com/api/v1/indicators/hostname/site.com/url_list?limit=500&page=1
-  https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse=urlkey
-  ```
+#### **URL Scanning**
+```bash
+https://otx.alienvault.com/api/v1/indicators/hostname/site.com/url_list?limit=500&page=1
+https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse=urlkey
+```
 
 ---
+
 
 ## 13. Test for Subdomain Takeover
 - **Subzy**:
