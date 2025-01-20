@@ -33,6 +33,7 @@
 ## 5. Claim ASN Number
 - **BGP Tools**:
   [BGP Tools](https://bgp.tools/search?q=dell)
+- https://blog.voorivex.team/20300-bounties-from-a-200-hour-hacking-challenge
 - https://bgp.he.net/ 
 - **theHarvester**:
   ```bash
