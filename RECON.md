@@ -1014,14 +1014,75 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 ---
 
 ## 17. Scan JS-Files
-- **LinkFinder**:
-  ```bash
-  python setup.py install
-  ```
-- **DumpsterDiver**:
-  ```bash
-  python3 DumpsterDiver.py
-  ```
+
+---
+
+### 1. **Check JS File Status Code**
+   - **Tool**: `hakcheckurl`
+   - **Repository**: [hakluke/hakcheckurl](https://github.com/hakluke/hakcheckurl)
+   - **Installation**:
+     ```bash
+     go get github.com/hakluke/hakcheckurl
+     ```
+   - **Usage**:
+     ```bash
+     cat lyftgalactic-js-urls.txt | hakcheckurl
+     ```
+
+---
+
+### 2. **Extract Endpoints from JS Files**
+   - **Tool**: `LinkFinder`
+   - **Repository**: [GerbenJavado/LinkFinder](https://github.com/GerbenJavado/LinkFinder)
+   - **Installation**:
+     ```bash
+     git clone https://github.com/GerbenJavado/LinkFinder.git
+     cd LinkFinder
+     python setup.py install
+     ```
+   - **Tool**: `relative-url-extractor`
+   - **Repository**: [jobertabma/relative-url-extractor](https://github.com/jobertabma/relative-url-extractor)
+   - **Usage**:
+     ```bash
+     ruby extract.rb https://www.domain.com/jspath/code.js
+     ```
+
+---
+
+### 3. **Scan for Secrets and Passwords**
+   - **Tool**: `DumpsterDiver`
+   - **Repository**: [securing/DumpsterDiver](https://github.com/securing/DumpsterDiver)
+   - **Usage**:
+     ```bash
+     python3 DumpsterDiver.py
+     ```
+
+---
+
+### 4. **Filter JS Files from a List of URLs**
+   - **Command**:
+     ```bash
+     cat allurls.txt | grep "\.js" > js-files.txt
+     ```
+
+---
+
+### 5. **Regex for Detecting Secrets in JS Files**
+   - **Tool**: `jsecret`
+   - **Repository**: [raoufmaklouf/jsecret](https://github.com/raoufmaklouf/jsecret)
+   - **Regex Pattern**:
+     ```regex
+     (?i)(api[_-]?key|secret[_-]?key|access[_-]?token|auth[_-]?token|client[_-]?id|client[_-]?secret|private[_-]?key|consumer[_-]?key|bearer[_-]?token|aws[_-]?secret|aws[_-]?key|github[_-]?token|admin(?:istrator)?[_-]?(?:key|password|token)|superuser[_-]?password|root[_-]?password)\s*[:=]\s*["']?[A-Za-z0-9._-]{8,}["']?
+     ```
+
+---
+
+### Summary of Tools and Commands:
+1. **Check JS File Status Code**: Use `hakcheckurl` to verify the status of JS files.
+2. **Extract Endpoints**: Use `LinkFinder` or `relative-url-extractor` to extract endpoints from JS files.
+3. **Scan for Secrets**: Use `DumpsterDiver` to scan for secrets and passwords.
+4. **Filter JS Files**: Use `grep` to filter JS files from a list of URLs.
+5. **Detect Secrets with Regex**: Use the provided regex pattern to detect secrets in JS files.
 
 ## 18. Hidden Parameters
 - **FFuf**:
