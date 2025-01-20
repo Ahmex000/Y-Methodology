@@ -218,159 +218,77 @@ censys search "parsed.names: example.com" --index certificates
 dnsrecon -d example.com -t brt -D wordlist.txt -c dnsrecon_output.csv
 ```
 
----
-
-### **Tools without Commands (Web Tools or No Direct Commands)**:
-1. [Subdomain Radar](https://subdomainradar.io/)
-2. [Alterx](https://github.com/projectdiscovery/alterx)
-3. [GitHub Subdomains](https://github.com/gwen001/github-subdomains)
-4. [PureDNS](https://github.com/d3mondev/puredns)
-5. [BBOT](https://github.com/blacklanternsecurity/bbot)
-6. [OneForAll](https://github.com/shmilylty/OneForAll)
-9. [DomainCollector](https://github.com/Cyber-Guy1/domainCollector)
-10. [Netlas.io](https://app.netlas.io/)
-11. [DNSDumpster](https://dnsdumpster.com/)
-12. [GitLab Subdomains](https://github.com/gwen001/gitlab-subdomains)
-
----
-
-### **إضافات من القائمة القديمة**:
-
-#### **1. Knock**:
-- أداة للبحث عن subdomains باستخدام تقنيات مختلفة.
+#### **20. Knock**:
 ```bash
 knockpy example.com
 ```
 
-#### **2. Frogy**:
-- أداة لاكتشاف subdomains باستخدام تقنيات متقدمة.
+#### **21. Frogy**:
 ```bash
 frogy -d example.com -o frogy_output.txt
 ```
 
-#### **3. GitHub Subdomains**:
-- أداة للبحث عن subdomains باستخدام GitHub.
+#### **22. GitHub Subdomains**:
 ```bash
 github-subdomains -d example.com -t <github_token> -o github_subs.txt
 ```
 
-#### **4. GitLab Subdomains**:
-- أداة للبحث عن subdomains باستخدام GitLab.
+#### **23. GitLab Subdomains**:
 ```bash
 gitlab-subdomains -d example.com -t <gitlab_token> -o gitlab_subs.txt
 ```
 
-#### **5. DNSDumpster**:
-- أداة ويب لاكتشاف subdomains.
-```bash
-# يمكن استخدامها عبر المتصفح:
-https://dnsdumpster.com/
-```
-
-#### **6. Netlas.io**:
-- أداة ويب للبحث عن subdomains وشهادات SSL.
-```bash
-# يمكن استخدامها عبر المتصفح:
-https://app.netlas.io/
-```
-
-#### **7. Subdomain Radar**:
-- أداة ويب لاكتشاف subdomains.
-```bash
-# يمكن استخدامها عبر المتصفح:
-https://subdomainradar.io/
-```
-
-#### **8. Alterx**:
-- أداة لإنشاء قوائم subdomains بناءً على أنماط معينة.
+#### **24. Alterx**:
 ```bash
 alterx -l domains.txt -o alterx_output.txt
 ```
 
-#### **9. OneForAll**:
-- أداة متقدمة لاكتشاف subdomains.
+#### **25. OneForAll**:
 ```bash
 python3 oneforall.py --target example.com run
 ```
 
-#### **10. DomainCollector**:
-- أداة لجمع subdomains من مصادر مختلفة.
+#### **26. DomainCollector**:
 ```bash
 domainCollector -d example.com -o domainCollector_output.txt
 ```
 
 ---
 
-### **إضافات من عندي**:
-
-#### **1. Chaos**:
-- أداة من ProjectDiscovery لجمع subdomains من مصادر مختلفة.
-```bash
-chaos -d example.com -o chaos.txt
-```
-
-#### **2. SecurityTrails**:
-- استخدم API للحصول على subdomains.
-```bash
-curl -s "https://api.securitytrails.com/v1/domain/<DOMAIN>/subdomains?apikey=<API_KEY>"
-```
-
-#### **3. Spyse**:
-- أداة متقدمة لجمع المعلومات عن النطاقات.
-```bash
-spyse -t domain -q example.com
-```
-
-#### **4. URLScan**:
-- استخدم URLScan للبحث عن subdomains.
-```bash
-urlscan -d example.com
-```
-
-#### **5. ZoomEye**:
-- أداة بحث عن النطاقات والأجهزة المتصلة بالإنترنت.
-```bash
-zoomeye search "domain:example.com"
-```
-
-#### **6. Censys**:
-- استخدم Censys للبحث عن subdomains باستخدام شهادات SSL.
-```bash
-censys search "parsed.names: example.com" --index certificates
-```
-
-#### **7. DNS Recon**:
-```bash
-dnsrecon -d example.com -t brt -D wordlist.txt -c dnsrecon_output.csv
-```
-
----
-
+### **Tools without Commands (Web Tools or No Direct Commands)**:
 1. [Subdomain Radar](https://subdomainradar.io/)
 2. [DNSDumpster](https://dnsdumpster.com/)
 3. [Netlas.io](https://app.netlas.io/)
 4. [GitHub Subdomains](https://github.com/gwen001/github-subdomains)
 5. [GitLab Subdomains](https://github.com/gwen001/gitlab-subdomains)
+6. [PureDNS](https://github.com/d3mondev/puredns)
+7. [BBOT](https://github.com/blacklanternsecurity/bbot)
+8. [OneForAll](https://github.com/shmilylty/OneForAll)
+9. [DomainCollector](https://github.com/Cyber-Guy1/domainCollector)
 
 ---
 
-
-## 9.1. Active  Subdomain Enumeration
-- https://github.com/d3mondev/puredns
-- 
-
-
-## 10. Subdomain Brute Forcing
-- https://github.com/projectdiscovery/shuffledns
+## **9.1. Active Subdomain Enumeration**
 - **PureDNS**:
   ```bash
   puredns bruteforce all.txt domain.com
   puredns bruteforce all.txt -d domains.txt
   ```
+
+---
+
+## **10. Subdomain Brute Forcing**
+- **ShuffleDNS**:
+  ```bash
+  shuffledns -d example.com -w wordlist.txt -r resolvers.txt -o output.txt
+  ```
+
 - **Gobuster**:
   ```bash
   gobuster dns -d mysite.com -t 50 -w common-names.txt
   ```
+
+---
 
 ## 11. Directory Busting
 - **Dirsearch**:
