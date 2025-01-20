@@ -75,70 +75,290 @@
   nmap -iL ips.txt -sn | grep for | cut -d " " -f 5
   ```
 
-## 9. Subdomain Enumeration
-- **Tools**:
-  - [Subdomain Radar](https://subdomainradar.io/)
-  - [Alterx](https://github.com/projectdiscovery/alterx)
-  - [GitHub Subdomains](https://github.com/gwen001/github-subdomains)
-  - [PureDNS](https://github.com/d3mondev/puredns)
-  - [BBOT](https://github.com/blacklanternsecurity/bbot)
-  - [OneForAll](https://github.com/shmilylty/OneForAll)
-  - [Knock](https://github.com/guelfoweb/knock)
-  - [Frogy](https://github.com/iamthefrogy/frogy)
-  - [DomainCollector](https://github.com/Cyber-Guy1/domainCollector)
-  - https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228
-  - https://github.com/sl4x0/subfree
-  - https://dnsdumpster.com/
-  - https://github.com/gwen001/github-subdomains
-  - https://github.com/gwen001/gitlab-subdomains
-  - 
-  - 
-  - 
+## **9. Subdomain Enumeration**
 
-- **VirusTotal**:
-  ```bash
-  curl -s "https://www.virustotal.com/vtapi/v2/domain/report?apikey=<api_key>&domain=<DOMAIN>" | jq -r '.domain_siblings[]'
-  ```
-- **Subfinder**:
-  ```bash
-  subfinder -d example.com > example.com.subs
-  subfinder -d example.com -recursive -silent -t 200 -o example.com.subs
-  subfinder -d example.com -b -w wordlist.txt -t 100 -sources censys -set-settings CensysPages=2 -v -o example.com.subs
-  subfinder -dL domains.txt > example.com.subs
-  ```
-- **CRT.sh**:
-  ```bash
-  curl -s "https://crt.sh/?q=%25.$1" | grep -oE "[\.a-zA-Z0-9-]+\.$1" | sort -u
-  ```
-- **Amass**:
-  ```bash
-  amass enum -brute -active -d domain.com -o amass-output.txt
-  amass enum -df domains.txt -o amass.txt
-  ```
-- **Favicon**:
-  ```bash
-  cat my_targets.txt | xargs -I %% bash -c 'echo "http://%%/favicon.ico"' > targets.txt
-  python3 favihash.py -f https://target/favicon.ico -t targets.txt -s
-  ```
-- **theHarvester**:
-  ```bash
-  theHarvester -d cisco.com -b all
-  ```
-- **SubEnum**:
-  ```bash
-  subenum -d target.com
-  subenum -l domains.txt -r
-  ```
-- **Findomain**:
-  ```bash
-  findomain -f wilds.txt | tee -a result.txt
-  findomain -d domain.com | tee -a result.txt
-  ```
-- **Assetfinder**:
-  ```bash
-  assetfinder --subs-only <domain>
-  cat ../target | xargs -I {} assetfinder --subs-only {} >> assetfinder
-  ```
+### **Tools with Commands**:
+
+#### **1. Subfinder**:
+```bash
+# Install
+go get github.com/subfinder/subfinder
+
+# Basic usage
+subfinder -d example.com > example.com.subs
+
+# Recursive
+subfinder -d example.com -recursive -silent -t 200 -o example.com.subs
+
+# Use Censys for more results
+subfinder -d example.com -b -w wordlist.txt -t 100 -sources censys -set-settings CensysPages=2 -v -o example.com.subs
+
+# Against a list of domains
+subfinder -dL domains.txt > example.com.subs
+```
+
+#### **2. Amass**:
+```bash
+# Basic enumeration
+amass enum -brute -active -d domain.com -o amass-output.txt
+
+# Against a list of domains
+amass enum -df domains.txt -o amass.txt
+
+# Passive enumeration
+amass enum -passive -norecursive -noalts -d target.com
+```
+
+#### **3. Crt.sh**:
+```bash
+# Get domains from crt.sh
+curl -s "https://crt.sh/?q=%25.$1" | grep -oE "[\.a-zA-Z0-9-]+\.$1" | sort -u
+
+# Certificate Search
+curl -s "https://crt.sh/?O=Apple%20Inc.&output=json" | jq -r ".[].common_name" | tr A-Z a-z | unfurl format %r.%t | sort -u | tee apple.cert.txt
+```
+
+#### **4. theHarvester**:
+```bash
+theHarvester -d cisco.com -b all
+```
+
+#### **5. SubEnum**:
+```bash
+# Install
+git clone https://github.com/bing0o/SubEnum.git
+cd SubEnum
+chmod +x setup.sh
+./setup.sh
+
+# Basic usage
+subenum -d target.com
+
+# Against a list of domains
+subenum -l domains.txt -r
+```
+
+#### **6. Findomain**:
+```bash
+findomain -f wilds.txt | tee -a result.txt
+findomain -d domain.com | tee -a result.txt
+```
+
+#### **7. Assetfinder**:
+```bash
+# Install
+go get -u github.com/tomnomnom/assetfinder
+
+# Basic usage
+assetfinder --subs-only <domain>
+
+# Against a list of domains
+cat ../target | xargs -I {} assetfinder --subs-only {} >> assetfinder
+```
+
+#### **8. Sublist3r**:
+```bash
+sublist3r -d example.com -o subdomains.txt
+```
+
+#### **9. Massdns**:
+```bash
+massdns -r resolvers.txt -t A -o S -w massdns_output.txt domains.txt
+```
+
+#### **10. Shodan**:
+```bash
+# Search for subdomains using Shodan CLI
+shodan domain <domain>
+```
+
+#### **11. VirusTotal**:
+```bash
+curl -s "https://www.virustotal.com/vtapi/v2/domain/report?apikey=<api_key>&domain=<DOMAIN>" | jq -r '.domain_siblings[]'
+```
+
+#### **12. Favicon Hash**:
+```bash
+cat my_targets.txt | xargs -I %% bash -c 'echo "http://%%/favicon.ico"' > targets.txt
+python3 favihash.py -f https://target/favicon.ico -t targets.txt -s
+```
+
+#### **13. Chaos**:
+```bash
+chaos -d example.com -o chaos.txt
+```
+
+#### **14. SecurityTrails**:
+```bash
+curl -s "https://api.securitytrails.com/v1/domain/<DOMAIN>/subdomains?apikey=<API_KEY>"
+```
+
+#### **15. Spyse**:
+```bash
+spyse -t domain -q example.com
+```
+
+#### **16. URLScan**:
+```bash
+urlscan -d example.com
+```
+
+#### **17. ZoomEye**:
+```bash
+zoomeye search "domain:example.com"
+```
+
+#### **18. Censys**:
+```bash
+censys search "parsed.names: example.com" --index certificates
+```
+
+#### **19. DNS Recon**:
+```bash
+dnsrecon -d example.com -t brt -D wordlist.txt -c dnsrecon_output.csv
+```
+
+---
+
+### **Tools without Commands (Web Tools or No Direct Commands)**:
+1. [Subdomain Radar](https://subdomainradar.io/)
+2. [Alterx](https://github.com/projectdiscovery/alterx)
+3. [GitHub Subdomains](https://github.com/gwen001/github-subdomains)
+4. [PureDNS](https://github.com/d3mondev/puredns)
+5. [BBOT](https://github.com/blacklanternsecurity/bbot)
+6. [OneForAll](https://github.com/shmilylty/OneForAll)
+7. [Knock](https://github.com/guelfoweb/knock)
+8. [Frogy](https://github.com/iamthefrogy/frogy)
+9. [DomainCollector](https://github.com/Cyber-Guy1/domainCollector)
+10. [Netlas.io](https://app.netlas.io/)
+11. [DNSDumpster](https://dnsdumpster.com/)
+12. [GitLab Subdomains](https://github.com/gwen001/gitlab-subdomains)
+
+بالفعل، قمت بمراجعة القائمة التي أرسلتها لك وقارنتها مع القائمة الجديدة التي قمت بإنشائها. هناك بعض الأدوات والروابط التي أرسلتها ولم أقم بتضمينها في القائمة الجديدة. سأضيفها الآن مع التأكد من عدم التكرار:
+
+---
+
+### **إضافات من القائمة القديمة**:
+
+#### **1. Knock**:
+- أداة للبحث عن subdomains باستخدام تقنيات مختلفة.
+```bash
+knockpy example.com
+```
+
+#### **2. Frogy**:
+- أداة لاكتشاف subdomains باستخدام تقنيات متقدمة.
+```bash
+frogy -d example.com -o frogy_output.txt
+```
+
+#### **3. GitHub Subdomains**:
+- أداة للبحث عن subdomains باستخدام GitHub.
+```bash
+github-subdomains -d example.com -t <github_token> -o github_subs.txt
+```
+
+#### **4. GitLab Subdomains**:
+- أداة للبحث عن subdomains باستخدام GitLab.
+```bash
+gitlab-subdomains -d example.com -t <gitlab_token> -o gitlab_subs.txt
+```
+
+#### **5. DNSDumpster**:
+- أداة ويب لاكتشاف subdomains.
+```bash
+# يمكن استخدامها عبر المتصفح:
+https://dnsdumpster.com/
+```
+
+#### **6. Netlas.io**:
+- أداة ويب للبحث عن subdomains وشهادات SSL.
+```bash
+# يمكن استخدامها عبر المتصفح:
+https://app.netlas.io/
+```
+
+#### **7. Subdomain Radar**:
+- أداة ويب لاكتشاف subdomains.
+```bash
+# يمكن استخدامها عبر المتصفح:
+https://subdomainradar.io/
+```
+
+#### **8. Alterx**:
+- أداة لإنشاء قوائم subdomains بناءً على أنماط معينة.
+```bash
+alterx -l domains.txt -o alterx_output.txt
+```
+
+#### **9. OneForAll**:
+- أداة متقدمة لاكتشاف subdomains.
+```bash
+python3 oneforall.py --target example.com run
+```
+
+#### **10. DomainCollector**:
+- أداة لجمع subdomains من مصادر مختلفة.
+```bash
+domainCollector -d example.com -o domainCollector_output.txt
+```
+
+---
+
+### **إضافات من عندي**:
+
+#### **1. Chaos**:
+- أداة من ProjectDiscovery لجمع subdomains من مصادر مختلفة.
+```bash
+chaos -d example.com -o chaos.txt
+```
+
+#### **2. SecurityTrails**:
+- استخدم API للحصول على subdomains.
+```bash
+curl -s "https://api.securitytrails.com/v1/domain/<DOMAIN>/subdomains?apikey=<API_KEY>"
+```
+
+#### **3. Spyse**:
+- أداة متقدمة لجمع المعلومات عن النطاقات.
+```bash
+spyse -t domain -q example.com
+```
+
+#### **4. URLScan**:
+- استخدم URLScan للبحث عن subdomains.
+```bash
+urlscan -d example.com
+```
+
+#### **5. ZoomEye**:
+- أداة بحث عن النطاقات والأجهزة المتصلة بالإنترنت.
+```bash
+zoomeye search "domain:example.com"
+```
+
+#### **6. Censys**:
+- استخدم Censys للبحث عن subdomains باستخدام شهادات SSL.
+```bash
+censys search "parsed.names: example.com" --index certificates
+```
+
+#### **7. DNS Recon**:
+```bash
+dnsrecon -d example.com -t brt -D wordlist.txt -c dnsrecon_output.csv
+```
+
+---
+
+1. [Subdomain Radar](https://subdomainradar.io/)
+2. [DNSDumpster](https://dnsdumpster.com/)
+3. [Netlas.io](https://app.netlas.io/)
+4. [GitHub Subdomains](https://github.com/gwen001/github-subdomains)
+5. [GitLab Subdomains](https://github.com/gwen001/gitlab-subdomains)
+
+---
+
+
 ## 9.1. Active  Subdomain Enumeration
 - https://github.com/d3mondev/puredns
 - 
