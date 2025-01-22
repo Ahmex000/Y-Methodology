@@ -81,6 +81,7 @@
 - Internet-Lab: https://internet-lab.ru/
 - GitHub Security Lab: https://github.blog/tag/github-security-lab/
 - Huntr Hacktivity: https://huntr.com/bounties/hacktivity
+- pmnh: https://www.pmnh.site/post/
 
 ## Cheatsheets & Tools
 
