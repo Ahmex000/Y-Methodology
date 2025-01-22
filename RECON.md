@@ -386,6 +386,7 @@ domainCollector -d example.com -o domainCollector_output.txt
 8. [OneForAll](https://github.com/shmilylty/OneForAll)
 9. [DomainCollector](https://github.com/Cyber-Guy1/domainCollector)
 10. [Crobat](https://github.com/Cgboal/SonarSearch)
+11. https://github.com/screetsec/Sudomy
 
 ---
 
