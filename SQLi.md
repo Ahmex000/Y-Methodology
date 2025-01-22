@@ -185,4 +185,6 @@
    - Automate SQL injection testing using scripts and tools like Ghauri and SQLMap.
 
 ---
+---
+- https://github.com/jhaddix/tbhm/blob/master/06_SQLi.md
 
