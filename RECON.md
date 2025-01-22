@@ -449,6 +449,7 @@ domainCollector -d example.com -o domainCollector_output.txt
    - [fullhunt.io](https://fullhunt.io)
    - [vulners.com](https://vulners.com)
    - [viz.greynoise.io](https://viz.greynoise.io)
+   - https://hunter.io/search/canon.ie?product_tour_id=389437 (to search about emploeyy emails)
 
 3. **Additional Resources**:
    - [Searx](https://searx.thegpm.org/)
