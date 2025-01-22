@@ -4,6 +4,8 @@
 ## 1. Select Main Domains & Acquisitions
 - Identify the main domains and any acquired domains related to the target.
 
+--- 
+
 ## 2. Detect Technology
 - Use the following command to detect web technologies:
   ```bash
@@ -54,6 +56,9 @@
   # Install browser extension to detect technologies used by the website.
   ```
 
+--- 
+
+
 ## 3. Virtual Host Fuzzing (search for another domains in the same IP)
 - **GoBuster**:
   ```bash
@@ -67,7 +72,12 @@
   ```bash
   amass intel -d domain.com -whois
   ```
+  
+--- 
+
+
 ## 4. Resolve Domains to IPs (don't forget to filter in scope domains )
+- **Get Target Real IP**: [DNS Checker](https://dnschecker.org/ip-location.php?ip=147.154.104.158)
 - **VirusTotal API**:
   ```bash
   curl -s "https://www.virustotal.com/vtapi/v2/domain/report?domain=<DOMAIN>&apikey=<api_key>" | jq -r '.. | .ip_address? // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
@@ -85,6 +95,10 @@
   ```bash
   for url in $(cat grab.txt); do host $url | grep "has address" | cut -d " " -f 4 ;done
   ```
+  
+--- 
+
+
 
 ## 5. Claim ASN Number (claim ASN's For Domains)
 - **BGP Tools**:
@@ -109,7 +123,12 @@
   amass intel -asn 12345
   ```
   ### 5.1 Claim CIDR's Number (claim CIDR's For Domains)
-- https://bgp.he.net/ 
+- https://bgp.he.net/
+
+
+--- 
+
+
 ## 6. Convert ASN to CIDR's (conver ASN number to CIDR and ASN to IP's)
 - **Whois**:
   ```bash
@@ -119,7 +138,11 @@
   ```bash
   apt-get install whois
   whois -h whois.radb.net  -- '-i origin AS8983' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq -u > ip_ranges.txt
-  ``` 
+  ```
+  
+--- 
+
+
 ## 7. Convert CIDR to IP's
 - **Nmap**:
   ```bash
@@ -130,6 +153,10 @@
   ```bash
   https://github.com/zmap/zmap?tab=readme-ov-file
   ```
+  
+--- 
+
+
 
 ## 8. Resolve IPs to Domains
 - **HostHunter**:
@@ -159,6 +186,9 @@
   - just use https://github.com/g0ldencybersec/CloudRecon to scan all web ips form https://kaeferjaeger.gay/
   - search for target CN/SAN
   ```
+
+--- 
+
 
 ## **9. Subdomain Enumeration**
 
@@ -359,14 +389,16 @@ domainCollector -d example.com -o domainCollector_output.txt
 
 ---
 
-## **9.1. Active Subdomain Enumeration**
+### **9.1. Active Subdomain Enumeration**
 - **PureDNS**:
   ```bash
   puredns bruteforce all.txt domain.com
   puredns bruteforce all.txt -d domains.txt
   ```
 
----
+--- 
+
+
 
 ## **10. Subdomain Brute Forcing**
 - **ShuffleDNS**:
@@ -381,6 +413,10 @@ domainCollector -d example.com -o domainCollector_output.txt
 
 ---
 
+--- 
+
+
+
 ## 11. Directory Busting
 - **Dirsearch**:
   ```bash
@@ -394,6 +430,9 @@ domainCollector -d example.com -o domainCollector_output.txt
   ```bash
   ffuf -u https://target.com/FUZZ -w wordlist.txt -o ffuf_results.json
   ```
+
+--- 
+
 
 ## 12. Dorking
 
@@ -541,7 +580,7 @@ domainCollector -d example.com -o domainCollector_output.txt
 
 ---
 
-#### **GooFuzz**
+### **GooFuzz**
 ```bash
 # Install
 git clone https://github.com/m3n0sd0n4ld/GooFuzz.git
@@ -561,7 +600,7 @@ GooFuzz -t nasa.gov -w wordlists/words-100.txt -p 3
 
 ---
 
-#### **GitHub Dorks**
+### **GitHub Dorks**
 ```python
 ".mlab.com password"
 "access_key"
@@ -846,7 +885,7 @@ AWS SECRET
 
 ---
 
-#### **Shodan Dorks**
+### **Shodan Dorks**
 ```bash
 ssl.cert.subject.cn:"att.com" -http.title:"404"
 ssl:apple
@@ -856,19 +895,19 @@ ssl:apple.com
 
 ---
 
-#### **Hash Dorking**
+### **Hash Dorking**
 - [Favihash](https://www.favihash.com/)
 
 ---
 
-#### **FOFA Dorks**
+### **FOFA Dorks**
 ```bash
 site:target.com intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"
 ```
 
 ---
 
-#### **Other Platforms**
+### **Other Platforms**
 - [Gist](https://gist.github.com)
 - [GitLab](https://gitlab.com)
 - [ContactOut](https://contactout.com)
@@ -880,14 +919,14 @@ site:target.com intext:"sql syntax near" | intext:"syntax error has occurred" | 
 
 ### **Dorking Sites**
 
-#### **Slack Invites**
+### **Slack Invites**
 ```bash
 site:http://join.slack.com
 site:http://docs.google.com "company name"
 site:http://groups.google.com "company name"
 ```
 
-#### **Cloud Storage**
+### **Cloud Storage**
 ```bash
 site:http://s3.amazonaws.com "target.com"
 site:http://blob.core.windows.net "target.com"
@@ -895,13 +934,15 @@ site:http://googleapis.com "target.com"
 site:http://drive.google.com "target.com"
 ```
 
-#### **URL Scanning**
+### **URL Scanning**
 ```bash
 https://otx.alienvault.com/api/v1/indicators/hostname/site.com/url_list?limit=500&page=1
 https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse=urlkey
 ```
 
----
+
+--- 
+
 
 
 ## 13. Test for Subdomain Takeover
@@ -941,9 +982,11 @@ https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse
   ```
 
 
+--- 
+
+
 
 ## 16. Claim URLs
----
 
 ### **Web Crawling and URL Discovery Tools**
 
@@ -1103,11 +1146,10 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
   cat ./waymoreUrls.txt ./gaukrawler.txt | sort -u | uro | gf endpoints > allUrls.txt
   ```
 
----
+--- 
+
 
 ## 17. Scan JS-Files
-
----
 
 ### 1. **Check JS File Status Code**
    - **Tool**: `hakcheckurl`
@@ -1175,6 +1217,9 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 3. **Scan for Secrets**: Use `DumpsterDiver` to scan for secrets and passwords.
 4. **Filter JS Files**: Use `grep` to filter JS files from a list of URLs.
 5. **Detect Secrets with Regex**: Use the provided regex pattern to detect secrets in JS files.
+
+--- 
+
 
 ## 18. Hidden Parameters
 
@@ -1309,7 +1354,8 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
   for URL in $(<php_endpoints_urls.txt); do (ffuf -X POST -u "${URL}" -w params_list.txt -mc 200 -ac -sa -t 20 -or -od ffuf_hidden_params_sqli_injections -d "FUZZ=1"); done
   ```
 
----
+--- 
+
 
 ## 19. Employee Enumeration
 - **GitHub**:
@@ -1321,15 +1367,24 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
   s3scanner -l domains.txt
   ```
 
+--- 
+
+
 ## 21. Subdomain Monitoring
 - **Facebook CT Search**:
   [Facebook CT Search](https://developers.facebook.com/tools/ct/search/)
+
+--- 
+
 
 ## 22. Nuclei
 - **Nuclei**:
   ```bash
   nuclei -l -t ~/nuclei-templates/http/exposures/
   ```
+
+--- 
+
 
 ## 23. Test for XSS, Open Redirect, LFI, SSTI, SQL Injection, CORS
 - **XSS Test**:
@@ -1346,7 +1401,3 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 ## Additional Tools
 - [Offensive Tools](https://offsec.tools/)
 
----
-
-- **Get Target Real IP**: [DNS Checker](https://dnschecker.org/ip-location.php?ip=147.154.104.158)
-```
