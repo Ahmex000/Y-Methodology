@@ -1,2 +1,6 @@
 - default credentials 
   - https://github.com/ihebski/DefaultCreds-cheat-sheet?tab=readme-ov-file
+  - https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials
+  - https://cirt.net/passwords
+  - https://weakpass.com/
+  - 
