@@ -1,0 +1,2 @@
+- default credentials 
+  - https://github.com/ihebski/DefaultCreds-cheat-sheet?tab=readme-ov-file
