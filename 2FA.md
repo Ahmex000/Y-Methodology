@@ -213,3 +213,4 @@
      1. Test if the disable 2FA page is vulnerable to clickjacking.  
 
 ---
+- https://blog.ys0.dev/p/playing-with-sms-otps/
