@@ -198,5 +198,5 @@
 ---
 
 - https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet#id=8abff2b134596d1a84408e32730f1cc9c37cf68b
+- https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
 
-إذا كنت بحاجة إلى أي تعديلات إضافية، فلا تتردد في طلبها! 😊
