@@ -111,6 +111,9 @@
 - Bug-bounty-Writeups: https://github.com/fardeen-ahmed/Bug-bounty-Writeups
 - Awesome-Bugbounty-Writeups: https://github.com/devanshbatham/Awesome-Bugbounty-Writeups
 - Bounty Writeups: https://securitycipher.com/bounty-writeups/
+- https://github.com/jaiswalakshansh/Facebook-BugBounty-Writeups
+- https://github.com/corrupted-brain/Facebook-Bug-Bounty-Writeups
+- https://github.com/Jester0x01/Facebook-Bug-Bounty-Writeups
 
 ### Blogs
 - Critical Thinking Podcast Blog: https://blog.criticalthinkingpodcast.io/
