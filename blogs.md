@@ -159,6 +159,7 @@
 - Sec-Cheatsheets: https://github.com/brianlam38/Sec-Cheatsheets/tree/master/Web
 - CheatSheet: https://github.com/akr3ch/CheatSheet
 - XXE Cheat Sheet: https://www.securityidiots.com/Web-Pentest/XXE/XXE-Cheat-Sheet-by-SecurityIdiots.html
+- https://book.hacktricks.wiki/en/index.html
 
 ### Tools
 - SpringBootVulExploit: https://github.com/LandGrey/SpringBootVulExploit
