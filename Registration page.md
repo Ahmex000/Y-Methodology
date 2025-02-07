@@ -246,5 +246,5 @@ Use temporary email services for testing:
   - Improper password reset/change implementations.  
 
 ---
-
+- https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
   
