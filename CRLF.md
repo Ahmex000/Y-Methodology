@@ -141,7 +141,7 @@
 - **CRLFuzz**: [https://github.com/dwisiswant0/crlfuzz](https://github.com/dwisiswant0/crlfuzz)
 
 ---
-
+- https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
 ### References
 - [Exploiting HTTP Parsers Inconsistencies](https://rafa.hashnode.dev/exploiting-http-parsers-inconsistencies)
 - [Bug Bounty: Exploiting CRLF Injection](https://medium.com/bugbountywriteup/bugbounty-exploiting-crlf-injection-can-lands-into-a-nice-bounty-159525a9cb62)
