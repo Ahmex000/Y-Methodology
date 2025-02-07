@@ -178,3 +178,4 @@
 
 ---
 
+- https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
