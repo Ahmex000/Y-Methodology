@@ -115,6 +115,7 @@
 - https://github.com/corrupted-brain/Facebook-Bug-Bounty-Writeups
 - https://github.com/Jester0x01/Facebook-Bug-Bounty-Writeups
 - https://blog.cyberxplore.com/
+- https://www.slideshare.net/0ang3el
 
 ### Blogs
 - Critical Thinking Podcast Blog: https://blog.criticalthinkingpodcast.io/
