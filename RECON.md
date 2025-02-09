@@ -72,7 +72,9 @@
   ```bash
   amass intel -d domain.com -whois
   ```
-  
+ ```bash
+ https://who.is/
+  ```
 --- 
 
 
