@@ -1,3 +1,4 @@
+- https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/introduction/architecture
 - https://youtu.be/EQNBQCQMouk
 - https://www.youtube.com/watch?v=O54ozMc8fJw
 - 
