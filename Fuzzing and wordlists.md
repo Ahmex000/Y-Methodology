@@ -65,6 +65,7 @@
   ```bash
   https://wordlists-cdn.assetnote.io/data/automated/
   ```
+- https://github.com/ZephrFish/Wordlists/tree/master
 
 #### **3. Mind Maps and Learning Resources**
 - **Mind Maps**:
@@ -134,4 +135,5 @@
   ```
 -- https://gowthams.gitbook.io/bughunter-handbook/fuzzing-wordlists
 -- https://bugbountyforum.com/tools/recon/
+-- https://github.com/ZephrFish/Wordlists/tree/master
 
