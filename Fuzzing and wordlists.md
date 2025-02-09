@@ -45,6 +45,7 @@
   ffuf -u http://target.com/FUZZ -recursive -w fuzzing.txt
   ffuf -u http://target.com/FUZZ -recursive -w fuzzing.txt -e txt,tree,main
   ffuf -u http://target.com/FUZZ?.css -w fuzzing.txt
+  ffuf -u http://target.com///FUZZ?.css -w fuzzing.txt
   ```
 
 #### **2. Wordlists and Parameters**
