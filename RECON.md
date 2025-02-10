@@ -11,6 +11,10 @@
   ```bash
   curl -s -X | grep "<meta>" //look if the site is wordpress
   ```
+- dnsdumpster
+  ```bash
+  https://dnsdumpster.com/
+  ```
 - **WhatWeb**:
   ```bash
   whatweb <target-url>
@@ -486,6 +490,7 @@ domainCollector -d example.com -o domainCollector_output.txt
 
 2. **OSINT Tools**:
    - [shodan.io](https://www.shodan.io)
+   - https://dnsdumpster.com/
    - [censys.io](https://censys.io)
    - [hunter.io](https://hunter.io)
    - [urlscan.io](https://urlscan.io)
