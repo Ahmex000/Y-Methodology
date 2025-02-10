@@ -42,4 +42,5 @@
 
 4. **Special Characters**:
    - Use special characters to test for input validation and sanitization issues.
+   - https://github.com/Az0x7/vulnerability-Checklist/blob/main/Api%20Authorization/Authorization.md
 
