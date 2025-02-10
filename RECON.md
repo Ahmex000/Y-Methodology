@@ -413,7 +413,11 @@ domainCollector -d example.com -o domainCollector_output.txt
   ```bash
   gobuster dns -d mysite.com -t 50 -w common-names.txt
   ```
-
+- **DNSCAN**
+  ```bash
+  https://github.com/rbsec/dnscan
+  $ dnscan.py -d dev-%%.example.org
+  ```
 ---
 
 --- 
