@@ -211,4 +211,7 @@
 - https://github.com/cujanovic/SSRF-Testing/blob/master/cloud-metadata.txt
 - https://github.com/MightyPirates/OpenComputers/security/advisories/GHSA-vvfj-xh7c-j2cm
 - https://github.com/cujanovic/SSRF-Testing
+- https://gist.github.com/BuffaloWill/fa96693af67e3a3dd3fb
+- https://hackerone.com/reports/341876?fbclid=IwY2xjawIXImtleHRuA2FlbQIxMAABHZdHszMnAa3hciTXI-ynqJWl5puxQZm9XMfLwge48ljY0qwpFdtAZuC34Q_aem_lpCrr2aXbYPt2WgE-R0u9A
+- https://www.hackerone.com/blog/how-server-side-request-forgery-ssrf
 
