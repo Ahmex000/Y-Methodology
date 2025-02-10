@@ -3,3 +3,4 @@
 - https://labs.detectify.com/writeups/a-deep-dive-into-aws-s3-access-controls-taking-full-control-over-your-assets/
 - https://cloudonaut.io/aws-security-primer/#Authorization
 - https://github.com/initstring/cloud_enum
+- https://www.intigriti.com/researchers/blog/hacking-tools/hacking-misconfigured-aws-s3-buckets-a-complete-guide
