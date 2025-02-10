@@ -176,8 +176,9 @@
 
 ## Miscellaneous
 
-### Notion
+### HackerOne Reports
 - H1 Report Notes: https://www.notion.so/H1-Report-Notes-Shreyas-Chavhan-Shared-c2c9e990d2474d288626da2604bd4498
+- https://github.com/reddelexc/hackerone-reports/tree/master
 
 ### GitHub Repos
 - Bugbountybloglist: https://github.com/g0ldencybersec/bugbountybloglist
