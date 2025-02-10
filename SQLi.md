@@ -200,4 +200,5 @@ https://systemweakness.com/sql-injection-to-remote-command-execution-rce-dd9a752
 
 ---
 - https://github.com/jhaddix/tbhm/blob/master/06_SQLi.md
+- https://medium.com/@0x3adly/from-sql-injection-to-rce-leveraging-vulnerability-for-maximum-impact-2fb356907eed
 
