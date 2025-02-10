@@ -1412,4 +1412,5 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 
 ## Additional Tools
 - [Offensive Tools](https://offsec.tools/)
+- https://www.offensity.com/en/blog/just-another-recon-guide-pentesters-and-bug-bounty-hunters/
 
