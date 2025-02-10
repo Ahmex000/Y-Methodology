@@ -1,5 +1,3 @@
----
-
 ### **Password Reset & Account Takeover Techniques**
 
 #### **1. Parameter Pollution**
@@ -247,3 +245,5 @@ Host: target.com
 
 ---
 - https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
+- https://infosecwriteups.com/hubspot-full-account-takeover-in-bug-bounty-4e2047914ab5
+- 
