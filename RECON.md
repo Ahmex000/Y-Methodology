@@ -455,6 +455,7 @@ domainCollector -d example.com -o domainCollector_output.txt
    - `site:s3.amazonaws.com site.com`
    - `site:amazonaws.com inurl:s3.amazonaws.com`
    - `site:s3.amazonaws.com intitle:index.of bucket`
+   - https://github.com/initstring/cloud_enum
 
 2. **Using Burp Suite**
    - Crawl the application through a browser proxy.
