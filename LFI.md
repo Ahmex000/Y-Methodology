@@ -18,3 +18,5 @@ I used [Acunetix PHP script](https://www.acunetix.com/blog/articles/web-shells-
 
 ```
 - https://github.com/RoqueNight/LFI---RCE-Cheat-Sheet
+- https://aditya-chauhan17.medium.com/local-file-inclusion-lfi-to-rce-7594e15870e1
+- https://medium.com/@lashin0x/local-file-inclusion-to-remote-code-execution-rce-bea0ec06342a
