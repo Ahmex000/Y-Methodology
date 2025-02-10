@@ -212,4 +212,5 @@
 
 ---
 
---- https://sallam.gitbook.io/sec-88/web-appsec/auth0-misconfigurations
+- https://sallam.gitbook.io/sec-88/web-appsec/auth0-misconfigurations
+- https://book.hacktricks.wiki/en/pentesting-web/oauth-to-account-takeover.html
