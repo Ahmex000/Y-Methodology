@@ -206,4 +206,9 @@
 - https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
 - https://book.hacktricks.wiki/en/pentesting-web/ssrf-server-side-request-forgery/index.html
 - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Request%20Forgery/README.md
+- https://github.com/akincibor/SSRFexploit
+- https://gist.github.com/jhaddix/78cece26c91c6263653f31ba453e273b
+- https://github.com/cujanovic/SSRF-Testing/blob/master/cloud-metadata.txt
+- https://github.com/MightyPirates/OpenComputers/security/advisories/GHSA-vvfj-xh7c-j2cm
+- https://github.com/cujanovic/SSRF-Testing
 
