@@ -42,6 +42,7 @@
 - Code Injection
 - LDAP Injection
 - PUT Method Allowed Vulnerability
+- PHP comparisons error
 
 ---
 
@@ -73,3 +74,6 @@
 - Ngrok Server
 - ASP .NET Programs
 - WordPress
+- s3 bucket misconfiguration's
+- 403,401 bypass
+- attacking cookies
