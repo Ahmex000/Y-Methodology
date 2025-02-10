@@ -17,3 +17,4 @@ I used [Acunetix PHP script](https://www.acunetix.com/blog/articles/web-shells-
 ```jsx
 
 ```
+- https://github.com/RoqueNight/LFI---RCE-Cheat-Sheet
