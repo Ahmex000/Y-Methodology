@@ -2,4 +2,4 @@
 - https://rhinosecuritylabs.com/penetration-testing/penetration-testing-aws-storage/
 - https://labs.detectify.com/writeups/a-deep-dive-into-aws-s3-access-controls-taking-full-control-over-your-assets/
 - https://cloudonaut.io/aws-security-primer/#Authorization
-- 
+- https://github.com/initstring/cloud_enum
