@@ -197,6 +197,11 @@
 
 ---
 
+### **To fuzz for inoternal Ports**
+- https://github.com/a7madn1/Fuzzing
+
+---
+
 - https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet#id=8abff2b134596d1a84408e32730f1cc9c37cf68b
 - https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
 - https://book.hacktricks.wiki/en/pentesting-web/ssrf-server-side-request-forgery/index.html
