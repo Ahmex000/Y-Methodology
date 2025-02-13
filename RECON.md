@@ -563,7 +563,7 @@ domainCollector -d example.com -o domainCollector_output.txt
 ### **OSINT Tools and Resources**
 
 - **Shodan**: [shodan.io](https://www.shodan.io)
-- **Censys**: [censys.io](https://censys.io)
+- **Censys**: [censys.io](https://censys.io) => `https://github.com/Ignitetechnologies/Mindmap/blob/main/Censys/Censys.pdf`
 - **Hunter**: [hunter.io](https://hunter.io)
 - **Urlscan**: [urlscan.io](https://urlscan.io)
 - **Grep.app**: [grep.app](https://grep.app)
