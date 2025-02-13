@@ -1,5 +1,6 @@
 - https://spaceraccoon.dev/  
-- https://shubs.io  
+- https://shubs.io
+- https://projectdiscovery.io/blog
 - https://krevetk0.medium.com/  
 - https://x2f.me  
 - https://ryotak.net  
