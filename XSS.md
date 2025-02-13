@@ -58,6 +58,7 @@
 - **CSP Bypass**:
   ```bash
   https://www.notion.so/CSP-10615e0fe55e8064a661dcfb7c0ee992?pvs=21
+  https://cspbypass.com/
   ```
 
 #### **4. Additional Resources**
