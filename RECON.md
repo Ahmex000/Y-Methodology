@@ -221,7 +221,7 @@ subfinder -dL domains.txt > example.com.subs
 ```bash
 BeVigil, BinaryEdge, BufferOver, C99, Censys, CertSpotter, Chaos, Chinaz, DNSDB, Fofa, FullHunt, GitHub, Intelx, PassiveTotal, quake, Robtex, SecurityTrails, Shodan, ThreatBook, VirusTotal, WhoisXML API, ZoomEye API china - worldwide, dnsrepo, Hunter, Facebook, BuiltWith
 ```
-- see subfinder Doc's https://docs.projectdiscovery.io/tools/subfinder/install
+- **see** subfinder Doc's https://docs.projectdiscovery.io/tools/subfinder/install
 
 #### **2. Amass**:
 ```bash
@@ -403,6 +403,10 @@ domainCollector -d example.com -o domainCollector_output.txt
   puredns bruteforce all.txt -d domains.txt
   ```
 
+### **9.2 sub enum via Burp Pro**
+
+### **9.3 sub enum via browser extention**
+- https://github.com/hackersthan/grepsubsfromwebpages // don't forget to creat CLI tool to do same thing's , and use it in you'r endpoint's
 --- 
 
 
@@ -422,11 +426,8 @@ domainCollector -d example.com -o domainCollector_output.txt
   https://github.com/rbsec/dnscan
   $ dnscan.py -d dev-%%.example.org
   ```
+  
 ---
-
---- 
-
-
 
 ## 11. Directory Busting
 - **Dirsearch**:
