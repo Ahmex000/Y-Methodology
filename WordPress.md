@@ -1,5 +1,3 @@
----
-
 ### **WordPress Security Testing**
 
 #### **1. Extract WordPress Plugins**
@@ -19,7 +17,11 @@
   ```bash
   wpscan --url https://target.com --disable-tls-checks --api-token zBsi404GGCMKGZTralEssQsFXCsUVWmaDUsn3EPuKC -e at -e ap -e u --enumerate ap --plugins-detection aggressive --force
   ```
-
+- wpprobe
+  ```bash
+  https://github.com/Chocapikk/wpprobe
+  ```
+  
 ---
 
 ### **How to Use This Information**
