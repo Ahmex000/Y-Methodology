@@ -41,3 +41,5 @@ assetfinder -subs-only http://target.com | httpx -silent -timeout 50 | xargs -I@
 ```jsx
 amass enum -d http://shivang.com -o subdomains.txt && cat subdomains.txt | while read url; do echo $url | gau | uro | grep -E ".php|.asp|.aspx|.jspx|.jsp" | grep "="; done
 ```
+
+- https://github.com/xerohackcom/webrecon
