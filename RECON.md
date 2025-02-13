@@ -1150,6 +1150,10 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 - **Waymore**:
   ```bash
   waymore -i $domain -mode U -oU ./waymoreUrls.txt -url-filename -p 4
+  -- X Tip's to se some endpoint't in non 80,443 Port's
+  waymore -i http://domain.com -mode U -oU waymore_output.txt
+  cat waymore_output.txt | grep "com:" | grep -v ":80" | grep -v ":443"
+  --
   ```
 - **Gauplus and Hakrawler**:
   ```bash
