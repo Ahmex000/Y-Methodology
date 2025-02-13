@@ -426,6 +426,8 @@ domainCollector -d example.com -o domainCollector_output.txt
   https://github.com/rbsec/dnscan
   $ dnscan.py -d dev-%%.example.org
   ```
+- https://wordlists-cdn.assetnote.io/data/manual/2m-subdomains.txt
+- https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt 
   
 ---
 
