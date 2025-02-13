@@ -953,7 +953,7 @@ site:http://drive.google.com "target.com"
 https://otx.alienvault.com/api/v1/indicators/hostname/site.com/url_list?limit=500&page=1
 https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse=urlkey
 ```
-
+- https://www.exploit-db.com/google-hacking-database
 
 --- 
 
