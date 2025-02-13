@@ -9,3 +9,6 @@
 - https://xmind.ai/share/gQBGfaVW?xid=3sZyctz5
 
 ---
+
+### **Local Lap**
+- https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application
