@@ -86,6 +86,7 @@
 
 ### Mind Maps
 - Mind-Maps: https://github.com/imran-parray/Mind-Maps/tree/master
+- https://github.com/Ignitetechnologies/Mindmap/tree/main
 
 ### Handbooks & Guides
 - sec-88: https://sallam.gitbook.io/sec-88
