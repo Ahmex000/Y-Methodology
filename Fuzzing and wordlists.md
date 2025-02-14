@@ -133,7 +133,11 @@
   https://github.com/vijay922/XXE-FUZZ
   https://github.com/MR-pentestGuy/nuclei-templates
   ```
--- https://gowthams.gitbook.io/bughunter-handbook/fuzzing-wordlists
--- https://bugbountyforum.com/tools/recon/
--- https://github.com/ZephrFish/Wordlists/tree/master
+- https://gowthams.gitbook.io/bughunter-handbook/fuzzing-wordlists
+- https://bugbountyforum.com/tools/recon/
+- https://github.com/ZephrFish/Wordlists/tree/master
+### **For Technologys**
+- https://github.com/orwagodfather/WordList/tree/main
+- https://github.com/orwagodfather/WordList/tree/main
+
 
