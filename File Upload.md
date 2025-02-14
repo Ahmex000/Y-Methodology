@@ -421,3 +421,6 @@ file.pHP5
 - https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
 - https://github.com/Az0x7/vulnerability-Checklist/blob/main/File%20Upload/File-Upload.pdf
 - https://github.com/Az0x7/vulnerability-Checklist/blob/main/File%20Upload/Slides(1).pdf
+- https://blog.doyensec.com/2025/01/09/cspt-file-upload.html
+- 
+- 
