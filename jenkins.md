@@ -180,3 +180,9 @@ fg
 export TERM=...
 stty rows xx columns yy
 ```
+
+
+--- 
+
+
+- https://github.com/gquere/pwn_jenkins
