@@ -138,6 +138,7 @@
 - https://github.com/ZephrFish/Wordlists/tree/master
 ### **For Technologys**
 - https://github.com/orwagodfather/WordList/tree/main
-- https://github.com/orwagodfather/WordList/tree/main
+- https://github.com/random-robbie/bruteforce-lists/tree/master
+- https://github.com/random-robbie/bruteforce-lists/tree/master
 
 
