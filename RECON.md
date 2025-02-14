@@ -72,7 +72,7 @@
   ```bash
   VHostScan -t domain.com
   ```
-- **Revers Whois (Do revers WHO is For target Domain)**:
+- **Reverse WHOIS (Do revers WHO is For target Domain)**:
   ```bash
   amass intel -d domain.com -whois
   ```
@@ -81,8 +81,31 @@
   ```
 --- 
 
+- **search for TLD's to another TLD**
 
-## 4. Resolve Domains to IPs (don't forget to filter in scope domains )
+```
+echo "example.com" | gotator -tld
+
+=>
+example.net
+example.org
+example.io
+example.co
+example.tech
+
+- SecurityTrails
+
+curl -H "APIKEY: YOUR_API_KEY" "https://api.securitytrails.com/v1/domain/example.com/list"
+
+- Subfinder
+
+subfinder -d example.com -all -o tlds_results.txt
+
+```
+
+
+## 4. Reverse DNS Resolve Domains to IPs (don't forget to filter in scope domains )
+
 - **Get Target Real IP**: [DNS Checker](https://dnschecker.org/ip-location.php?ip=147.154.104.158)
 - **VirusTotal API**:
   ```bash
@@ -103,6 +126,21 @@
   ```
   
 --- 
+- **Reverse DNS with commands**
+```bash
+dig -x 8.8.8.8 +short
+host 8.8.8.8
+=>
+8.8.8.8.in-addr.arpa domain name pointer dns.google.
+curl -s "https://api.hackertarget.com/reverseiplookup/?q=8.8.8.8"
+=>
+example.com
+sub.example.com
+mail.example.com
+vpn.example.com
+
+```
+
 
 
 
@@ -164,7 +202,7 @@
 
 
 
-## 8. Resolve IPs to Domains
+## 8. Resolve IPs to Domains (Reverse IP)
 - **HostHunter**:
   ```bash
   python3 hosthunter.py <target-ips.txt> > vhosts.txt
@@ -187,6 +225,25 @@
    echo "censys.io" | zdns A
   ```
 
+  ```bash
+  curl -s "https://api.hackertarget.com/reverseiplookup/?q=8.8.8.8"
+  =>
+  example.com
+  sub.example.com
+  mail.example.com
+  vpn.example.com
+  
+  - shodan
+    shodan search "net:8.8.8.8"
+  
+  - Censys
+  censys search "ip:8.8.8.8"
+  
+  - SecurityTrails
+  curl -H "APIKEY: YOUR_API_KEY" "https://api.securitytrails.com/v1/domain/example.com/subdomains"
+
+  ```
+
   ### **8.1 sacn all web IPs to search for target CN/SAN's**
   ```bash
   - just use https://github.com/g0ldencybersec/CloudRecon to scan all web ips form https://kaeferjaeger.gay/
@@ -197,6 +254,7 @@
 
 
 ## **9. Subdomain Enumeration**
+
 
 ### **Tools with Commands**:
 
@@ -379,6 +437,54 @@ python3 oneforall.py --target example.com run
 domainCollector -d example.com -o domainCollector_output.txt
 ```
 
+#### **27. DomainCollector**:
+```bash
+domainCollector -d example.com -o domainCollector_output.txt
+```
+
+#### **27. new subdomains not saved in DNS servers**:
+```bash
+echo | openssl s_client -connect example.com:443 -servername example.com 2>/dev/null | openssl x509 -noout -subject -issuer -ext subjectAltName
+```
+
+#### **28. Add and Analytics Relationships**:
+
+```
+## **Ad & Analytics Relationships Recon**  
+
+### **Why?**  
+- Find hidden domains linked to the same company.  
+- Identify **staging/dev environments** with weaker security.  
+- Use analytics & ad tracking IDs to **correlate domains**.  
+
+### **Google Analytics ID Lookup**  
+Extract GA ID and find related domains:  
+```sh
+curl -s https://example.com | grep -oE "UA-[0-9]+-[0-9]+"
+Search for domains using the same ID:
+🔗 https://builtwith.com/
+
+Facebook Pixel ID Lookup
+Extract Facebook Pixel ID:
+
+sh
+Copy
+Edit
+curl -s https://example.com | grep -oE "fbq\('init', '[0-9]+'\)"
+Find related domains:
+🔗 https://www.whatsmyserp.com/tools/facebook-pixel-id-lookup
+
+Google AdSense ID Lookup
+Extract AdSense Publisher ID:
+
+sh
+Copy
+Edit
+curl -s https://example.com | grep -oE "pub-[0-9]+"
+Find other sites using the same AdSense ID:
+🔗 https://spyonweb.com/
+```
+
 ---
 
 ### **Tools without Commands (Web Tools or No Direct Commands)**:
@@ -431,6 +537,61 @@ domainCollector -d example.com -o domainCollector_output.txt
 - https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt 
   
 ---
+
+## **Permutation Scanning – Discovering Hidden Subdomains**  
+
+### **Why?**  
+- Finds **hidden subdomains** not listed in DNS records.  
+- Identifies **development, testing, and internal environments**.  
+- Detects **common naming patterns** like `dev.example.com`, `vpn.example.com`.  
+- Expands the attack surface by uncovering **misconfigured subdomains**.  
+
+### **1️⃣ Generating Permutations with `gotator`**  
+```sh
+gotator -sub subdomains.txt -perm mutations.txt -depth 2 -numbers 10 -mindup -adv -out output.txt
+```
+**Example Output:**  
+```
+dev.example.com  
+test.example.com  
+vpn.example.com  
+staging.example.com  
+```
+
+### **2️⃣ Creating Smart Permutations with `dnsgen`**  
+```sh
+cat subdomains.txt | dnsgen - | tee permutations.txt
+```
+**Example Output:**  
+```
+admin.example.com  
+secure.example.com  
+mail.example.com  
+legacy.example.com  
+```
+
+### **3️⃣ Testing Permutations with `altdns`**  
+```sh
+altdns -i subdomains.txt -o permutations.txt -w words.txt -r -s results.txt
+```
+**Example Output:**  
+```
+vpn.example.com - FOUND  
+internal.example.com - FOUND  
+db.example.com - NOT FOUND  
+```
+
+### **4️⃣ Validating Results with `massdns` or `puredns`**  
+```sh
+puredns resolve permutations.txt -w resolvers.txt -o valid_subdomains.txt
+```
+
+### **Key Takeaways:**  
+✅ **Start with known subdomains** using tools like `Amass` and `Subfinder`.  
+✅ **Use permutation tools** (`gotator`, `dnsgen`, `altdns`) to generate subdomains.  
+✅ **Validate results** using DNS resolvers like `massdns` or `puredns`.  
+✅ **Analyze found subdomains** for potential misconfigurations and vulnerabilities.  
+
 
 ## 11. Directory Busting
 - **Dirsearch**:
@@ -960,6 +1121,69 @@ https://web.archive.org/cdx/search/cdx?url=*.join.slack.com&fl=original&collapse
 
 --- 
 
+## **Esoteric Techniques in Reconnaissance**  
+
+### **Why?**  
+- Discover **hidden assets** that don’t appear in regular scans.  
+- Uncover **relationships between domains, servers, and services**.  
+- Exploit **forgotten or misconfigured data** to gain intelligence.  
+- Find **sensitive information** that traditional OSINT techniques might miss.  
+
+### **1️⃣ Tracking Codes & Ad Networks**  
+Extract tracking IDs (Google Analytics, Facebook Pixel, AdSense) to find related domains.  
+```sh
+curl -s https://example.com | grep -oE "UA-[0-9]+-[0-9]+"
+```
+Search for related domains using:  
+- 🔗 [BuiltWith](https://builtwith.com/)  
+- 🔗 [SpyOnWeb](https://spyonweb.com/)  
+
+### **2️⃣ Cache Snooping – Extracting Old Versions of Pages**  
+Use public caches to retrieve deleted or modified content.  
+```sh
+https://webcache.googleusercontent.com/search?q=cache:example.com
+```
+Retrieve historical URLs:  
+```sh
+echo "example.com" | waybackurls
+```
+
+### **3️⃣ Bypassing CDN Protection to Reveal Real IP**  
+Extract SPF records to find mail servers that might expose the real IP.  
+```sh
+dig TXT example.com +short | grep "spf"
+```
+Attempt direct requests to potential real IPs:  
+```sh
+curl -H "Host: example.com" --resolve example.com:80:[IP] http://example.com
+```
+
+### **4️⃣ Analyzing Public Repositories for Leaked Data**  
+Search GitHub for exposed credentials, API keys, or sensitive data.  
+```sh
+github.com/search?q="example.com" type=code
+```
+Scan repositories for secrets:  
+```sh
+gitleaks --repo=https://github.com/example/repo.git
+```
+
+### **5️⃣ Extracting Metadata from Leaked Documents**  
+Find sensitive user and system information hidden in document metadata.  
+```sh
+exiftool leaked_document.pdf
+```
+Search Google for exposed documents:  
+```google
+site:example.com filetype:pdf OR filetype:docx OR filetype:xls
+```
+
+### **Key Takeaways:**  
+✅ **Analyze tracking codes** to find linked domains.  
+✅ **Leverage cache archives** to recover deleted data.  
+✅ **Bypass CDN protection** to reveal real backend servers.  
+✅ **Mine public repositories** for exposed secrets.  
+✅ **Extract metadata** from leaked documents to uncover user and system info.  
 
 
 ## 13. Test for Subdomain Takeover
