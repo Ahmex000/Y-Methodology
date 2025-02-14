@@ -1,7 +1,7 @@
 - https://spaceraccoon.dev/  
 - https://shubs.io
 - https://projectdiscovery.io/blog
-- https://blog.doyensec.com/
+- https://blog.doyensec.com/  **1**
 - https://krevetk0.medium.com/  
 - https://x2f.me  
 - https://ryotak.net  
