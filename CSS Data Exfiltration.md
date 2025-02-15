@@ -26,3 +26,4 @@ input {
 - https://github.com/hackvertor/blind-css-exfiltration/tree/main
 - https://github.com/VoorivexTeam/CSS-Exfiltration/tree/main
 - https://portswigger-labs.net/blind-css-exfiltration/start
+- https://d0nut.medium.com/better-exfiltration-via-html-injection-31c72a2dae8b
