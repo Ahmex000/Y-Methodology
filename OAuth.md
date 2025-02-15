@@ -1,5 +1,3 @@
----
-
 ### **OAuth Testing Scenarios**
 
 #### **General Research**
@@ -214,3 +212,4 @@
 
 - https://sallam.gitbook.io/sec-88/web-appsec/auth0-misconfigurations
 - https://book.hacktricks.wiki/en/pentesting-web/oauth-to-account-takeover.html
+- https://labs.detectify.com/writeups/account-hijacking-using-dirty-dancing-in-sign-in-oauth-flows/#current-state-and-assumptions-about-oauth-credential-leakage
