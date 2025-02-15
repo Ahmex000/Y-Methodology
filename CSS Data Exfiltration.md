@@ -23,3 +23,4 @@ input {
 ```
 - https://blog.voorivex.team/css-data-exfiltration-to-steal-oauth-token
 -  https://portswigger.net/research/blind-css-exfiltration
+- https://github.com/hackvertor/blind-css-exfiltration/tree/main
