@@ -25,3 +25,4 @@ input {
 -  https://portswigger.net/research/blind-css-exfiltration
 - https://github.com/hackvertor/blind-css-exfiltration/tree/main
 - https://github.com/VoorivexTeam/CSS-Exfiltration/tree/main
+- https://portswigger-labs.net/blind-css-exfiltration/start
