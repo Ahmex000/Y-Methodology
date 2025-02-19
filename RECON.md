@@ -1357,6 +1357,25 @@ site:example.com filetype:pdf OR filetype:docx OR filetype:xls
   echo $domain | (gauplus || hakrawler) | grep -Ev "\.(jpeg|jpg|png|ico|woff|svg|css|ico|woff|ttf)$" > ./gaukrawler.txt
   ```
 
+#### **3. Hakrawler**
+- **Purpose**: A web crawler for discovering URLs and endpoints.
+- **Repo** : https://github.com/hakluke/hakrawler
+- **Installation**:
+  ```bash
+  go install github.com/hakluke/hakrawler@latest
+  ```
+- **Usage**:
+  - Single URL:
+    ```bash
+    echo https://google.com | hakrawler
+    ```
+  - Multiple URLs:
+    ```bash
+    cat urls.txt | hakrawler
+    ```
+---
+  
+  
 
 ### **Web Archiving and Historical Data**
 
@@ -1413,8 +1432,7 @@ site:example.com filetype:pdf OR filetype:docx OR filetype:xls
 #### **2. VirusTotal**
 - **Purpose**: A service for analyzing files and URLs for malware.
 
-#### **3. Hakrawler**
-- **Purpose**: A web crawler for discovering URLs and endpoints.
+
 
 ---
 
@@ -1507,6 +1525,7 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 5. **Detect Secrets with Regex**: Use the provided regex pattern to detect secrets in JS files.
 
 --- 
+---
 
 
 ## 18. Hidden Parameters
