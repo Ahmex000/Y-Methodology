@@ -1294,16 +1294,69 @@ site:example.com filetype:pdf OR filetype:docx OR filetype:xls
 ---
 
 #### **4. URLFinder**
-- **GitHub Repository**: [URLFinder by ProjectDiscovery](https://github.com/projectdiscovery/urlfinder)
-- **Purpose**: A tool to discover URLs from various sources.
-
+- **GitHub Repository**: [URLFinder ](https://github.com/projectdiscovery/urlfinder)
+- **Installation**:
+  ```bash
+  go install -v github.com/projectdiscovery/urlfinder/cmd/urlfinder@latest
+  ```
+- **Usage**:
+  - Extract subdomains:
+    ```bash
+    urlfinder -h
+    ```
+  - Basic Usage:
+    ```bash
+    urlfinder -d tesla.com
+    ```
 ---
 
 #### **5. CWFF**
 - **GitHub Repository**: [CWFF by D4Vinci](https://github.com/D4Vinci/CWFF)
-- **Purpose**: A tool for web application fingerprinting.
+- **Installation**:
+  ```bash
+  git clone https://github.com/D4Vinci/CWFF
+  cd CWFF
+  python3 -m pip install -r requirements.txt
+  python3 cwff.py --help
+  ```
+- **Usage**:
+
+  - Basic Usage:
+    ```bash
+    CWFF [-h] [--threads] [--github] [--subdomains] [--recursive] [--js-libraries] [--connected-websites] [--juicy-files] [--use-filter-model] [-o] 
+    domain
+
+    positional arguments:
+      domain                Target website(ofc)
+    
+    optional arguments:
+      -h, --help            Show this help message and exit
+      --threads             The number of maximum concurrent threads to use (Default:1000)
+      --github              Collect endpoints from a given github repo (ex:https://github.com/google/flax)
+      --subdomains          Extract endpoints from subdomains also while search in the wayback machine!
+      --recursive           Work on extracted endpoints recursively (Adds more endpoints but less accurate sometimes)!
+      --js-libraries        Extract endpoints from JS libraries also, not just the JS written by them!
+      --connected-websites  Include endpoints extracted from connected websites
+      --juicy-files         Include endpoints extracted from juicy files like sitemap.xml and robots.txt
+      --use-filter-model    Filter result endpoints with filter_model file
+      -o                    The output directory for the endpoints and parameters. (Default: website name)
+      ```
 
 ---
+
+- **Waymore**:
+  ```bash
+  waymore -i $domain -mode U -oU ./waymoreUrls.txt -url-filename -p 4
+  -- X Tip's to se some endpoint't in non 80,443 Port's
+  waymore -i http://domain.com -mode U -oU waymore_output.txt
+  cat waymore_output.txt | grep "com:" | grep -v ":80" | grep -v ":443"
+  --
+  ```
+- **Gauplus and Hakrawler**:
+  ```bash
+  echo $domain | (gauplus || hakrawler) | grep -Ev "\.(jpeg|jpg|png|ico|woff|svg|css|ico|woff|ttf)$" > ./gaukrawler.txt
+  ```
+
 
 ### **Web Archiving and Historical Data**
 
@@ -1374,18 +1427,8 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 ---
 
 ### **Additional Notes**
-- **Waymore**:
-  ```bash
-  waymore -i $domain -mode U -oU ./waymoreUrls.txt -url-filename -p 4
-  -- X Tip's to se some endpoint't in non 80,443 Port's
-  waymore -i http://domain.com -mode U -oU waymore_output.txt
-  cat waymore_output.txt | grep "com:" | grep -v ":80" | grep -v ":443"
-  --
-  ```
-- **Gauplus and Hakrawler**:
-  ```bash
-  echo $domain | (gauplus || hakrawler) | grep -Ev "\.(jpeg|jpg|png|ico|woff|svg|css|ico|woff|ttf)$" > ./gaukrawler.txt
-  ```
+
+
 - **Combining Results**:
   ```bash
   cat ./waymoreUrls.txt ./gaukrawler.txt | sort -u | uro | gf endpoints > allUrls.txt
