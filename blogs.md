@@ -199,3 +199,4 @@
 ### APT New And Scenarios
 - https://www.trendmicro.com/en_us/research.html
 - https://jsac.jpcert.or.jp/archive/2025/pdf/JSAC2025_1_2_theo-chen_leon-chang_en.pdf
+- https://cybercentaurs.com/blog/
