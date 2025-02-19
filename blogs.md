@@ -196,3 +196,5 @@
 - https://0xhunterr.gitbook.io/the-nen-book
 ### Slides
 - https://www.slideshare.net/
+### APT New And Scenarios
+- https://www.trendmicro.com/en_us/research.html
