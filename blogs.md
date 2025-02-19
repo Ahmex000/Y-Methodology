@@ -202,3 +202,4 @@
 - https://cybercentaurs.com/blog/
 - https://malpedia.caad.fkie.fraunhofer.de/actor/apt41
 - https://malpedia.caad.fkie.fraunhofer.de/library
+- https://0x0d4y.blog/
