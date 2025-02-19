@@ -1310,37 +1310,6 @@ site:example.com filetype:pdf OR filetype:docx OR filetype:xls
     ```
 ---
 
-#### **5. CWFF**
-- **GitHub Repository**: [CWFF by D4Vinci](https://github.com/D4Vinci/CWFF)
-- **Installation**:
-  ```bash
-  git clone https://github.com/D4Vinci/CWFF
-  cd CWFF
-  python3 -m pip install -r requirements.txt
-  python3 cwff.py --help
-  ```
-- **Usage**:
-
-  - Basic Usage:
-    ```bash
-    CWFF [-h] [--threads] [--github] [--subdomains] [--recursive] [--js-libraries] [--connected-websites] [--juicy-files] [--use-filter-model] [-o] 
-    domain
-
-    positional arguments:
-      domain                Target website(ofc)
-    
-    optional arguments:
-      -h, --help            Show this help message and exit
-      --threads             The number of maximum concurrent threads to use (Default:1000)
-      --github              Collect endpoints from a given github repo (ex:https://github.com/google/flax)
-      --subdomains          Extract endpoints from subdomains also while search in the wayback machine!
-      --recursive           Work on extracted endpoints recursively (Adds more endpoints but less accurate sometimes)!
-      --js-libraries        Extract endpoints from JS libraries also, not just the JS written by them!
-      --connected-websites  Include endpoints extracted from connected websites
-      --juicy-files         Include endpoints extracted from juicy files like sitemap.xml and robots.txt
-      --use-filter-model    Filter result endpoints with filter_model file
-      -o                    The output directory for the endpoints and parameters. (Default: website name)
-      ```
 
 ---
 
@@ -1424,6 +1393,8 @@ site:example.com filetype:pdf OR filetype:docx OR filetype:xls
 
 ---
 
+
+
 ### **Other Tools and Resources**
 
 #### **1. AlienVault**
@@ -1486,6 +1457,39 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
      ```bash
      ruby extract.rb https://www.domain.com/jspath/code.js
      ```
+   -  **CWFF**
+  - **GitHub Repository**: [CWFF by D4Vinci](https://github.com/D4Vinci/CWFF)
+  - **Installation**: // this tool to claim .js files then extract endpoint's from it
+    ```bash
+    git clone https://github.com/D4Vinci/CWFF
+    cd CWFF
+    python3 -m pip install -r requirements.txt
+    python3 cwff.py --help
+    ```
+  - **Usage**:
+  
+    - Basic Usage:
+      ```bash
+      CWFF [-h] [--threads] [--github] [--subdomains] [--recursive] [--js-libraries] [--connected-websites] [--juicy-files] [--use-filter-model] [- 
+      o] 
+      domain
+  
+      positional arguments:
+        domain                Target website(ofc)
+      
+      optional arguments:
+        -h, --help            Show this help message and exit
+        --threads             The number of maximum concurrent threads to use (Default:1000)
+        --github              Collect endpoints from a given github repo (ex:https://github.com/google/flax)
+        --subdomains          Extract endpoints from subdomains also while search in the wayback machine!
+        --recursive           Work on extracted endpoints recursively (Adds more endpoints but less accurate sometimes)!
+        --js-libraries        Extract endpoints from JS libraries also, not just the JS written by them!
+        --connected-websites  Include endpoints extracted from connected websites
+        --juicy-files         Include endpoints extracted from juicy files like sitemap.xml and robots.txt
+        --use-filter-model    Filter result endpoints with filter_model file
+        -o                    The output directory for the endpoints and parameters. (Default: website name)
+        ```
+  
 
 ---
 
