@@ -221,3 +221,17 @@
 6. 🔗 [Google Developers - OAuth Best Practices](https://developers.google.com/identity/protocols/oauth2/web-server?utm_source=chatgpt.com)  
 7. 🔗 [Microsoft OAuth Security Best Practices](https://learn.microsoft.com/en-us/azure/active-directory/develop/security-best-practices-for-apps?utm_source=chatgpt.com)  
 8. 🔗 [Auth0 - OAuth Security](https://auth0.com/blog/oauth-security-deep-dive/?utm_source=chatgpt.com)
+9. https://portswigger.net/web-security/oauth
+10. https://www.descope.com/blog/post/5-oauth-misconfigurations
+11. https://blog.doyensec.com/2025/01/30/oauth-common-vulnerabilities.html
+12. https://www.cyberark.com/resources/threat-research-blog/how-secure-is-your-oauth-insights-from-100-websites
+13. https://www.descope.com/blog/post/5-oauth-misconfigurations
+14. https://blog.doyensec.com/2025/01/30/oauth-common-vulnerabilities.html
+15. https://developers.google.com/identity/protocols/oauth2
+16. https://www.cossacklabs.com/blog/practical-oauth-security-guide-for-mobile-apps/
+17. https://www.descope.com/blog/post/noauth
+18. https://www.cobalt.io/blog/oauth-vulnerabilites
+19. https://0xparth.medium.com/oauth-misconfig-account-takeover-df68afe3245b
+20. https://careers.coupa.com/how-to-identify-oauth2-vulnerabilities-and-mitigate-risks
+21. https://portswigger.net/web-security/oauth
+
