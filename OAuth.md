@@ -213,3 +213,11 @@
 - https://sallam.gitbook.io/sec-88/web-appsec/auth0-misconfigurations
 - https://book.hacktricks.wiki/en/pentesting-web/oauth-to-account-takeover.html
 - https://labs.detectify.com/writeups/account-hijacking-using-dirty-dancing-in-sign-in-oauth-flows/#current-state-and-assumptions-about-oauth-credential-leakage
+1. 🔗 [OAuth Security Guide - PortSwigger](https://portswigger.net/web-security/oauth?utm_source=chatgpt.com)  
+2. 🔗 [Descope Blog - OAuth Misconfigurations](https://www.descope.com/blog/post/5-oauth-misconfigurations?utm_source=chatgpt.com)  
+3. 🔗 [Doyensec Blog - Common OAuth Vulnerabilities](https://blog.doyensec.com/2025/01/30/oauth-common-vulnerabilities.html?utm_source=chatgpt.com)  
+4. 🔗 [IETF OAuth 2.0 Security BCP](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics)  
+5. 🔗 [OAuth 2.0 Threat Model - RFC 6819](https://datatracker.ietf.org/doc/html/rfc6819)  
+6. 🔗 [Google Developers - OAuth Best Practices](https://developers.google.com/identity/protocols/oauth2/web-server?utm_source=chatgpt.com)  
+7. 🔗 [Microsoft OAuth Security Best Practices](https://learn.microsoft.com/en-us/azure/active-directory/develop/security-best-practices-for-apps?utm_source=chatgpt.com)  
+8. 🔗 [Auth0 - OAuth Security](https://auth0.com/blog/oauth-security-deep-dive/?utm_source=chatgpt.com)
