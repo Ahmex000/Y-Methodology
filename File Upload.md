@@ -3,6 +3,7 @@
 ### **File Upload Vulnerabilities & Techniques**
 
 #### **1. Basic Techniques**
+- **Check if site use Blacklist or white list** *
 - File Name Manipulation:
   - 02.mp3";id;#
   - Try uploading a text file with .png extension.
