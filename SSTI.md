@@ -71,3 +71,5 @@
    - Refer to Medium, GitHub, and HackTricks for additional techniques and payloads.
 
 ---
+
+- https://medium.com/@muhammad4208/bug-bounty-hunting-web-vulnerability-remote-code-execution-3935b5823657
