@@ -140,5 +140,8 @@
 - https://github.com/orwagodfather/WordList/tree/main
 - https://github.com/random-robbie/bruteforce-lists/tree/master
 - https://github.com/random-robbie/bruteforce-lists/tree/master
-
+### subdoamin bruteforcing
+- https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS
+- https://github.com/netsecurity-as/subfuz/blob/master/subdomain_megalist.txt
+- https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS
 
