@@ -8,6 +8,64 @@ X-Client-IP : 127.0.0.1
 X-Remote-IP : 127.0.0.1
 X-Remote-Addr : 127.0.0.1
 X-Host : 127.0.0.1
+X-Forwarded-For: [attacker.com](http://attacker.com/)
+
+X-Forwarded-Host: [attacker.com](http://attacker.com/)
+
+X-Forwarded-Proto headers: [attacker.com](http://attacker.com/)
+
+Host: [attacker.com](http://attacker.com/) (duplicate this header)
+
+X-Host: [attacker.com](http://attacker.com/)
+
+X-Forwarded-Server: [attacker.com](http://attacker.com/)
+
+X-HTTP-Host-Override: [attacker.com](http://attacker.com/)
+
+Forwarded: [attacker.com](http://attacker.com/)
+
+Base-Url: 127.0.0.1
+Client-IP: 127.0.0.1
+Forwarded-For: 127.0.0.1
+Forwarded-For-Ip: 127.0.0.1
+Http-Url: 127.0.0.1
+nullOrigin: 127.0.0.1
+Origin: 127.0.0.1
+Proxy-Host: 127.0.0.1
+Proxy-Url: 127.0.0.1
+Real-Ip: 127.0.0.1
+Redirect: 127.0.0.1
+Referer: 127.0.0.1
+Referrer: 127.0.0.1
+Refferer: 127.0.0.1
+Request-Uri: 127.0.0.1
+Uri: 127.0.0.1
+Url: 127.0.0.1
+X-Client-IP: 127.0.0.1
+X-Custom-IP-Authorization: 127.0.0.1
+X-Custom-IP-Authorization:127.0.0.1
+X-Forwarded: 127.0.0.1
+X-Forwarded-By: 127.0.0.1
+X-Forwarded-For: 127.0.0.1
+X-Forwarded-For-Original: 127.0.0.1
+X-Forwarded-Host: 127.0.0.1
+X-Forwarded-Port: 127.0.0.1
+X-Forwarded-Scheme: 127.0.0.1
+X-Forwarded-Server: 127.0.0.1
+X-Forwarder-For: 127.0.0.1
+X-Forward-For: 127.0.0.1
+X-Frame-Options: Allow
+X-Host: 127.0.0.1
+X-Http-Destinationurl: 127.0.0.1
+X-Http-Host-Override: 127.0.0.1
+X-Original-Remote-Addr: 127.0.0.1
+X-Original-Url: 127.0.0.1
+X-Originating-IP: 127.0.0.1
+X-Proxy-Url: 127.0.0.1
+X-Real-Ip: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Rewrite-Url: 127.0.0.1
 ```
 For example:
 ```
