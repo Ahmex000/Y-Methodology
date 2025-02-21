@@ -775,4 +775,26 @@ delete username=admin
 Always try the "\" character in login entries. It can trigger an SQL.
 curl -d 'username=1\&password=1\' -X POST https :// login(.)domain(.)com
 ---
+- ## Bypass regular login
+If you find a login page, here you can find some techniques to try to bypass it:
+* Check for `comments` inside the page (scroll down and to the right?)
+* Check if you can directly access the restricted pages
+* Check to not send the parameters (do not send any or only 1)
+* Check the PHP comparisons error: `user[]=a&pwd=b` , `user=a&pwd[]=b` , `user[]=a&pwd[]=b`
+* Change content type to json and send json values (bool true included)
+  * If you get a response saying that `POST` is not supported you can try to send the `JSON` in the body but with a `GET` request with `Content-Type: application/json`
+* Check nodejs potential parsing error (read [this](https://flattsecurity.medium.com/finding-an-unseen-sql-injection-by-bypassing-escape-functions-in-mysqljs-mysql-90b27f6542b4)): `password[password]=1`
+  * Nodejs will transform that payload to a query similar to the following one:
+    ```sql
+    SELECT id, username, left(password, 8) AS snipped_password, email FROM accounts WHERE username='admin' AND`` ``password=password=1; 
+    ```
+    which makes the password bit to be always true
+  * If you can send a JSON object you can send "password":{"password": 1} to bypass the login
+  * Remember that to bypass this login you still need to know and send a valid username
+  * Adding `"stringifyObjects":true` option when calling `mysql.createConnection` will eventually block all unexpected behaviours when `Object` is passed in the parameter
+* Check credentials:
+  * Default credentials of the technology/platform used
+  * 
+
+
 - https://github.com/Az0x7/vulnerability-Checklist/blob/main/Api%20Authentication%20/Authentication.md
