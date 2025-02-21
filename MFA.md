@@ -211,6 +211,12 @@
 7. **Clickjacking on 2FA Disabling Page [P4]**  
    - Steps:  
      1. Test if the disable 2FA page is vulnerable to clickjacking.  
+8. **try login with another victor/endpoint**
+   - steps
+   1. from user A enable MFA
+   2. From User B , try do any action to asking for login with non normal flow
+   3. after enter vicitm username&password , you will login without 2FA
+
 
 ---
 - https://blog.ys0.dev/p/playing-with-sms-otps/
