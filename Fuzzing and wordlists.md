@@ -144,4 +144,5 @@
 - https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS
 - https://github.com/netsecurity-as/subfuz/blob/master/subdomain_megalist.txt
 - https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS
+- https://wordlists.assetnote.io/ =>  All
 
