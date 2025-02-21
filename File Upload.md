@@ -3,7 +3,7 @@
 ### **File Upload Vulnerabilities & Techniques**
 
 #### **1. Basic Techniques**
-- **Check if site use Blacklist or white list** *
+- **Check if site use Blacklist or white list by upload file.LOL** 
 - File Name Manipulation:
   - 02.mp3";id;#
   - Try uploading a text file with .png extension.
@@ -737,7 +737,9 @@ Only one step remained: Upload the ZIP file and let the application decompress i
 9. **ZIP:** RCE via LFI / DoS
 10. **PDF / PPTX:** SSRF / BLIND XXE
 
-
+---
+### uploading EXif photo
+- https://github.com/ianare/exif-samples/blob/master/jpg/tests/67-0_length_string.jpg
 
 
 ## Tools
