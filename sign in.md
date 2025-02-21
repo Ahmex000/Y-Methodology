@@ -796,5 +796,14 @@ If you find a login page, here you can find some techniques to try to bypass it:
   * Default credentials of the technology/platform used
   * 
 
+---
+### Admin Panel
+- search in JS for endpoint's
+- fuzz after `/admin/FUZZ`
+- saerch fir singup endpoint `ffuf -w common-register-endpoints -u https://<Target-IP>/FUZZ`
+- search for whats technology site using 
+ - search for exploit to this technology `searchsploit "technology name"`
+
+
 
 - https://github.com/Az0x7/vulnerability-Checklist/blob/main/Api%20Authentication%20/Authentication.md
