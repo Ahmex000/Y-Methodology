@@ -300,10 +300,15 @@ xss can be test in any of parameter
 4. improperly implemented password recovery link functionality
 ```
 
+
 [ ] Path Overwrite
 ```
 If an application allows users to check their profile with direct path /{username} always try to signup with system reserved file names, such as index.php, signup.php, login.php, etc. In some cases what happens here is, when you signup with username: index.php, now upon visiting target.tld/index.php, your profile will comeup and occupy the index.php page of an application. Similarly, if an attacker is able to signup with username login.php, Imagine login page getting takeovered.
 ```
+
+- fuzz for parameters like ID, Account_ID.. etc
+
+
 
 ---
 - https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
