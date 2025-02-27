@@ -2,6 +2,7 @@
 - https://shubs.io
 - https://projectdiscovery.io/blog
 - https://blog.doyensec.com/  **1**
+- https://gitlab.com/gitlab-org/gitlab/-/issues **2**
 - https://krevetk0.medium.com/  
 - https://x2f.me  
 - https://ryotak.net  
