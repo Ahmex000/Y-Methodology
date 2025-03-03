@@ -65,4 +65,4 @@ This repository is licensed under the [MIT License](LICENSE). Feel free to use a
 ---
 
 ## 📫 Contact
-Have questions or suggestions? Feel free to open an issue or reach out via [your email/handle]. Happy hunting! 🐛🔍
+Have questions or suggestions? Feel free to open an issue or reach out via x.com/Ahmex000 . Happy hunting! 🐛🔍
