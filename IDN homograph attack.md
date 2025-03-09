@@ -1,2 +1,3 @@
 - https://en.wikipedia.org/wiki/IDN_homograph_attack
 - https://github.com/evilsocket/ditto
+- https://hackerone.com/reports/861940
