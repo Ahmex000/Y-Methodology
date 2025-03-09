@@ -13,3 +13,4 @@ redirect_uri=target.\com%40myburpcollab.\com
 
 -
 - https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
+- https://hackerone.com/reports/861940
