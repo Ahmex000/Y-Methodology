@@ -2,6 +2,7 @@
 - https://waf-bypass.com/
 - https://shubs.io
 - https://projectdiscovery.io/blog
+- https://ctf.org.cn/ **CTF**
 - https://blog.doyensec.com/  **1**
 - https://gitlab.com/gitlab-org/gitlab/-/issues **2**
 - https://krevetk0.medium.com/  
