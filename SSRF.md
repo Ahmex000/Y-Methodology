@@ -242,6 +242,11 @@ http://[::]:3128/ Squid
 http://[0000::1]:80/
 http://[0:0:0:0:0:ffff:127.0.0.1]/thefile
 http://①②⑦.⓪.⓪.⓪
+https://1:@my.site:\@@@@w.youtube.com/@https://www.youtube.com/
+https://1:@127.0.0.1:\@@@@w.youtube.com/@https://www.youtube.com/
+https:\/\/1:@127.0.0.1:\\@@@@w.youtube.com\/@https:\/www.youtube.com
+https://1:@10.0.0.1:\@@@@w.youtube.com/@https://www.youtube.com/
+
 
 # CDIR bypass
 http://127.127.127.127
