@@ -611,6 +611,8 @@ More payloads in the folder `Picture ImageMagick`
 - https://4lemon.ru/2017-01-17_facebook_imagetragick_remote_code_execution.html
 - https://hackerone.com/reports/403417
 - https://imagemagick.org/index.php
+- https://www.cobalt.io/blog/imagetragick
+- 
 
 ## CVE - FFMpeg
 FFmpeg HLS vulnerability
