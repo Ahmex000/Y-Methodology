@@ -597,7 +597,7 @@ Alternatively you may be able to upload a JSON file with a custom scripts, try t
 
 ```
 
-## CVE - ImageMagick
+## ImageMagick
 If the backend is using ImageMagick to resize/convert user images, you can try to exploit well-known vulnerabilities such as ImageTragik.
 * ImageTragik example: Upload this content with an image extension to exploit the vulnerability (ImageMagick , 7.0.1-1)
 ```bash
@@ -608,6 +608,9 @@ pop graphic-context
 
 ```
 More payloads in the folder `Picture ImageMagick`
+- https://4lemon.ru/2017-01-17_facebook_imagetragick_remote_code_execution.html
+- https://hackerone.com/reports/403417
+- https://imagemagick.org/index.php
 
 ## CVE - FFMpeg
 FFmpeg HLS vulnerability
@@ -622,9 +625,7 @@ ln -s ../../../index.php symindex.txt
 zip --symlinks test.zip symindex.txt
 
 ```
-- https://4lemon.ru/2017-01-17_facebook_imagetragick_remote_code_execution.html
-- https://hackerone.com/reports/403417
-- https://imagemagick.org/index.php
+
 
 ## Jetty RCE
 Upload the XML file to `$JETTY_BASE/webapps/`
