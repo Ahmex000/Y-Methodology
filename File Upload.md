@@ -1,5 +1,3 @@
----
-
 ### **File Upload Vulnerabilities & Techniques**
 
 #### **1. Basic Techniques**
@@ -624,6 +622,9 @@ ln -s ../../../index.php symindex.txt
 zip --symlinks test.zip symindex.txt
 
 ```
+- https://4lemon.ru/2017-01-17_facebook_imagetragick_remote_code_execution.html
+- https://hackerone.com/reports/403417
+- https://imagemagick.org/index.php
 
 ## Jetty RCE
 Upload the XML file to `$JETTY_BASE/webapps/`
