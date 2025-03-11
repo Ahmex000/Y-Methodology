@@ -803,13 +803,6 @@ If you find a login page, here you can find some techniques to try to bypass it:
 - saerch fir singup endpoint `ffuf -w common-register-endpoints -u https://<Target-IP>/FUZZ`
 - search for whats technology site using 
  - search for exploit to this technology `searchsploit "technology name"`
-- search for leaked creds in one of
-  https://www.dehashed.com/
-  https://leakcheck.io/
-  https://ghostproject.fr/
-  https://snusbase.com/
-  https://intelx.io/
-  https://haveibeenpwned.com/ 
 
 
 - https://github.com/Az0x7/vulnerability-Checklist/blob/main/Api%20Authentication%20/Authentication.md
