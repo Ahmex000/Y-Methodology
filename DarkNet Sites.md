@@ -415,4 +415,22 @@ Feel free to clone this repository or use it as a reference for your own needs.
 - https://intelx.io/
 - https://ghostproject.fr/
 - https://snusbase.com/
+- http://darkobds5j7xpsncsexzwhzaotyc4sshuiby3wtxslq5jy2mhrulnzad.onion/
+- http://dna777fdlbcv24cx5ctdvydvfa277vgb6wd6w4ztem6cho3kqogi7bqd.onion/
+- http://darktrustyzmsgogz4vcwrl7z6w2pjhp6pkihnanc3q237yytgptlqad.onion/Site/253
+- http://darktrustyzmsgogz4vcwrl7z6w2pjhp6pkihnanc3q237yytgptlqad.onion/All-Sites/Hacking
+
+### Leaked Data
+- http://darktrustyzmsgogz4vcwrl7z6w2pjhp6pkihnanc3q237yytgptlqad.onion/All-Sites/Data
+- http://darkobds5j7xpsncsexzwhzaotyc4sshuiby3wtxslq5jy2mhrulnzad.onion/listings/?q=database
 - 
+
+### chats
+1: prozoneawomb44basnnov5p7mhf5fy53s5l7qkjjitgcualpr5b3uqid.onion
+2: prozone63cumr6k4z5obqbo2thwblia546cfq3wbrnfba7wbdq7pumad.onion
+3: prozonebbp5x4v4pre7qf6kcww5ysvj42liidgdol6xba2clx4yiuxad.onion
+4: prozone7dlgg6kgkzr3vwwvuotqqeqv7bqjjbsafh4vie5iqrkjh6wad.onion
+5: prozonegat7sekx26772mlyn7neyyaqv5c3e4zqy3tmsnc7iximm25qd.onion
+- http://dna777fdlbcv24cx5ctdvydvfa277vgb6wd6w4ztem6cho3kqogi7bqd.onion/
+
+
