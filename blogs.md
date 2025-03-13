@@ -79,12 +79,14 @@
 - Bug-Hunting: https://github.com/IamLucif3r/Bug-Hunting
 - HowToHunt: https://github.com/KathanP19/HowToHunt
 - AllAboutBugBounty: https://github.com/daffainfo/AllAboutBugBounty
+- https://github.com/OWASP/wstg/blob/master/document/4-Web_Application_Security_Testing/07-Input_Validation_Testing/18-Testing_for_Server-side_Template_Injection.md
 
 ### Checklists
 - vulnerability-Checklist: https://github.com/Az0x7/vulnerability-Checklist
 - Galaxy-Bugbounty-Checklist: https://github.com/0xmaximus/Galaxy-Bugbounty-Checklist
 - Sec-Cheatsheets: https://github.com/brianlam38/Sec-Cheatsheets/tree/master/Web
 - bugbounty-cheatsheet: https://github.com/EdOverflow/bugbounty-cheatsheet
+- https://github.com/OWASP/wstg/blob/master/document/4-Web_Application_Security_Testing/07-Input_Validation_Testing/18-Testing_for_Server-side_Template_Injection.md
 
 ## Mind Maps & Learning Resources
 
