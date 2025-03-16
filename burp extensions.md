@@ -1,4 +1,7 @@
 - jsluice++
 - logger++
 - Autorize
+- Content Type Converter
+- paramminer
+- inQL
 - 
