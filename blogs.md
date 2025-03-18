@@ -1,5 +1,6 @@
 - https://spaceraccoon.dev/
 - https://waf-bypass.com/
+- https://enclave-regenerous.com/  **1**
 - https://www.thehacker.recipes/
 -https://github.com/zapstiko/HackingPDF
 - https://cxsecurity.com/  **1**
