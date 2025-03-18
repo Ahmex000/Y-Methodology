@@ -1,1 +1,2 @@
 - https://sallam.gitbook.io/sec-88/web-appsec/llm-hacking-checklist
+- https://x.com/h4x0r_fr34k/status/1861787638291890257
