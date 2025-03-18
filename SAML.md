@@ -1,6 +1,3 @@
-
----
-
 - https://auth0.com/blog/how-saml-authentication-works/
 - https://epi052.gitlab.io/notes-to-self/blog/2019-03-13-how-to-test-saml-a-methodology-part-two/
 - https://joonas.fi/2021/08/saml-is-insecure-by-design/
@@ -13,4 +10,5 @@
 - https://www.netspi.com/blog/technical-blog/web-application-pentesting/attacking-sso-common-saml-vulnerabilities-ways-find/
 - https://xakep.ru/2016/02/09/hacking-single-sign-on/
 
+- https://portswigger.net/research/saml-roulette-the-hacker-always-wins
 --- 
