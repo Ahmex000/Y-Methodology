@@ -1,6 +1,4 @@
 
----
-
 ### **Fuzzing Techniques**
 
 #### **1. FFuf Commands**
@@ -147,4 +145,4 @@
 - https://wordlists.assetnote.io/ =>  All
 - https://github.com/the-xentropy/samlists/
 
-
+https://github.com/reewardius/bbFuzzing.txt
