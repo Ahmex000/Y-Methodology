@@ -234,4 +234,5 @@
 19. https://0xparth.medium.com/oauth-misconfig-account-takeover-df68afe3245b
 20. https://careers.coupa.com/how-to-identify-oauth2-vulnerabilities-and-mitigate-risks
 21. https://portswigger.net/web-security/oauth
+22. https://blog.criticalthinkingpodcast.io/p/hackernotes-ep-110-oauth-gadget-correlation-and-common-attacks
 
