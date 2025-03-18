@@ -312,4 +312,4 @@ If an application allows users to check their profile with direct path /{usernam
 
 ---
 - https://portswigger.net/research/bypassing-character-blocklists-with-unicode-overflows
-  
+  https://0xacb.com/normalization_table
