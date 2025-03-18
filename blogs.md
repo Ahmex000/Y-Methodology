@@ -92,7 +92,7 @@
 - Sec-Cheatsheets: https://github.com/brianlam38/Sec-Cheatsheets/tree/master/Web
 - bugbounty-cheatsheet: https://github.com/EdOverflow/bugbounty-cheatsheet
 - https://github.com/OWASP/wstg/blob/master/document/4-Web_Application_Security_Testing/07-Input_Validation_Testing/18-Testing_for_Server-side_Template_Injection.md
-
+- https://m0chan.github.io/2019/12/17/Bug-Bounty-Cheetsheet.html?fbclid=IwAR3lb8IZfxTHxZpmuIwOV_5R-RdZt8nSi__bUEDZH3U3f4iafutWFSJTWEQ
 ## Mind Maps & Learning Resources
 
 ### Mind Maps
