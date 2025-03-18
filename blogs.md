@@ -1,6 +1,7 @@
 - https://spaceraccoon.dev/
 - https://waf-bypass.com/
 - https://www.thehacker.recipes/
+- https://github.com/zapstiko/Hacking-PDF
 - https://shubs.io
 - https://projectdiscovery.io/blog
 - https://ctf.org.cn/ **CTF**
