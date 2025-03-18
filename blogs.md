@@ -14,7 +14,8 @@
 - https://krevetk0.medium.com/  
 - https://x2f.me  
 - https://ryotak.net  
-- https://arthurair.es  
+- https://arthurair.es
+- https://sicks3c.github.io/
 - https://rhynorater.github.io/  
 - https://www.shockwave.cloud  
 - http://corb3nik.github.io/  
