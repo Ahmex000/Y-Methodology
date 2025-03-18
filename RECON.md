@@ -1423,6 +1423,7 @@ cat live | tee >(gau --fp | sort | uniq | cat way | grep -Ev '\.(png|jpg|gif|jpe
 
 --- 
 
+- https://github.com/projectdiscovery/urlfinder
 
 ## 17. Scan JS-Files
 
