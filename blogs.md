@@ -2,7 +2,8 @@
 - https://waf-bypass.com/
 - https://enclave-regenerous.com/  **1**
 - https://www.thehacker.recipes/
--https://github.com/zapstiko/HackingPDF
+- https://www.benasin.space/archives/
+- https://github.com/zapstiko/HackingPDF
 - https://cxsecurity.com/  **1**
 - https://shubs.io
 - https://projectdiscovery.io/blog
