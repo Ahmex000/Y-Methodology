@@ -173,7 +173,7 @@
 - CheatSheet: https://github.com/akr3ch/CheatSheet
 - XXE Cheat Sheet: https://www.securityidiots.com/Web-Pentest/XXE/XXE-Cheat-Sheet-by-SecurityIdiots.html
 - https://book.hacktricks.wiki/en/index.html
-
+- https://hariprasaanth.notion.site/WEB-APPLICATION-PENTESTING-CHECKLIST-0f02d8074b9d4af7b12b8da2d46ac998
 ### Tools
 - SpringBootVulExploit: https://github.com/LandGrey/SpringBootVulExploit
 - PayloadsAllTheThings: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master
