@@ -6,3 +6,7 @@
 - inQL
 - https://x.com/0xHussein/status/1702984356271190315
   - https://drive.google.com/file/d/19CEccZDCmS3PoiYAFhIGuzEKHTBviNIw/view
+- https://github.com/metaStor/SpringScan
+- https://github.com/xiaoliangli1128/SpringBootFinder
+- https://github.com/onurgule/S4S-Scanner
+- https://github.com/danielmiessler/SecLists/blob/df35d09ec1251c70f6d0679b6ca7a36f4a337f37/Discovery/Web-Content/spring-boot.txt
