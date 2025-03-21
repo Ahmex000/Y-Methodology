@@ -2,6 +2,7 @@
 - https://waf-bypass.com/
 - https://enclave-regenerous.com/  **1**
 - https://www.thehacker.recipes/
+- https://www.geeksforgeeks.org/linkfinder-script-to-search-endpoints-in-javascript-files/
 - https://www.benasin.space/archives/
 - https://github.com/zapstiko/HackingPDF
 - https://cxsecurity.com/  **1**
