@@ -13,6 +13,7 @@
 - https://m19o.github.io/
 - https://blog.doyensec.com/  **1**
 - https://gitlab.com/gitlab-org/gitlab/-/issues **2**
+- https://www.elttam.com/blog/
 - https://krevetk0.medium.com/  
 - https://x2f.me  
 - https://ryotak.net  
