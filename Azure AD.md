@@ -1,4 +1,138 @@
 # Azure
+# Azure Tenant Attacks - Detailed Guide
+
+## Introduction
+An **Azure Tenant** represents an organization within **Microsoft Azure Active Directory (Azure AD)**. Identifying an organization's Azure Tenant ID or domain can open up multiple attack vectors that penetration testers or malicious actors might exploit.
+
+This guide explains various attack scenarios related to Azure Tenant enumeration, misconfiguration exploitation, and advanced attack techniques.
+
+---
+
+## 1. Enumerating Users
+### **Overview**
+User enumeration helps identify valid accounts within an Azure AD Tenant, which can later be exploited for further attacks.
+
+### **How It Works**
+- Use Microsoft login portals (`https://login.microsoftonline.com`) to check if an email exists.
+- Use **Microsoft Graph API** to query users.
+- Attempt **Brute Force or Password Spraying** with common credentials.
+
+### **Tools**
+- `curl` requests to Microsoft login portals.
+- PowerShell scripts for Graph API enumeration.
+
+### **Exploitation**
+- Identify active accounts for phishing attacks.
+- Conduct password-spraying attacks to gain access.
+
+---
+
+## 2. Password Spraying & Brute-Forcing
+### **Overview**
+Azure AD authentication can be brute-forced using password spraying techniques.
+
+### **How It Works**
+- Attackers try common passwords like `Winter2024!`, `Company123!`, or `Password123!`.
+- Azure AD may not lock accounts after multiple failed attempts.
+
+### **Tools**
+- [Azzure](https://github.com/Hackndo/Azzure)
+- [MSOLSpray](https://github.com/dafthack/MSOLSpray)
+
+### **Exploitation**
+- Gain unauthorized access to user accounts.
+- Escalate privileges if MFA is not enforced.
+
+---
+
+## 3. Phishing & OAuth Token Hijacking
+### **Overview**
+OAuth token theft can be used to bypass password-based authentication.
+
+### **How It Works**
+- Attackers create phishing pages that mimic Azure login portals.
+- Users unknowingly authenticate, granting token access to attackers.
+
+### **Tools**
+- [EvilGinx](https://github.com/kgretzky/evilginx2) for MITM OAuth phishing.
+
+### **Exploitation**
+- Access cloud services without needing passwords.
+- Move laterally within an organization’s Azure infrastructure.
+
+---
+
+## 4. Checking for Misconfigurations
+### **Overview**
+Some Azure AD tenants have weak configurations that expose sensitive data.
+
+### **How It Works**
+- Check if **guest access** is enabled in Microsoft Teams or SharePoint.
+- Identify public files on **OneDrive or SharePoint**.
+- Look for misconfigured **OAuth apps**.
+
+### **Tools**
+- PowerShell commands for Azure AD configuration checks.
+- Manual enumeration of OneDrive and SharePoint.
+
+### **Exploitation**
+- Gain unauthorized access to sensitive documents.
+- Use internal documents for social engineering.
+
+---
+
+## 5. Exploiting SaaS Applications Linked to Azure AD
+### **Overview**
+Many organizations integrate third-party SaaS apps with Azure AD, leading to potential vulnerabilities.
+
+### **How It Works**
+- Enumerate OAuth applications linked to an organization’s Azure AD.
+- Exploit weak OAuth permissions to hijack user sessions.
+
+### **Tools**
+- `jwt_tool` for testing OAuth tokens.
+
+### **Exploitation**
+- Gain access to enterprise applications.
+- Exploit OAuth misconfigurations to escalate privileges.
+
+---
+
+## 6. Exploiting Hybrid Environments (Azure AD Connect)
+### **Overview**
+Some organizations connect Azure AD with traditional on-premise **Active Directory**, introducing new attack vectors.
+
+### **How It Works**
+- Identify **Azure AD Connect** installations.
+- Use **Kerberoasting** or **NTLM Relaying** to steal credentials.
+
+### **Tools**
+- [BloodHound](https://github.com/BloodHoundAD/BloodHound) for Active Directory recon.
+- [Impacket](https://github.com/SecureAuthCorp/impacket) for NTLM relay attacks.
+
+### **Exploitation**
+- Escalate privileges within an organization’s internal network.
+- Move laterally across hybrid environments.
+
+---
+
+## Conclusion
+Identifying an organization's **Azure Tenant** provides attackers with multiple opportunities for reconnaissance and exploitation. Organizations should:
+- Enforce **MFA** to mitigate password attacks.
+- Restrict **guest access** to minimize exposure.
+- Monitor **OAuth applications** to prevent token hijacking.
+
+By understanding these attack vectors, penetration testers and security teams can better defend their Azure environments.
+
+---
+
+## References
+- [Microsoft Azure AD Documentation](https://docs.microsoft.com/en-us/azure/active-directory/)
+- [Azzure - Azure AD Enumeration Tool](https://github.com/Hackndo/Azzure)
+- [EvilGinx2 - Advanced Phishing](https://github.com/kgretzky/evilginx2)
+
+
+
 ### Basic Info
 ```
 **Tools** 
