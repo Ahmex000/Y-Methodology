@@ -6,6 +6,7 @@
 - https://www.benasin.space/archives/
 - https://github.com/zapstiko/HackingPDF
 - https://cxsecurity.com/  **1**
+- https://cert.gov.ua/articles
 - https://shubs.io
 - https://projectdiscovery.io/blog
 - https://blog.criticalthinkingpodcast.io/ **1**
