@@ -11,6 +11,7 @@
 - https://projectdiscovery.io/blog
 - https://blog.criticalthinkingpodcast.io/ **1**
 - https://securityscorecard.com/resources/research/
+- https://securityscorecard.com/blog/
 - https://ctf.org.cn/ **CTF**
 - https://m19o.github.io/
 - https://blog.doyensec.com/  **1**
