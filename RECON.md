@@ -453,6 +453,8 @@ Find other sites using the same AdSense ID:
   puredns bruteforce all.txt -d domains.txt
   ```
 
+  - https://subdomainfinder.c99.nl/scans/2025-03-13/britishgas.co.uk
+
 ### **9.2 sub enum via Burp Pro**
 
 ### **9.3 sub enum via browser extention**
