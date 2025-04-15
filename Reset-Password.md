@@ -512,7 +512,13 @@ mydomain.com%25%32%33@growanz.hubspot.com
 // Array of emails
 {"email":["victim@mail.com","attacker@mail.com"]}
 
-
+// Array of emails
+"user": {  
+     "email": [  
+              "victim@gmail.com",  
+              "attacker@gmail.com"  
+       ]  
+ },  
 
 ```
 ---
