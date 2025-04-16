@@ -10,6 +10,7 @@
 - https://cxsecurity.com/  **1**
 - https://cert.gov.ua/articles
 - https://shubs.io
+- https://www.writeup-db.com/
 - https://projectdiscovery.io/blog
 - https://blog.criticalthinkingpodcast.io/ **1**
 - https://securityscorecard.com/resources/research/
