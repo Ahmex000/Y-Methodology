@@ -6,6 +6,7 @@
 - https://www.thehacker.recipes/
 - https://www.geeksforgeeks.org/linkfinder-script-to-search-endpoints-in-javascript-files/
 - https://www.benasin.space/archives/
+- https://khalid-emad.gitbook.io/cyber-sec
 - https://github.com/zapstiko/HackingPDF
 - https://cxsecurity.com/  **1**
 - https://cert.gov.ua/articles
